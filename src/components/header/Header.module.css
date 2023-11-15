@@ -1,0 +1,15 @@
+.navigation {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #0065cb;
+    transition: 0.5s ease;
+}
+
+.navigation:hover {
+    color: white;
+    background: #0066cb;
+}
