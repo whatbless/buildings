@@ -7,6 +7,7 @@ import styles from "./Quiz.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryThink from "./../../images/henry-think.png";
 
 const min = 1;
 const max = 9;
@@ -22,7 +23,7 @@ const ThirdStep = () => {
   };
 
   return (
-    <div>
+    <div className="relative w-full h-full">
       <h1 className={styles.header}>Количество комнат</h1>
       <div className={styles.values}>
         <h4 className={styles.value}>от</h4>
@@ -52,6 +53,10 @@ const ThirdStep = () => {
         <button className={styles.button} onClick={handleClick}>
           Далее <FontAwesomeIcon icon={faArrowRight} />
         </button>
+      </div>
+      <div className="flex flex-col items-center">
+        <img className="w-56 h-56" src={henryThink} alt="henry-image4" />
+        <p>Хммм... сколько же комнат выбрать...</p>
       </div>
     </div>
   );

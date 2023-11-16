@@ -6,11 +6,12 @@ import { Formik, Form, Field } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryLove from "./../../images/henry-love.png";
 
 function requireValidate(value: string) {
   let error;
   if (!value) {
-    error = "Required field";
+    error = "Мне нужны районы мечты, чтобы подобрать недвижимость мечты!";
   }
   return error;
 }
@@ -19,9 +20,13 @@ const FirstStep = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <h1 className={styles.header}>
-        Укажите район, в котором бы вы хотели себе недвижимость
+    <div className="relative w-full h-full">
+      <div className="w-full flex flex-col items-center">
+        <h1>Я рад что ты остаешься со мной, ответим на несколько вопросов</h1>
+        <img className="w-56 h-56" src={henryLove} alt="henry-image2" />
+      </div>
+      <h1 className="text-center">
+        Укажи район, в котором ты бы хотел{"(а)"} себе недвижимость
       </h1>
       <div>
         <Formik
@@ -35,7 +40,7 @@ const FirstStep = () => {
           }}
         >
           {({ errors, touched, isValidating }) => (
-            <Form className="w-full">
+            <Form>
               <div className={styles.inputWrapper}>
                 <Field
                   validate={requireValidate}
@@ -51,7 +56,10 @@ const FirstStep = () => {
                 )}
               </div>
               <div className={styles.buttonWrapper}>
-                <button disabled={true} className={styles.disabledButton}>
+                <button
+                  className={styles.backButton}
+                  onClick={() => dispatch<any>(setStep(0))}
+                >
                   <FontAwesomeIcon icon={faArrowLeft} /> Назад
                 </button>
                 <button className={styles.button} type="submit">

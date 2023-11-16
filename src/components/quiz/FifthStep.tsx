@@ -7,6 +7,7 @@ import styles from "./Quiz.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryGrin from "./../../images/henry-grin.png";
 
 const min = 1;
 const max = 45;
@@ -22,7 +23,7 @@ const FifthStep = () => {
   };
 
   return (
-    <div>
+    <div className="w-full relative h-full">
       <h1 className={styles.header}>Этаж</h1>
       <div className={styles.values}>
         <h4 className={styles.value}>от</h4>
@@ -39,6 +40,13 @@ const FifthStep = () => {
       <div className={styles.values}>
         <h4 className={styles.value}>{values[0]}</h4>
         <h4 className={styles.value}>{values[1]}</h4>
+      </div>
+      <div className="w-full flex flex-col items-center">
+        <img className="w-56 h-56" src={henryGrin} alt="henry-image6" />
+        <p className="text-center">
+          Мда уж, достаточно философский вопрос. Если тебе без разницы на каком
+          этаже жить, то нажимай далее, мои коллеги сами разберутся
+        </p>
       </div>
       <div className={styles.buttonWrapper}>
         <button

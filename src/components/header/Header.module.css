@@ -1,15 +1,13 @@
 .navigation {
     margin-left: 15px;
     margin-right: 15px;
-    padding: 10px 15px;
-    font-weight: 300;
+    font-weight: 700;
+    padding: 4px;
     text-transform: uppercase;
     cursor: pointer;
-    border: 1px solid #0065cb;
-    transition: 0.5s ease;
+    color: #dc1c2d;
 }
 
 .navigation:hover {
-    color: white;
-    background: #0066cb;
+    border-bottom: 1px solid white;
 }

@@ -11,11 +11,12 @@ import styles from "./Quiz.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryParty from "./../../images/henry-party.png";
 
 function validateName(value: string) {
   let error;
   if (!value) {
-    error = "Required field";
+    error = "Моим коллегам нужна эта информация!";
   }
   return error;
 }
@@ -23,9 +24,10 @@ function validateName(value: string) {
 function validateNumber(value: string) {
   let error;
   if (!value) {
-    error = "Required field";
-  } else if (!/^\d{12}$/.test(value)) {
-    error = "Invalid phone number. Example: 972 58 321 1234";
+    error = "Моим коллегам нужна эта информация!";
+  } else if (/^\d+$/.test(value)) {
+  } else {
+    error = "Вводи свой номер настоящий номер";
   }
   return error;
 }
@@ -34,12 +36,23 @@ const Result = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <h1 className={styles.header}>
-        Отлично, все вопросы пройдены! Введите ваше имя и номер телефона и
-        нажмите кнопку "Отправить результаты"! Получив их, мы сделаем
-        персональную подборку объектов именно под ваши запросы и потребности, а
-        наш эксперт свяжется с вами !
+    <div className="relative">
+      <img
+        className="w-56 h-56 absolute -left-48 -top-20"
+        src={henryParty}
+        alt="henry-image7"
+      />
+      <img
+        style={{ transform: "scale(-1, 1)" }}
+        className="w-56 h-56 absolute -right-48 top-20"
+        src={henryParty}
+        alt="henry-image7"
+      />
+      <h1 className="text-center">
+        Отлично, все вопросы позади! Введи свое имя и номер телефона и нажимай
+        кнопку "Отправить результаты"! Получив их, мои коллеги сделают
+        персональную подборку объектов именно под твои запросы и потребности, и
+        наш эксперт свяжется с тобой в ближайшее время!
       </h1>
       <Formik
         initialValues={{
@@ -55,7 +68,7 @@ const Result = () => {
         }}
       >
         {({ errors, touched, isValidating }) => (
-          <Form>
+          <Form className="w-full h-96 relative">
             <div className={styles.formBlock}>
               <Field
                 className={styles.formInput}

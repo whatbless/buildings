@@ -31,7 +31,7 @@ const Quiz = () => {
         {step > 0 && step < 7 && <p className={styles.steps}>{step}/6</p>}
         <div className={styles.progress}>
           <div
-            style={{ width: `${(step + 1) * 12.5}%` }}
+            style={{ width: `${step * 14.29}%` }}
             className={styles.progress__inner}
           ></div>
         </div>

@@ -7,12 +7,13 @@ import { Formik, Form, Field } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryHand from "./../../images/henry-hand.png";
 
 function checkedValidation(values: any) {
   console.log(values);
   let error;
   if (values.length === 0) {
-    error = "no one params choosen";
+    error = "Думаю здесь найдется нужный параметр.";
   }
   return error;
 }
@@ -28,8 +29,11 @@ const SecondStep = () => {
 
   const dispatch = useDispatch();
   return (
-    <div>
-      <h1 className={styles.header}>Выберите вид недвижимости</h1>
+    <div className="relative h-full w-full">
+      <div></div>
+      <h1 className={styles.header}>
+        Так держать! Здесь тебе нужно определиться с видом недвижимости.
+      </h1>
       <Formik
         initialValues={{
           propertyType: [],
@@ -41,21 +45,26 @@ const SecondStep = () => {
         }}
       >
         {({ errors, touched, isValidating }) => (
-          <Form name="FC" className="w-full">
-            {variants.map((variant) => (
+          <Form>
+            <div className="flex w-full justify-between items-center">
               <div>
-                <div className={styles.formCheckboxWrapper}>
-                  <Field
-                    className={styles.formCheckbox}
-                    name="propertyType"
-                    type="checkbox"
-                    value={variant.var}
-                    validate={checkedValidation}
-                  />
-                  <p className={styles.formCheckboxTitle}>{variant.var}</p>
-                </div>
+                {variants.map((variant) => (
+                  <div>
+                    <div className={styles.formCheckboxWrapper}>
+                      <Field
+                        className={styles.formCheckbox}
+                        name="propertyType"
+                        type="checkbox"
+                        value={variant.var}
+                        validate={checkedValidation}
+                      />
+                      <p className={styles.formCheckboxTitle}>{variant.var}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+              <img className="w-56 h-56" src={henryHand} alt="henry-image3" />
+            </div>
             <div className={styles.error}>
               {errors.propertyType && touched.propertyType && (
                 <div>{errors.propertyType}</div>
