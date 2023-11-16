@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/buildings/static/css/main.9f7f8b81.css",
-    "main.js": "/buildings/static/js/main.2857cc00.js",
+    "main.css": "/buildings/static/css/main.3829669d.css",
+    "main.js": "/buildings/static/js/main.de2f4b61.js",
     "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
     "static/media/logo.png": "/buildings/static/media/logo.22b12e32cbaca4a2f970.png",
     "static/media/slider1.jpeg": "/buildings/static/media/slider1.90d5d069eb63b82c8091.jpeg",
     "static/media/sky.jpg": "/buildings/static/media/sky.b82c0dd35e6efa37e235.jpg",
     "static/media/slider3.jpeg": "/buildings/static/media/slider3.fc9c72d20b35eaa76dd4.jpeg",
     "static/media/slider2.jpeg": "/buildings/static/media/slider2.ea9f42bca0178e2fa65d.jpeg",
-    "static/media/safety.jpeg": "/buildings/static/media/safety.dd4e84870617e3c3b30f.jpeg",
-    "static/media/parking.jpeg": "/buildings/static/media/parking.c58c780ee41ab76ca7e8.jpeg",
-    "static/media/balcony.jpeg": "/buildings/static/media/balcony.ec455267d97c4789467a.jpeg",
+    "static/media/henry-hi.png": "/buildings/static/media/henry-hi.ff3ebb803265adbc9a38.png",
+    "static/media/henry-party.png": "/buildings/static/media/henry-party.60c487fed4677df870ba.png",
+    "static/media/henry-v.png": "/buildings/static/media/henry-v.9c3fbc9172940b095538.png",
+    "static/media/henry-think.png": "/buildings/static/media/henry-think.dac028c10eccb33497bf.png",
+    "static/media/henry-hand.png": "/buildings/static/media/henry-hand.2ea85b13135f973de442.png",
+    "static/media/henry-love.png": "/buildings/static/media/henry-love.4e9acc955d2cd350406b.png",
+    "static/media/henry-grin.png": "/buildings/static/media/henry-grin.16c4606c37414d6c5a5d.png",
+    "static/media/henry-heart.png": "/buildings/static/media/henry-heart.eab7384c884d63ab0f36.png",
     "index.html": "/buildings/index.html",
-    "main.9f7f8b81.css.map": "/buildings/static/css/main.9f7f8b81.css.map",
-    "main.2857cc00.js.map": "/buildings/static/js/main.2857cc00.js.map",
+    "main.3829669d.css.map": "/buildings/static/css/main.3829669d.css.map",
+    "main.de2f4b61.js.map": "/buildings/static/js/main.de2f4b61.js.map",
     "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f7f8b81.css",
-    "static/js/main.2857cc00.js"
+    "static/css/main.3829669d.css",
+    "static/js/main.de2f4b61.js"
   ]
 }
