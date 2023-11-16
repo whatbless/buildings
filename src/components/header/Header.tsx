@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header className="text-regal-blue z-20 fixed w-full flex justify-center bg-white">
-      <div className="container mx-auto flex flex-row justify-between">
+      <div className="container mx-auto flex flex-row justify-between px-20">
         <a href="/" className="w-40">
           <img src={logo}></img>
         </a>

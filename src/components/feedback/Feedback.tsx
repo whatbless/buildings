@@ -16,8 +16,8 @@ const Feedback = () => {
 
   return (
     <section className={styles.wrapper}>
-      <div className="container mx-auto w-full h-full text-white">
-        <h1 className="text-6xl font-extralight w-full text-center py-10 text-black">
+      <div className="container mx-auto w-full h-full text-white px-20">
+        <h1 className="text-6xl font-extralight w-full text-center py-10 text-black ">
           Форма обратной связи
         </h1>
         <div className="flex h-full">
@@ -34,7 +34,7 @@ const Feedback = () => {
               </p>
             </div>
           ) : (
-            <div className="w-full flex flex-col justify-center items-center">
+            <div className="w-full flex flex-col justify-center items-center pb-10">
               <p className="w-1/2 text-black text-lg font-extralight">
                 Оставьте ваши контакты и наш специалист свяжется с вами в
                 течении 24 часов!

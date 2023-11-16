@@ -1,8 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setName, setNumber, setStep } from "../../redux/quizReducer";
+import {
+  setName,
+  setNumber,
+  setStep,
+  setAddition,
+} from "../../redux/quizReducer";
 import { Formik, Form, Field } from "formik";
 import styles from "./Quiz.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function validateName(value: string) {
   let error;
@@ -16,8 +24,8 @@ function validateNumber(value: string) {
   let error;
   if (!value) {
     error = "Required field";
-  } else if (!/^\d{11}$/.test(value)) {
-    error = "Invalid phone number. Example: 89329325555";
+  } else if (!/^\d{12}$/.test(value)) {
+    error = "Invalid phone number. Example: 972 58 321 1234";
   }
   return error;
 }
@@ -37,10 +45,12 @@ const Result = () => {
         initialValues={{
           name: "",
           number: "",
+          addition: "",
         }}
         onSubmit={(values) => {
           dispatch<any>(setName(values.name));
           dispatch<any>(setNumber(values.number));
+          dispatch<any>(setAddition(values.addition));
           dispatch<any>(setStep(7));
         }}
       >
@@ -70,9 +80,32 @@ const Result = () => {
                 {errors.number && touched.number && <div>{errors.number}</div>}
               </div>
             </div>
+            <div className={styles.inputBlock}>
+              <Field
+                className={styles.formArea}
+                name="addition"
+                component="textarea"
+              />
+              <span className={styles.formTitle}>
+                Дополнительная информация
+              </span>
+            </div>
+            <div className={styles.error}>
+              {errors.addition && touched.addition && (
+                <div>{errors.addition}</div>
+              )}
+            </div>
             <div className={styles.buttonWrapper}>
+              <button
+                className={styles.backButton}
+                onClick={() => {
+                  dispatch<any>(setStep(5));
+                }}
+              >
+                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+              </button>
               <button className={styles.button} type="submit">
-                Отправить ответы!
+                Далее <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

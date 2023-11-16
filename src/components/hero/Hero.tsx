@@ -21,6 +21,10 @@ const customStyles = {
     padding: "0",
     borderRadius: "35px",
   },
+  overlay: {
+    zIndex: 1000,
+    backgroundColor: "rgba(255,255,255, 0.5)",
+  },
 };
 
 const Hero = () => {
@@ -51,7 +55,7 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="container mx-auto w-full min-h-screen text-white">
+      <div className="container mx-auto w-full min-h-screen text-white px-20">
         <div className={styles.wrapper}>
           <div className={styles.slider}>
             <div

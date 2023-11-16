@@ -1,5 +1,4 @@
-const SET_REGION = "QUIZREDUCER_SET_REGION";
-const UPDATE_REGION = "QUIZREDUCER_UPDATE_REGION";
+const SET_REGIONS = "QUIZREDUCER_SET_REGIONS";
 const SET_STEP = "QUIZREDUCER_SET_STEP";
 const SET_PROPERTY_TYPE = "QUIZREDUCER_SET_PROPERTY_TYPE";
 const SET_ROOM_RANGE = "QUIZREDUCER_SET_ROOM_RANGE";
@@ -8,21 +7,19 @@ const SET_PRICE = "QUIZREDUCER_SET_PRICE";
 const SET_VALIDATIONS = "QUIZREDUCER_SET_VALIDATIONS";
 const SET_NAME = "QUIZREDUCER_SET_NAME";
 const SET_NUMBER = "QUIZREDUCER_SET_NUMBER";
+const SET_ADDITION = "QUIZREDUCER_SET_ADDITION";
 
 let initialState = {
-  regions: ["kyky", "pppp", "LLLL", "eeeeee"],
-  selectedRegion: "",
-  regionFormText: "",
+  regions: "",
   step: 0,
-  propertyType: "",
+  propertyType: [],
   roomRange: [1, 9],
   price: [0, 10000000],
-  havePark: false,
-  haveBalcony: false,
-  haveSafetyRoom: false,
+  validations: [],
   floorRange: [1, 45],
   name: "",
   number: "",
+  addition: "",
 };
 
 type initialStateType = typeof initialState;
@@ -32,17 +29,14 @@ const quizReducer = (
   action: any
 ): initialStateType => {
   switch (action.type) {
-    case SET_REGION:
-      return { ...state, selectedRegion: action.region };
+    case SET_REGIONS:
+      return { ...state, regions: action.regions };
 
     case SET_STEP:
       return { ...state, step: action.step };
 
-    case UPDATE_REGION:
-      return { ...state, regionFormText: action.text };
-
     case SET_PROPERTY_TYPE:
-      return { ...state, propertyType: action.variant };
+      return { ...state, propertyType: action.variants };
 
     case SET_ROOM_RANGE:
       return { ...state, roomRange: action.values };
@@ -59,12 +53,13 @@ const quizReducer = (
     case SET_NUMBER:
       return { ...state, number: action.number };
 
+    case SET_ADDITION:
+      return { ...state, addition: action.addition };
+
     case SET_VALIDATIONS:
       return {
         ...state,
-        havePark: action.payload[0],
-        haveBalcony: action.payload[1],
-        haveSafetyRoom: action.payload[2],
+        validations: action.payload,
       };
 
     default:
@@ -72,9 +67,14 @@ const quizReducer = (
   }
 };
 
-export const setRegionForm = (region: string) => ({
-  type: SET_REGION,
-  region,
+export const setRegionForm = (regions: string) => ({
+  type: SET_REGIONS,
+  regions,
+});
+
+export const setAddition = (addition: string) => ({
+  type: SET_ADDITION,
+  addition,
 });
 
 export const setStep = (step: number) => ({
@@ -82,14 +82,9 @@ export const setStep = (step: number) => ({
   step,
 });
 
-export const updateRegionFormText = (text: string) => ({
-  type: UPDATE_REGION,
-  text,
-});
-
-export const setPropertyType = (variant: string) => ({
+export const setPropertyType = (variants: string) => ({
   type: SET_PROPERTY_TYPE,
-  variant,
+  variants,
 });
 
 export const setName = (name: string) => ({

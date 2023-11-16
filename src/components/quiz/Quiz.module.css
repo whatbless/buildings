@@ -7,67 +7,146 @@
 .wrapper {
     width: 1000px;
     display: flex;
+    font-weight: 300;
     flex-direction: column;
     align-items: center;
-    background: gainsboro;
-    padding: 50px 100px;
-    border-radius: 30px;
-    box-shadow: inset 0px 0px 20px 5px rgba(255, 255, 255, 0.7)
+    background: white;
+    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
 }
 
 .content {
     width: 100%;
     height: 100%;
+    padding: 50px 100px;
 }
 
 .input {
-    border: 1px solid black;
-    border-radius: 10px;
+    border-bottom: black 1px solid;
     font-size: 20px;
-    background: gainsboro;
     color: black;
     padding: 10px;
     resize: none;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
 }
 
 .inputWrapper {
     display: flex;
     width: 100%;
+    justify-content: left;
+}
+
+.formPrice {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    font-size: 20px;
+    background: white;
+    color: black;
+    padding: 10px;
+    resize: none;
+}
+
+.priceWrap {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.formPriceWrapper {
+    position: relative;
+
+}
+
+.formPriceTitle {
+    position: absolute;
+    z-index: 0;
+    left: 30px;
+    top: -11px;
+    background: white;
+    padding: 0px 5px;
+}
+
+.steps {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.progressWrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: rgb(232, 232, 232);
+    padding: 50px 50px;
+    box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1)
 }
 
 .progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 10px;
-    border-radius: 30px;
-    background-color: rgb(232, 232, 232);
-    margin-bottom: 25px;
+    background-color: white;
     width: 100%;
 }
 
 .progress__inner {
     height: 100%;
-    border-radius: 30px;
     width: 80%;
-    background: rgb(18, 231, 48);
+    background: #0065cb;
     transition: all 0.3s ease-in-out;
-    background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, #0065cb 0%, #003972 100%);
 }
 
 .header {
-    text-align: center;
+    text-align: left;
+    font-size: 22px;
     margin-bottom: 40px;
+}
+
+.firstButtonWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    margin-top: 40px;
 }
 
 .buttonWrapper {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 40px;
 }
 
+.disabledButton {
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    width: max-content;
+    color: rgba(0, 0, 0, 0.35);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.backButton {
+    border: 1px solid black;
+    width: max-content;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
 .button {
-    background: black;
-    color: gainsboro;
+    border: 1px solid #0065cb;
+    width: max-content;
+    color: #0065cb;
     padding: 15px 30px;
     border-radius: 5px;
     transition: 0.5s ease;
@@ -75,9 +154,13 @@
 }
 
 .button:hover {
-    background: gainsboro;
-    color: black;
-    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.346);
+    box-shadow: 0px 0px 30px 4px #0065cb54;
+    transform: translateY(-5px);
+}
+
+.backButton:hover {
+    box-shadow: 0px 0px 30px 4px #00000054;
+    transform: translateY(-5px);
 }
 
 .list {
@@ -104,12 +187,13 @@
 .values {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 7px;
 }
 
 .value {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .difference {
@@ -197,30 +281,65 @@
 }
 
 .formInput {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 1px solid #0065cb82;
+    border-radius: 5px;
     width: 100%;
     font-size: 20px;
-    background: gainsboro;
+    background: white;
     color: black;
     padding: 10px;
     resize: none;
 }
 
+.inputBlock {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+
 .formBlock {
     position: relative;
     margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formTitle {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     left: 30px;
     top: -10px;
-    background: gainsboro;
+    background: white;
     padding: 0px 5px;
+    color: #0065cb;
+}
+
+.formArea {
+    border: 1px solid #0065cb82;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    background: white;
+    color: black;
+    padding: 10px;
+    height: 100px;
+    box-sizing: border-box;
+    resize: none;
 }
 
 .error {
     color: red;
+}
+
+.formCheckboxWrapper {
+    display: flex;
+    font-size: 20px;
+    color: #0065cb;
+}
+
+.formCheckbox {
+    margin-right: 20px;
+
 }

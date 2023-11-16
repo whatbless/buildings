@@ -1,49 +1,22 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setRegionForm,
-  updateRegionFormText,
-  setStep,
-} from "../../redux/quizReducer";
-import { RootState } from "../../redux/store";
+import { setRegionForm, setStep } from "../../redux/quizReducer";
 import styles from "./Quiz.module.css";
-import { Popover } from "react-tiny-popover";
+import { Formik, Form, Field } from "formik";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+function requireValidate(value: string) {
+  let error;
+  if (!value) {
+    error = "Required field";
+  }
+  return error;
+}
 
 const FirstStep = () => {
-  const regionFormText = useSelector(
-    (state: RootState) => state.quiz.regionFormText
-  );
-  const regions = useSelector((state: RootState) => state.quiz.regions);
-
   const dispatch = useDispatch();
-
-  const addRegion = () => {
-    console.log(regionFormText);
-    const text: string = regionFormText;
-    dispatch<any>(setRegionForm(text));
-    dispatch<any>(setStep(2));
-  };
-
-  const regionFormChange = (e: any) => {
-    const text = e.target.value;
-    dispatch<any>(updateRegionFormText(text));
-  };
-
-  const textFormChange = (text: string) => {
-    dispatch<any>(updateRegionFormText(text));
-  };
-
-  const [formFocus, setFormFocus] = useState(false);
-
-  const focusHandler = () => {
-    setFormFocus(true);
-  };
-
-  const blurHandler = () => {
-    setTimeout(() => {
-      setFormFocus(false);
-    }, 100);
-  };
 
   return (
     <div>
@@ -51,42 +24,43 @@ const FirstStep = () => {
         Укажите район, в котором бы вы хотели себе недвижимость
       </h1>
       <div>
-        <Popover
-          isOpen={formFocus}
-          positions={["bottom"]}
-          content={
-            <div>
-              {regions.map(
-                (region, index) =>
-                  region.includes(regionFormText as string) && (
-                    <div
-                      key={index}
-                      className={styles.regions}
-                      onClick={() => textFormChange(region)}
-                    >
-                      {region}
-                    </div>
-                  )
-              )}
-            </div>
-          }
+        <Formik
+          initialValues={{
+            regions: "",
+          }}
+          onSubmit={(values: any) => {
+            console.log(values);
+            dispatch<any>(setRegionForm(values.regions));
+            dispatch<any>(setStep(2));
+          }}
         >
-          <div className={styles.inputWrapper}>
-            <input
-              type="text"
-              className={styles.input}
-              onBlur={blurHandler}
-              onFocus={focusHandler}
-              value={regionFormText}
-              onChange={regionFormChange}
-            />
-          </div>
-        </Popover>
-        <div className={styles.buttonWrapper}>
-          <div className={styles.button} onClick={addRegion}>
-            Следующий вопрос
-          </div>
-        </div>
+          {({ errors, touched, isValidating }) => (
+            <Form className="w-full">
+              <div className={styles.inputWrapper}>
+                <Field
+                  validate={requireValidate}
+                  className={styles.input}
+                  name="regions"
+                  component="input"
+                  placeholder="Перечислите районы через запятую. Пример: Кировский, Октябрьский, Ленинский, Железнодорожный"
+                />
+              </div>
+              <div className={styles.error}>
+                {errors.regions && touched.regions && (
+                  <div>{errors.regions}</div>
+                )}
+              </div>
+              <div className={styles.buttonWrapper}>
+                <button disabled={true} className={styles.disabledButton}>
+                  <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                </button>
+                <button className={styles.button} type="submit">
+                  Далее <FontAwesomeIcon icon={faArrowRight} />
+                </button>
+              </div>
+            </Form>
+          )}
+        </Formik>
       </div>
     </div>
   );

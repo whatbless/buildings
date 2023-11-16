@@ -13,7 +13,7 @@ const Start = () => {
         подойдёт именно вам! Получив ответы на эти вопросы, мы будем знать какие
         объекты вам подойдут лучше всего».
       </h1>
-      <div className={styles.buttonWrapper}>
+      <div className={styles.firstButtonWrapper}>
         <div
           className={styles.button}
           onClick={() => dispatch<any>(setStep(1))}

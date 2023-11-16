@@ -4,6 +4,9 @@ import ReactSlider from "react-slider";
 import { setStep, setFloorRange } from "../../redux/quizReducer";
 import "./../../index.css";
 import styles from "./Quiz.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const min = 1;
 const max = 45;
@@ -21,9 +24,10 @@ const FifthStep = () => {
   return (
     <div>
       <h1 className={styles.header}>Этаж</h1>
-      <h3 className={styles.difference}>
-        Диапазон: {Math.abs(values[0] - values[1])}
-      </h3>
+      <div className={styles.values}>
+        <h4 className={styles.value}>от</h4>
+        <h4 className={styles.value}>до</h4>
+      </div>
       <ReactSlider
         className={"slider"}
         min={min}
@@ -37,9 +41,17 @@ const FifthStep = () => {
         <h4 className={styles.value}>{values[1]}</h4>
       </div>
       <div className={styles.buttonWrapper}>
-        <div className={styles.button} onClick={handleClick}>
-          Следущий вопрос
-        </div>
+        <button
+          className={styles.backButton}
+          onClick={() => {
+            dispatch<any>(setStep(4));
+          }}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} /> Назад
+        </button>
+        <button className={styles.button} onClick={handleClick}>
+          Далее <FontAwesomeIcon icon={faArrowRight} />
+        </button>
       </div>
     </div>
   );

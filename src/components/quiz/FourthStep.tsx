@@ -4,93 +4,79 @@ import ReactSlider from "react-slider";
 import { setStep, setPrice, setValidations } from "../../redux/quizReducer";
 import "./../../index.css";
 import styles from "./Quiz.module.css";
-import checker from "./../../images/check.png";
+import { Formik, Form, Field } from "formik";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-const min = 0;
-const max = 10000000;
+const validations = [
+  "Наличие стоянки",
+  "Наличие балкона",
+  "Наличие комнаты безопасности",
+];
 
 const FourthStep = () => {
-  const [values, setValues] = useState([min, max]);
-
   const dispatch = useDispatch();
-
-  const validations = [false, false, false];
-
-  const handleParking = (e: any) => {
-    validations[0] = e.target.checked;
-  };
-  const handleBalcony = (e: any) => {
-    validations[1] = e.target.checked;
-  };
-  const handleSafetyRoom = (e: any) => {
-    validations[2] = e.target.checked;
-  };
-
-  const handleClick = () => {
-    dispatch<any>(setPrice(values));
-    dispatch<any>(setValidations(validations));
-    dispatch<any>(setStep(5));
-  };
-
   return (
     <div>
       <h1 className={styles.header}>Цена</h1>
-      <h3 className={styles.difference}>
-        Диапазон: {Math.abs(values[0] - values[1])}
-      </h3>
-      <ReactSlider
-        className={"slider"}
-        min={min}
-        max={max}
-        value={values}
-        onChange={setValues}
-        step={100}
-      />
-      <div className={styles.values}>
-        <h4 className={styles.value}>{values[0]}</h4>
-        <h4 className={styles.value}>{values[1]}</h4>
-      </div>
-      <div className={styles.checkBlocks}>
-        <div className={styles.checkBlock1}>
-          <input
-            className={styles.checkbox}
-            type="checkbox"
-            onChange={handleParking}
-          />
-          <div className={styles.div}>
-            <img className={styles.image} src={checker} alt="check" />
-            <span className={styles.span}>Наличие стоянки</span>
-          </div>
-        </div>
-        <div className={styles.checkBlock2}>
-          <input
-            className={styles.checkbox}
-            type="checkbox"
-            onChange={handleBalcony}
-          />
-          <div className={styles.div}>
-            <div className={styles.background}></div>
-            <img className={styles.image} src={checker} alt="check" />
-            <span className={styles.span}>Наличие балкона</span>
-          </div>
-        </div>
-        <div className={styles.checkBlock3}>
-          <input
-            className={styles.checkbox}
-            type="checkbox"
-            onChange={handleSafetyRoom}
-          />
-          <div className={styles.div}>
-            <img className={styles.image} src={checker} alt="check" />
-            <span className={styles.span}>Наличие комнаты безопасности</span>
-          </div>
-        </div>
-      </div>
-      <div className={styles.buttonWrapper}>
-        <div className={styles.button} onClick={handleClick}>
-          Следущий вопрос
-        </div>
-      </div>
+      <Formik
+        initialValues={{
+          vals: [],
+          minPrice: 0,
+          maxPrice: 1000000,
+        }}
+        onSubmit={(values: any) => {
+          console.log(values);
+          dispatch<any>(setPrice([values.minPrice, values.maxPrice]));
+          dispatch<any>(setValidations(values.vals));
+          dispatch<any>(setStep(5));
+        }}
+      >
+        {({ errors, touched, isValidating }) => (
+          <Form className="w-full">
+            <div className={styles.priceWrap}>
+              <div className={styles.formPriceWrapper}>
+                <p className={styles.formPriceTitle}>от</p>
+                <Field className={styles.formPrice} name="minPrice" />
+              </div>
+              <div className={styles.formPriceWrapper}>
+                <p className={styles.formPriceTitle}>до</p>
+                <Field className={styles.formPrice} name="maxPrice" />
+              </div>
+            </div>
+            {validations.map((val) => (
+              <div>
+                <div className={styles.formCheckboxWrapper}>
+                  <Field
+                    className={styles.formCheckbox}
+                    name="vals"
+                    type="checkbox"
+                    value={val}
+                  />
+                  <p className={styles.formCheckboxTitle}>{val}</p>
+                </div>
+              </div>
+            ))}
+            <div className={styles.error}>
+              {errors.vals && touched.vals && <div>{errors.vals}</div>}
+            </div>
+            <div className={styles.buttonWrapper}>
+              <button
+                className={styles.backButton}
+                onClick={() => {
+                  dispatch<any>(setStep(3));
+                }}
+              >
+                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+              </button>
+              <button className={styles.button} type="submit">
+                Далее <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 };
