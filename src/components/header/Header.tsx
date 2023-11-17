@@ -7,9 +7,9 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   const navs = [
-    { title: "О нас" },
-    { title: "Получить консультацию" },
-    { title: "Контакты" },
+    { title: "О нас", anchor: "#about" },
+    { title: "Получить консультацию", anchor: "#question" },
+    { title: "Контакты", anchor: "contacts" },
   ];
 
   const socials = [
@@ -26,7 +26,9 @@ const Header = () => {
         </a>
         <div className="flex items-center">
           {navs.map((nav) => (
-            <h1 className={styles.navigation}>{nav.title}</h1>
+            <a href={nav.anchor} className={styles.navigation}>
+              {nav.title}
+            </a>
           ))}
         </div>
         <div className="flex items-center">

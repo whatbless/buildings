@@ -2,12 +2,15 @@
     margin-left: 15px;
     margin-right: 15px;
     font-weight: 700;
-    padding: 4px;
+    padding: 5px 10px;
+    border-radius: 10px;
     text-transform: uppercase;
     cursor: pointer;
     color: #dc1c2d;
+    transition: 0.3s all;
 }
 
 .navigation:hover {
-    border-bottom: 1px solid white;
+    color: white;
+    background: #dc1c2c81;
 }

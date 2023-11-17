@@ -8,6 +8,7 @@ const SET_VALIDATIONS = "QUIZREDUCER_SET_VALIDATIONS";
 const SET_NAME = "QUIZREDUCER_SET_NAME";
 const SET_NUMBER = "QUIZREDUCER_SET_NUMBER";
 const SET_ADDITION = "QUIZREDUCER_SET_ADDITION";
+const SET_EMAIL = "QUIZREDUCER_SET_EMAIL";
 
 let initialState = {
   regions: "",
@@ -20,6 +21,7 @@ let initialState = {
   name: "",
   number: "",
   addition: "",
+  email: "",
 };
 
 type initialStateType = typeof initialState;
@@ -55,6 +57,9 @@ const quizReducer = (
 
     case SET_ADDITION:
       return { ...state, addition: action.addition };
+
+    case SET_EMAIL:
+      return { ...state, email: action.email };
 
     case SET_VALIDATIONS:
       return {
@@ -95,6 +100,11 @@ export const setName = (name: string) => ({
 export const setNumber = (number: string) => ({
   type: SET_NUMBER,
   number,
+});
+
+export const setEmail = (email: string) => ({
+  type: SET_EMAIL,
+  email,
 });
 
 export const setRoomRange = (values: Array<number>) => ({

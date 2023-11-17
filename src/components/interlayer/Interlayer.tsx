@@ -1,0 +1,21 @@
+import React from "react";
+
+const Interlayer = () => {
+  return (
+    <section className="bg-pastel-grey">
+      <div className="container mx-auto w-full py-7">
+        <div className="w-full flex justify-center">
+          <a
+            href="#questions"
+            className="text-white bg-regal-blue px-10 py-5 font-extralight"
+          >
+            Ответить на 6 вопросов и получить персональную подборку
+            недвижимости!
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Interlayer;

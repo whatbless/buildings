@@ -87,7 +87,7 @@ const Hero = () => {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             style={customStyles}
-            contentLabel="Example Modal"
+            contentLabel="Modal"
           >
             <Quiz />
           </Modal>

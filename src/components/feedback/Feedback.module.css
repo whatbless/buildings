@@ -17,19 +17,19 @@
     background: rgb(232, 232, 232);
     color: black;
     padding: 10px;
-    height: 200px;
+    height: 100px;
     box-sizing: border-box;
     resize: none;
 }
 
 .inputBlock {
     position: relative;
-    width: 50%;
+    width: 100%;
 }
 
 .formBlock {
     position: relative;
-    margin-top: 30px;
+    margin-top: 15px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .button {
