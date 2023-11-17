@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/buildings/static/css/main.3829669d.css",
-    "main.js": "/buildings/static/js/main.de2f4b61.js",
+    "main.css": "/buildings/static/css/main.5bb15a3b.css",
+    "main.js": "/buildings/static/js/main.68c3d81b.js",
     "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
     "static/media/logo.png": "/buildings/static/media/logo.22b12e32cbaca4a2f970.png",
+    "static/media/sky.png": "/buildings/static/media/sky.6cad519b96e5e34b15a7.png",
     "static/media/slider1.jpeg": "/buildings/static/media/slider1.90d5d069eb63b82c8091.jpeg",
-    "static/media/sky.jpg": "/buildings/static/media/sky.b82c0dd35e6efa37e235.jpg",
+    "static/media/buenos.jpeg": "/buildings/static/media/buenos.a7604d780f6c2ad065d2.jpeg",
+    "static/media/portu.jpeg": "/buildings/static/media/portu.fbb46a164d057aab1041.jpeg",
     "static/media/slider3.jpeg": "/buildings/static/media/slider3.fc9c72d20b35eaa76dd4.jpeg",
+    "static/media/lissabon.jpeg": "/buildings/static/media/lissabon.eb11391448cc207dada6.jpeg",
+    "static/media/braga.jpeg": "/buildings/static/media/braga.cf14fa02de8ba99423be.jpeg",
+    "static/media/loresh.jpeg": "/buildings/static/media/loresh.79d8387e3f07b0611edb.jpeg",
     "static/media/slider2.jpeg": "/buildings/static/media/slider2.ea9f42bca0178e2fa65d.jpeg",
+    "static/media/rosario.jpeg": "/buildings/static/media/rosario.094165c20a601f79bec1.jpeg",
+    "static/media/mendosa.jpeg": "/buildings/static/media/mendosa.7d8df036dfb5e373ade4.jpeg",
+    "static/media/kordova.jpeg": "/buildings/static/media/kordova.b5e57e8240d5e6ac22e3.jpeg",
+    "static/media/like.gif": "/buildings/static/media/like.8f7332d61fcfcb2b4485.gif",
     "static/media/henry-hi.png": "/buildings/static/media/henry-hi.ff3ebb803265adbc9a38.png",
     "static/media/henry-party.png": "/buildings/static/media/henry-party.60c487fed4677df870ba.png",
     "static/media/henry-v.png": "/buildings/static/media/henry-v.9c3fbc9172940b095538.png",
@@ -17,12 +26,12 @@
     "static/media/henry-grin.png": "/buildings/static/media/henry-grin.16c4606c37414d6c5a5d.png",
     "static/media/henry-heart.png": "/buildings/static/media/henry-heart.eab7384c884d63ab0f36.png",
     "index.html": "/buildings/index.html",
-    "main.3829669d.css.map": "/buildings/static/css/main.3829669d.css.map",
-    "main.de2f4b61.js.map": "/buildings/static/js/main.de2f4b61.js.map",
+    "main.5bb15a3b.css.map": "/buildings/static/css/main.5bb15a3b.css.map",
+    "main.68c3d81b.js.map": "/buildings/static/js/main.68c3d81b.js.map",
     "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3829669d.css",
-    "static/js/main.de2f4b61.js"
+    "static/css/main.5bb15a3b.css",
+    "static/js/main.68c3d81b.js"
   ]
 }
