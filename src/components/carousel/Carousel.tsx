@@ -11,6 +11,8 @@ import loresh from "./../../images/loresh.jpeg";
 import kordova from "./../../images/kordova.jpeg";
 import mendosa from "./../../images/mendosa.jpeg";
 import rosario from "./../../images/rosario.jpeg";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const customStyles = {
   content: {
@@ -221,25 +223,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={loreshModalIsOpen}
@@ -263,25 +255,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={portuModalIsOpen}
@@ -305,25 +287,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={buenosModalIsOpen}
@@ -349,25 +321,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={rosarioModalIsOpen}
@@ -393,25 +355,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={kordovaModalIsOpen}
@@ -437,25 +389,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={mendosaModalIsOpen}
@@ -481,25 +423,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
         <Modal
           isOpen={bragaModalIsOpen}
@@ -523,25 +455,15 @@ const Carousel = () => {
               doloremque corrupti nulla ea. Consequatur at maiores quibusdam
               dicta voluptates itaque ex, deleniti culpa dolorem non alias quos,
               unde sed dolor beatae pariatur asperiores molestiae explicabo
-              aspernatur numquam porro harum minus sint. Culpa non maiores
-              adipisci illo, amet ea! Nisi velit unde architecto, quisquam
-              adipisci ut incidunt cum dolorem itaque possimus vel alias, sit
-              debitis quaerat accusamus odio maiores vero dignissimos quos nemo
-              rerum. Sint quibusdam sapiente dolores beatae ipsam tempora
-              voluptas voluptate obcaecati numquam dolore. Ipsa, fuga debitis
-              beatae quisquam, est, at asperiores quibusdam repellat vitae sint
-              ratione eius! Iusto dolorum fugiat assumenda voluptates ducimus
-              obcaecati expedita laudantium. Ipsam, distinctio excepturi vel
-              rem, incidunt ea beatae dolorem culpa facere dolores quam
-              repudiandae ut nisi quas repellendus temporibus neque. Voluptates!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              eaque autem aspernatur debitis ab placeat, facilis ex rem cum
-              mollitia dolorum nesciunt architecto numquam velit soluta quasi
-              laudantium qui quia cupiditate, iure corporis facere sit itaque
-              aliquid! Iure autem tenetur exercitationem placeat nesciunt! Non,
-              perferendis repellendus?
+              aspernatur numquam porro harum minus sint.
             </p>
           </section>
+          <button className="absolute z-20 right-5 top-5" onClick={closeModal}>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="text-2xl hover:text-regal-red"
+            />
+          </button>
         </Modal>
       </div>
     </section>
