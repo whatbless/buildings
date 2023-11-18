@@ -1,25 +1,18 @@
-.formInput {
-    border: 1px solid #0065cb82;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 20px;
-    background: rgb(232, 232, 232);
-    color: black;
-    padding: 10px;
-    resize: none;
-}
-
 .formArea {
-    border: 1px solid #0065cb82;
-    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: 300;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     background: rgb(232, 232, 232);
     color: black;
     padding: 10px;
     height: 100px;
     box-sizing: border-box;
     resize: none;
+}
+
+.formArea:focus {
+    outline: none;
 }
 
 .inputBlock {
@@ -36,14 +29,25 @@
     align-items: center;
 }
 
-.formTitle {
-    position: absolute;
-    z-index: 0;
-    left: 30px;
-    top: -10px;
+.input {
+    border-bottom: black 1px solid;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    padding: 10px;
+    resize: none;
+    width: 100%;
     background: rgb(232, 232, 232);
-    padding: 0px 5px;
-    color: #0065cb;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.inputWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: left;
 }
 
 .error {

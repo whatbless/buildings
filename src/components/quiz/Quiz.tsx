@@ -13,20 +13,32 @@ import End from "./End";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const customStyles = {
+  width: "1000px",
+  height: "650px",
+  display: "flex",
+  fontWeight: "300",
+  flexDirection: "column",
+  alignItems: "center",
+  background: "white",
+  boxShadow: "inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1)",
+  overflow: "hidden",
+};
+
 const Quiz = () => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 
   return (
-    <div className={styles.wrapper}>
+    <div className="h-650 2xl:w-[1336px] xl:w-[1080px] lg:w-[824px] mx-auto flex flex-col items-center bg-white overflow-hidden">
       <div className={styles.progressWrap}>
-        <h1 className="text-lg font-extralight">
+        <h1 className="md:text-lg sm:text-md text-sm font-extralight">
           <FontAwesomeIcon
             icon={faClipboard}
             className="pr-4 text-2xl text-regal-blue"
           />
           Пройдите опрос и получите{" "}
-          <span className="text-regal-blue ">бесплатную консультацию</span> от
-          наших экспертов!
+          <span className="text-regal-blue">консультацию</span> от наших
+          экспертов!
         </h1>
         {step > 0 && step < 7 && <p className={styles.steps}>{step}/6</p>}
         <div className={styles.progress}>
@@ -36,7 +48,7 @@ const Quiz = () => {
           ></div>
         </div>
       </div>
-      <div className={styles.content}>
+      <div className="w-full h-full md:px-10 md:py-10 px-2 py-10">
         {step === 0 && <Start />}
         {step === 1 && <FirstStep />}
         {step === 2 && <SecondStep />}

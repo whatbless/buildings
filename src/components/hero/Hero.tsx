@@ -3,6 +3,8 @@ import styles from "./Hero.module.css";
 import cx from "classnames";
 import Modal from "react-modal";
 import Quiz from "../quiz/Quiz";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const images = [
   <img className={styles.image1} key="{slider1}"></img>,
@@ -75,13 +77,18 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 min-h-screen flex flex-col justify-center">
+        <div className="2xl:w-1/2 xl:w-2/3 md:w-5/6 xl:text-4xl md:text-left md:text-3xl text-2xl text-center w-full min-h-screen flex flex-col justify-center">
           <h1 className={styles.header}>
             Пройдите краткий опрос и получите персональную консультацию по
             выбору лучшей недвижимости в израиле!
           </h1>
-          <div className={styles.button} onClick={openModal}>
-            Пройти опрос!
+          <div>
+            <button
+              className="text-white bg-regal-red text-xl rounded-md font-extralight w-max lg:px-12 lg:py-6 px-8 py-4 mt-10 duration-500 hover:-translate-y-1.5 hover:shadow-hero"
+              onClick={openModal}
+            >
+              Пройти опрос!
+            </button>
           </div>
           <Modal
             isOpen={modalIsOpen}
@@ -90,6 +97,15 @@ const Hero = () => {
             contentLabel="Modal"
           >
             <Quiz />
+            <button
+              className="absolute z-20 right-5 top-5"
+              onClick={closeModal}
+            >
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="text-2xl hover:text-regal-red"
+              />
+            </button>
           </Modal>
         </div>
       </div>

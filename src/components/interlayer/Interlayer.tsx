@@ -6,8 +6,8 @@ const Interlayer = () => {
       <div className="container mx-auto w-full py-7">
         <div className="w-full flex justify-center">
           <a
-            href="#questions"
-            className="text-white bg-regal-blue px-10 py-5 font-extralight"
+            href="#question"
+            className="text-white bg-regal-blue px-10 py-5 font-extralight text-center"
           >
             Ответить на 6 вопросов и получить персональную подборку
             недвижимости!

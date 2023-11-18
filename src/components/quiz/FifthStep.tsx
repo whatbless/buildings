@@ -24,7 +24,7 @@ const FifthStep = () => {
 
   return (
     <div className="w-full relative h-full">
-      <h1 className={styles.header}>Этаж</h1>
+      <h1 className="md:text-lg text-md text-center mb-8">Этаж</h1>
       <div className={styles.values}>
         <h4 className={styles.value}>от</h4>
         <h4 className={styles.value}>до</h4>
@@ -42,8 +42,12 @@ const FifthStep = () => {
         <h4 className={styles.value}>{values[1]}</h4>
       </div>
       <div className="w-full flex flex-col items-center">
-        <img className="w-56 h-56" src={henryGrin} alt="henry-image6" />
-        <p className="text-center">
+        <img
+          className="md:w-60 md:h-60 w-36 h-36"
+          src={henryGrin}
+          alt="henry-image6"
+        />
+        <p className="text-center md:text-lg text-md">
           Мда уж, достаточно философский вопрос. Если тебе без разницы на каком
           этаже жить, то нажимай далее, мои коллеги сами разберутся
         </p>

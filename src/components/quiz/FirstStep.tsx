@@ -21,11 +21,15 @@ const FirstStep = () => {
 
   return (
     <div className="relative w-full h-full">
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center md:text-lg text-md text-center">
         <h1>Я рад что ты остаешься со мной, ответим на несколько вопросов</h1>
-        <img className="w-56 h-56" src={henryLove} alt="henry-image2" />
+        <img
+          className="md:w-60 md:h-60 w-36 h-36"
+          src={henryLove}
+          alt="henry-image2"
+        />
       </div>
-      <h1 className="text-center">
+      <h1 className="text-center md:texl-lg text-md">
         Укажи район, в котором ты бы хотел{"(а)"} себе недвижимость
       </h1>
       <div>
@@ -44,13 +48,13 @@ const FirstStep = () => {
               <div className={styles.inputWrapper}>
                 <Field
                   validate={requireValidate}
-                  className={styles.input}
+                  className="border-b border-black md:text-lg text-md text-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="regions"
                   component="input"
                   placeholder="Перечислите районы через запятую. Пример: Кировский, Октябрьский, Ленинский, Железнодорожный"
                 />
               </div>
-              <div className={styles.error}>
+              <div className="text-regal-red font-extralight md:text-lg text-md text-center">
                 {errors.regions && touched.regions && (
                   <div>{errors.regions}</div>
                 )}

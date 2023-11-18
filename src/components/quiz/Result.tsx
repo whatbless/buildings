@@ -36,19 +36,19 @@ const Result = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <img
-        className="w-56 h-56 absolute -left-48 -top-20"
+        className="md:w-60 md:h-60 w-36 h-36 absolute md:-left-36 -left-20 md:-top-40 -top-0 z-10"
         src={henryParty}
         alt="henry-image7"
       />
       <img
         style={{ transform: "scale(-1, 1)" }}
-        className="w-56 h-56 absolute -right-48 top-20"
+        className="md:w-60 md:h-60 w-36 h-36 absolute md:-right-36 -right-20 md:top-36 top-52 z-10"
         src={henryParty}
         alt="henry-image7"
       />
-      <h1 className="text-center">
+      <h1 className="text-center md:text-lg sm:text-md text-sm px-5">
         Отлично, все вопросы позади! Введи свое имя и номер телефона и нажимай
         кнопку "Отправить результаты"! Получив их, мои коллеги сделают
         персональную подборку объектов именно под твои запросы и потребности, и
@@ -68,42 +68,44 @@ const Result = () => {
         }}
       >
         {({ errors, touched, isValidating }) => (
-          <Form className="w-full h-96 relative">
+          <Form>
             <div className={styles.formBlock}>
               <Field
-                className={styles.formInput}
+                className="border-regal-blue border rounded-md w-full md:text-lg sm:text-md text-sm bg-white font-extralight px-3.5 py-2.5 resize-none"
                 name="name"
                 validate={validateName}
               />
-              <span className={styles.formTitle}>Ваше имя</span>
-              <div className={styles.error}>
+              <span className="absolute md:text-lg sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue font-extralight">
+                Ваше имя
+              </span>
+              <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
                 {errors.name && touched.name && <div>{errors.name}</div>}
               </div>
             </div>
             <div className={styles.formBlock}>
               <Field
-                className={styles.formInput}
+                className="border-regal-blue border rounded-md w-full md:text-lg sm:text-md text-sm bg-white font-extralight px-3.5 py-2.5 resize-none"
                 name="number"
                 validate={validateNumber}
               />
-              <span className={styles.formTitle}>
+              <span className="absolute md:text-lg sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue font-extralight">
                 Ваш номер телефона {"( WhatsApp )"}
               </span>
-              <div className={styles.error}>
+              <div className="text-regal-red font-extralight md:text-lg sm:text-md text-sm text-center">
                 {errors.number && touched.number && <div>{errors.number}</div>}
               </div>
             </div>
             <div className={styles.inputBlock}>
               <Field
-                className={styles.formArea}
+                className="border-regal-blue border rounded-md w-full md:text-lg sm:text-md text-sm bg-white font-extralight px-3.5 py-2.5 h-24 resize-none box-border"
                 name="addition"
                 component="textarea"
               />
-              <span className={styles.formTitle}>
+              <span className="absolute md:text-lg sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue font-extralight">
                 Дополнительная информация
               </span>
             </div>
-            <div className={styles.error}>
+            <div className="text-regal-red font-extralight md:text-lg sm:text-md text-sm text-center">
               {errors.addition && touched.addition && (
                 <div>{errors.addition}</div>
               )}

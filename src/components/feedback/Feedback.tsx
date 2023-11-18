@@ -28,10 +28,10 @@ const Feedback = () => {
   return (
     <section className={styles.wrapper}>
       <div className="container mx-auto w-full px-20">
-        <h1 className="text-4xl font-extralight w-full text-center py-10">
+        <h1 className="md:text-4xl text-3xl font-extralight w-full text-center py-10">
           Какую недвижимость вы ищите?
         </h1>
-        <p className="text-lg font-extralight text-center w-full">
+        <p className="md:text-lg texl-md font-extralight text-center w-full">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in
           dolore ab. Voluptates quidem quod, accusamus ullam, adipisci aut
           fugiat iusto magnam asperiores ipsam earum, sapiente consequuntur
@@ -39,8 +39,8 @@ const Feedback = () => {
           delectus iure earum quam eaque, sunt dicta quidem recusandae, qui, eum
           voluptas aut atque animi?
         </p>
-        <div className="flex h-max">
-          <div className="w-1/2 mt-32 mb-20 px-20">
+        <div className="flex xl:flex-row flex-col h-max">
+          <div className="xl:w-1/2 w-full xl:mt-32 sm:block hidden mt-10 mb-20 px-20">
             <img src={sky} alt="feedback-image" />
           </div>
           {isSended ? (
@@ -54,7 +54,7 @@ const Feedback = () => {
               </p>
             </div>
           ) : (
-            <div className="w-1/2 flex flex-col mt-32 items-center">
+            <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center xl:mt-32 sm:mt-0 mt-20 xl:mb-0 mb-16 items-center">
               <p className="w-full font-extralight">
                 Оставьте ваши контакты и наш специалист свяжется с вами в
                 течении 24 часов!
@@ -75,13 +75,13 @@ const Feedback = () => {
                 {({ errors, touched, isValidating }) => (
                   <Form className="w-full">
                     <div className={styles.formBlock}>
-                      <div className={styles.inputBlock}>
+                      <div className={styles.inputWrapper}>
                         <Field
-                          className={styles.formInput}
+                          className={styles.input}
                           name="name"
                           validate={requireValidate}
+                          placeholder="Ваше имя"
                         />
-                        <span className={styles.formTitle}>Ваше имя</span>
                       </div>
                       <div className={styles.error}>
                         {errors.name && touched.name && (
@@ -90,15 +90,13 @@ const Feedback = () => {
                       </div>
                     </div>
                     <div className={styles.formBlock}>
-                      <div className={styles.inputBlock}>
+                      <div className={styles.inputWrapper}>
                         <Field
-                          className={styles.formInput}
+                          className={styles.input}
                           name="number"
                           validate={requireValidate}
+                          placeholder="Ваш номер телефона (WhatsApp)"
                         />
-                        <span className={styles.formTitle}>
-                          Ваш номер телефона {"( WhatsApp )"}
-                        </span>
                       </div>
                       <div className={styles.error}>
                         {errors.number && touched.number && (
@@ -107,15 +105,13 @@ const Feedback = () => {
                       </div>
                     </div>
                     <div className={styles.formBlock}>
-                      <div className={styles.inputBlock}>
+                      <div className={styles.inputWrapper}>
                         <Field
-                          className={styles.formInput}
+                          className={styles.input}
                           name="email"
                           validate={validateEmail}
+                          placeholder="Ваша почта (email)"
                         />
-                        <span className={styles.formTitle}>
-                          Ваша почта {"( email )"}
-                        </span>
                       </div>
                       <div className={styles.error}>
                         {errors.email && touched.email && (
@@ -124,15 +120,13 @@ const Feedback = () => {
                       </div>
                     </div>
                     <div className={styles.formBlock}>
-                      <div className={styles.inputBlock}>
+                      <div className={styles.inputWrapper}>
                         <Field
-                          className={styles.formInput}
+                          className={styles.input}
                           name="purpose"
                           validate={requireValidate}
+                          placeholder="Для каких целей вы ищете недвижимость"
                         />
-                        <span className={styles.formTitle}>
-                          Для каких целей вы ищете недвижимость
-                        </span>
                       </div>
                       <div className={styles.error}>
                         {errors.purpose && touched.purpose && (
@@ -156,10 +150,8 @@ const Feedback = () => {
                           className={styles.formArea}
                           name="addition"
                           component="textarea"
+                          placeholder="Дополнительная информация"
                         />
-                        <span className={styles.formTitle}>
-                          Дополнительная информация
-                        </span>
                       </div>
                       <div className={styles.error}>
                         {errors.addition && touched.addition && (

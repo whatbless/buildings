@@ -43,7 +43,7 @@ const FourthStep = () => {
         }}
       >
         {({ errors, touched, isValidating }) => (
-          <div className="w-full flex justify-between items-center">
+          <div className="w-full flex md:flex-row flex-col justify-between items-center">
             <Form>
               <div className={styles.priceWrap}>
                 <div className={styles.formPriceWrapper}>
@@ -65,9 +65,9 @@ const FourthStep = () => {
               </div>
               {validations.map((val) => (
                 <div>
-                  <div className={styles.formCheckboxWrapper}>
+                  <div className="md:text-lg text-md font-extralight flex text-regal-blue">
                     <Field
-                      className={styles.formCheckbox}
+                      className="mr-5"
                       name="vals"
                       type="checkbox"
                       value={val}
@@ -76,7 +76,7 @@ const FourthStep = () => {
                   </div>
                 </div>
               ))}
-              <div className={styles.error}>
+              <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
                 {(errors.maxPrice && touched.maxPrice && (
                   <div>{errors.minPrice}</div>
                 )) ||
@@ -98,8 +98,12 @@ const FourthStep = () => {
                 </button>
               </div>
             </Form>
-            <div>
-              <img className="w-56 h-56" src={henryV} alt="henry-image5" />
+            <div className="md:pt-0 pt-5">
+              <img
+                className="md:w-60 md:h-60 w-36 h-36"
+                src={henryV}
+                alt="henry-image5"
+              />
             </div>
           </div>
         )}

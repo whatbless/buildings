@@ -143,13 +143,13 @@ const Carousel = () => {
   ));
 
   return (
-    <section className="px-20 pt-5 pb-20">
+    <section className="px-10 pt-5 pb-20">
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center py-8">
-          <h1 className="text-center w-full text-4xl font-extralight text-regal-blue pb-4">
+          <h1 className="text-center w-full md:text-4xl text-3xl font-extralight text-regal-blue pb-4">
             Португалия
           </h1>
-          <p className="w-2/3 text-center font-extralight ">
+          <p className="md:w-2/3 w-full text-center font-extralight ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magni
             iste dolorem nisi itaque excepturi dolore culpa mollitia vero?
             Accusamus cupiditate recusandae aliquid. Praesentium eos totam
@@ -162,16 +162,20 @@ const Carousel = () => {
           mouseTracking
           items={portugalItems}
           autoPlay={true}
-          responsive={{ 0: { items: 4 } }}
+          responsive={{
+            640: { items: 1 },
+            1024: { items: 2 },
+            1280: { items: 4 },
+          }}
           infinite={true}
           disableDotsControls={true}
           autoPlayInterval={5000}
         />
         <div className="flex flex-col items-center py-8">
-          <h1 className="text-center w-full text-4xl font-extralight text-regal-red pb-4">
+          <h1 className="text-center w-full md:text-4xl text-3xl font-extralight text-regal-red pb-4">
             Аргентина
           </h1>
-          <p className="w-2/3 text-center font-extralight ">
+          <p className="md:w-2/3 w-full text-center font-extralight ">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magni
             iste dolorem nisi itaque excepturi dolore culpa mollitia vero?
             Accusamus cupiditate recusandae aliquid. Praesentium eos totam
@@ -184,7 +188,11 @@ const Carousel = () => {
           mouseTracking
           items={argentinaItems}
           autoPlay={true}
-          responsive={{ 0: { items: 4 } }}
+          responsive={{
+            640: { items: 1 },
+            1024: { items: 2 },
+            1280: { items: 4 },
+          }}
           infinite={true}
           disableDotsControls={true}
           autoPlayInterval={5000}

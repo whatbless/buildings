@@ -24,10 +24,10 @@ const ThirdStep = () => {
 
   return (
     <div className="relative w-full h-full">
-      <h1 className={styles.header}>Количество комнат</h1>
+      <h1 className="md:text-lg text-md text-center mb-8">Количество комнат</h1>
       <div className={styles.values}>
-        <h4 className={styles.value}>от</h4>
-        <h4 className={styles.value}>до</h4>
+        <h4 className="font-extralight md:text-lg text-md">от</h4>
+        <h4 className="font-extralight md:text-lg text-md">до</h4>
       </div>
       <ReactSlider
         className={"slider"}
@@ -38,8 +38,8 @@ const ThirdStep = () => {
         step={0.5}
       />
       <div className={styles.values}>
-        <h4 className={styles.value}>{values[0]}</h4>
-        <h4 className={styles.value}>{values[1]}</h4>
+        <h4 className="font-extralight md:text-lg text-md">{values[0]}</h4>
+        <h4 className="font-extralight md:text-lg text-md">{values[1]}</h4>
       </div>
       <div className={styles.buttonWrapper}>
         <button
@@ -55,8 +55,14 @@ const ThirdStep = () => {
         </button>
       </div>
       <div className="flex flex-col items-center">
-        <img className="w-56 h-56" src={henryThink} alt="henry-image4" />
-        <p>Хммм... сколько же комнат выбрать...</p>
+        <img
+          className="md:w-60 md:h-60 w-36 h-36"
+          src={henryThink}
+          alt="henry-image4"
+        />
+        <p className="text-center md:text-lg text-md">
+          Хммм... сколько же комнат выбрать...
+        </p>
       </div>
     </div>
   );

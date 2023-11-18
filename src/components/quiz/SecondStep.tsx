@@ -30,8 +30,7 @@ const SecondStep = () => {
   const dispatch = useDispatch();
   return (
     <div className="relative h-full w-full">
-      <div></div>
-      <h1 className={styles.header}>
+      <h1 className=" md:text-lg text-sm text-center mb-8">
         Так держать! Здесь тебе нужно определиться с видом недвижимости.
       </h1>
       <Formik
@@ -50,9 +49,9 @@ const SecondStep = () => {
               <div>
                 {variants.map((variant) => (
                   <div>
-                    <div className={styles.formCheckboxWrapper}>
+                    <div className="md:text-lg text-md font-extralight flex text-regal-blue">
                       <Field
-                        className={styles.formCheckbox}
+                        className="mr-5"
                         name="propertyType"
                         type="checkbox"
                         value={variant.var}
@@ -63,9 +62,13 @@ const SecondStep = () => {
                   </div>
                 ))}
               </div>
-              <img className="w-56 h-56" src={henryHand} alt="henry-image3" />
+              <img
+                className="md:w-60 md:h-60 w-36 h-36"
+                src={henryHand}
+                alt="henry-image3"
+              />
             </div>
-            <div className={styles.error}>
+            <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
               {errors.propertyType && touched.propertyType && (
                 <div>{errors.propertyType}</div>
               )}
