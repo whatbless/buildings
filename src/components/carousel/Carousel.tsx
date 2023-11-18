@@ -207,7 +207,7 @@ const Carousel = () => {
             <h1 className="text-center font-extralight text-3xl pb-5">
               Лиссабон
             </h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -249,7 +249,7 @@ const Carousel = () => {
         >
           <section className="flex flex-col items-center p-20">
             <h1 className="text-center font-extralight text-3xl pb-5">Лореш</h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -291,7 +291,7 @@ const Carousel = () => {
         >
           <section className="flex flex-col items-center p-20">
             <h1 className="text-center font-extralight text-3xl pb-5">Порту</h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -335,7 +335,7 @@ const Carousel = () => {
             <h1 className="text-center font-extralight text-3xl pb-5">
               Буэнос-Айрес
             </h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -379,7 +379,7 @@ const Carousel = () => {
             <h1 className="text-center font-extralight text-3xl pb-5">
               Росарио
             </h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -423,7 +423,7 @@ const Carousel = () => {
             <h1 className="text-center font-extralight text-3xl pb-5">
               Кордова
             </h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -467,7 +467,7 @@ const Carousel = () => {
             <h1 className="text-center font-extralight text-3xl pb-5">
               Мендоса
             </h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
@@ -509,7 +509,7 @@ const Carousel = () => {
         >
           <section className="flex flex-col items-center p-20">
             <h1 className="text-center font-extralight text-3xl pb-5">Брага</h1>
-            <p className="text-center font-extralight text-md">
+            <p className="text-center font-extralight lg:text-md md:text-md sm:text-sm">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
               esse dignissimos doloribus maiores excepturi, ab est quos alias,
               nulla similique incidunt sapiente consectetur dolorem tempora
