@@ -120,7 +120,7 @@ const Result = () => {
                 <FontAwesomeIcon icon={faArrowLeft} /> Назад
               </button>
               <button className={styles.button} type="submit">
-                Далее <FontAwesomeIcon icon={faArrowRight} />
+                Получить бонус <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

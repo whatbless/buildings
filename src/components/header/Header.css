@@ -19,18 +19,10 @@ nav ul li {
     list-style: none;
 }
 
-nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 4px;
-    border-radius: 50%;
-}
-
 nav .menu {
     display: none;
     position: absolute;
-    top: 2.5rem;
+    top: 3.5rem;
     right: 2.5rem;
     flex-direction: column;
     justify-content: space-between;

@@ -31,6 +31,7 @@ const ThirdStep = () => {
       </div>
       <ReactSlider
         className={"slider"}
+        trackClassName="slider-track"
         min={min}
         max={max}
         value={values}

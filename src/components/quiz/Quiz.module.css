@@ -101,6 +101,14 @@
     margin-top: 30px;
 }
 
+.endButtonWrap {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .disabledButton {
     border: 1px solid rgba(0, 0, 0, 0.35);
     width: max-content;
@@ -163,7 +171,7 @@
 .values {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-left: 10px;
     padding-right: 7px;
 }

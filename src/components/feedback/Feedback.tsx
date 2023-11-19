@@ -4,16 +4,6 @@ import styles from "./Feedback.module.css";
 import sky from "./../../images/sky.png";
 import like from "./../../images/like.gif";
 
-function validateEmail(value: string) {
-  let error;
-  if (!value) {
-    error = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = "Invalid email address";
-  }
-  return error;
-}
-
 function requireValidate(value: string) {
   let error;
   if (!value) {
@@ -27,7 +17,8 @@ const Feedback = () => {
 
   return (
     <section className={styles.wrapper}>
-      <div className="container mx-auto w-full px-20">
+      <div className="container relative mx-auto w-full px-20">
+        <div id="feedback" className="absolute top-36"></div>
         <h1 className="md:text-4xl text-3xl font-extralight w-full text-center py-10">
           Какую недвижимость вы ищите?
         </h1>
@@ -65,7 +56,6 @@ const Feedback = () => {
                   number: "",
                   purpose: "",
                   addition: "",
-                  email: "",
                 }}
                 onSubmit={(values: any) => {
                   console.log(values);
@@ -101,21 +91,6 @@ const Feedback = () => {
                       <div className={styles.error}>
                         {errors.number && touched.number && (
                           <div>{errors.number}</div>
-                        )}
-                      </div>
-                    </div>
-                    <div className={styles.formBlock}>
-                      <div className={styles.inputWrapper}>
-                        <Field
-                          className={styles.input}
-                          name="email"
-                          validate={validateEmail}
-                          placeholder="Ваша почта (email)"
-                        />
-                      </div>
-                      <div className={styles.error}>
-                        {errors.email && touched.email && (
-                          <div>{errors.email}</div>
                         )}
                       </div>
                     </div>

@@ -1,10 +1,16 @@
 import React from "react";
 import styles from "./Quiz.module.css";
 import henryHeart from "./../../images/henry-heart.png";
+import { setStep } from "../../redux/quizReducer";
+import { useDispatch } from "react-redux";
+import { faRepeat } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const End = () => {
+  const dispatch = useDispatch();
+
   return (
-    <div className="w-full h-70 flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col relative items-center">
       <img
         className="md:w-60 md:h-60 w-36 h-36"
         src={henryHeart}
@@ -16,6 +22,14 @@ const End = () => {
         недвижимость мечты! Наш эксперт скоро свяжется с тобой чтобы
         предоставить вам только самые лучшие варианты!»
       </h1>
+      <div className={styles.endButtonWrap}>
+        <button
+          className={styles.button}
+          onClick={() => dispatch<any>(setStep(0))}
+        >
+          Пройти еще раз <FontAwesomeIcon icon={faRepeat} />
+        </button>
+      </div>
     </div>
   );
 };

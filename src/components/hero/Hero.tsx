@@ -5,6 +5,8 @@ import Modal from "react-modal";
 import Quiz from "../quiz/Quiz";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDispatch } from "react-redux";
+import { setStep } from "../../redux/quizReducer";
 
 const images = [
   <img className={styles.image1} key="{slider1}"></img>,
@@ -47,12 +49,16 @@ const Hero = () => {
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
+  const dispatch = useDispatch();
+
   function openModal() {
     setIsOpen(true);
+    dispatch<any>(setStep(0));
   }
 
   function closeModal() {
     setIsOpen(false);
+    dispatch<any>(setStep(0));
   }
 
   return (

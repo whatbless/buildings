@@ -10,6 +10,7 @@ import FifthStep from "./FifthStep";
 import Result from "./Result";
 import Start from "./Start";
 import End from "./End";
+import Bonus from "./Bonus";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -29,7 +30,7 @@ const Quiz = () => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 
   return (
-    <div className="h-650 2xl:w-[1336px] xl:w-[1080px] lg:w-[824px] mx-auto flex flex-col items-center bg-white overflow-hidden">
+    <div className="h-650 2xl:w-[1036px] lg:w-[780px] mx-auto flex flex-col items-center bg-white overflow-hidden">
       <div className={styles.progressWrap}>
         <h1 className="md:text-lg sm:text-md text-sm font-extralight">
           <FontAwesomeIcon
@@ -37,13 +38,12 @@ const Quiz = () => {
             className="pr-4 text-2xl text-regal-blue"
           />
           Пройдите опрос и получите{" "}
-          <span className="text-regal-blue">консультацию</span> от наших
-          экспертов!
+          <span className="text-regal-blue">бонус</span> от наших экспертов!
         </h1>
-        {step > 0 && step < 7 && <p className={styles.steps}>{step}/6</p>}
+        {step > 0 && step < 6 && <p className={styles.steps}>{step}/5</p>}
         <div className={styles.progress}>
           <div
-            style={{ width: `${step * 14.29}%` }}
+            style={{ width: `${(step - 1) * 20}%` }}
             className={styles.progress__inner}
           ></div>
         </div>
@@ -56,7 +56,8 @@ const Quiz = () => {
         {step === 4 && <FourthStep />}
         {step === 5 && <FifthStep />}
         {step === 6 && <Result />}
-        {step === 7 && <End />}
+        {step === 7 && <Bonus />}
+        {step === 8 && <End />}
       </div>
     </div>
   );

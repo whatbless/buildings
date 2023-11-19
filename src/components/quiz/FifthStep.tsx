@@ -10,7 +10,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import henryGrin from "./../../images/henry-grin.png";
 
 const min = 1;
-const max = 45;
+const max = 25;
 
 const FifthStep = () => {
   const [values, setValues] = useState([min, max]);
@@ -31,6 +31,7 @@ const FifthStep = () => {
       </div>
       <ReactSlider
         className={"slider"}
+        trackClassName="slider-track"
         min={min}
         max={max}
         value={values}
