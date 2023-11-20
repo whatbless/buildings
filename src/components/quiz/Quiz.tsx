@@ -30,7 +30,7 @@ const Quiz = () => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 
   return (
-    <div className="h-650 2xl:w-[1036px] lg:w-[780px] mx-auto flex flex-col items-center bg-white overflow-hidden">
+    <div className="h-[650px] 2xl:w-[1036px] lg:w-[780px] mx-auto flex flex-col items-center bg-white overflow-hidden">
       <div className={styles.progressWrap}>
         <h1 className="md:text-lg sm:text-md text-sm font-extralight">
           <FontAwesomeIcon

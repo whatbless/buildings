@@ -63,7 +63,7 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="container mx-auto w-full min-h-screen text-white px-20">
+      <div className="container mx-auto w-full min-h-screen text-white px-10">
         <div className={styles.wrapper}>
           <div className={styles.slider}>
             <div

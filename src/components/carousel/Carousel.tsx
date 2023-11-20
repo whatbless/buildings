@@ -183,7 +183,7 @@ const Carousel = () => {
 
   const placesItems = objects.map((block, index: number) => (
     <div
-      className="mx-5 text-center duration-300 hover:translate-y-1.5 cursor-pointer hover:text-regal-blue"
+      className="mx-5 text-center duration-300 hover:translate-y-1.5 flex flex-col items-center cursor-pointer hover:text-regal-blue"
       onClick={() => openModal(index)}
     >
       <img src={block.src} onDragStart={handleDragStart} role="presentation" />
