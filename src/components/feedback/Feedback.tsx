@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import styles from "./Feedback.module.css";
-import sky from "./../../images/sky.png";
+import image from "./../../images/feedback-image.jpeg";
 import like from "./../../images/like.gif";
 
 function requireValidate(value: string) {
@@ -19,7 +19,7 @@ const Feedback = () => {
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
         <div id="feedback" className="absolute top-36"></div>
-        <h1 className="md:text-4xl text-3xl font-extralight w-full text-center py-10">
+        <h1 className="md:text-4xl text-3xl w-full text-center py-10">
           Какую недвижимость вы ищите?
         </h1>
         <p className="md:text-lg texl-md font-extralight text-center w-full">
@@ -31,8 +31,8 @@ const Feedback = () => {
           voluptas aut atque animi?
         </p>
         <div className="flex xl:flex-row flex-col h-max">
-          <div className="xl:w-1/2 w-full xl:mt-32 sm:block hidden mt-10 mb-20 px-20">
-            <img src={sky} alt="feedback-image" />
+          <div className="xl:w-1/2 w-full xl:mt-32 mt-10 sm:mb-20 mb-0 px-20">
+            <img src={image} alt="feedback-image" />
           </div>
           {isSended ? (
             <div className="flex flex-col justify-center items-center">
@@ -46,7 +46,7 @@ const Feedback = () => {
             </div>
           ) : (
             <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center xl:mt-32 sm:mt-0 mt-20 xl:mb-0 mb-16 items-center">
-              <p className="w-full font-extralight">
+              <p className="w-full">
                 Оставьте ваши контакты и наш специалист свяжется с вами в
                 течении 24 часов!
               </p>
@@ -113,7 +113,7 @@ const Feedback = () => {
                       <h1 className="w-full text-2xl mb-4">
                         Дополнительная информация
                       </h1>
-                      <p className="w-full mb-7 text-black font-extralight">
+                      <p className="w-full mb-7 text-black">
                         Это поможет нам сделать максимально персонализированную
                         подборку для вас{" "}
                         {

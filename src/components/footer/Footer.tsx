@@ -8,8 +8,8 @@ import logo from "./../../images/logo.png";
 const Footer = () => {
   const navs = [
     { title: "о нас", anchor: "#about" },
+    { title: "объекты", anchor: "#objects" },
     { title: "получить консультацию", anchor: "#question" },
-    { title: "контакты", anchor: "#contacts" },
   ];
 
   const rules = [
@@ -19,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full absolute xl:pt-[600px] sm:pt-[670px] pt-[775px] xl:min-h-max min-h-full -z-10">
+    <footer className="w-full">
       <div className="container mx-auto px-5 flex xl:flex-row flex-col xl:space-y-0 sm:space-y-12 space-y-5 justify-center 2xl:space-x-20 xl:space-x-10 h-60 items-center">
         <div className="flex 2xl:space-x-20 sm:flex-row flex-col sm:space-y-0 space-y-5 xl:space-x-10 xl:justify-normal justify-between items-center w-full">
           <div className="w-full flex flex-col sm:items-start justify-center items-center">
@@ -29,11 +29,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="lg:w-1/3 w-1/2">
-            <ul>
+            <ul className="space-y-3 flex flex-col">
               {navs.map((nav) => (
-                <li className="w-full uppercase text-sm font-bold leading-9 xl:text-left text-center text-regal-red hover:text-black cursor-pointer">
+                <a
+                  href={nav.anchor}
+                  className="w-full uppercase text-sm font-bold xl:text-left text-center text-regal-red hover:text-black cursor-pointer"
+                >
                   {nav.title}
-                </li>
+                </a>
               ))}
             </ul>
           </div>
@@ -51,7 +54,7 @@ const Footer = () => {
           <div>
             <div className="flex flex-row">
               <img
-                className="w-16 h-16 p-px mx-2 my-5 rounded-full"
+                className="w-16 h-16 mx-2 my-5"
                 src={facebook}
                 alt="facebook"
               />

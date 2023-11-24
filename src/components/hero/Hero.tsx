@@ -10,8 +10,9 @@ import { setStep } from "../../redux/quizReducer";
 
 const images = [
   <img className={styles.image1} key="{slider1}"></img>,
-  <img className={styles.image2} key="{slider2}"></img>,
   <img className={styles.image3} key="{slider3}"></img>,
+  <img className={styles.image4} key="{slider4}"></img>,
+  <img className={styles.image5} key="{slider5}"></img>,
 ];
 
 const customStyles = {
@@ -83,14 +84,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="2xl:w-1/2 xl:w-2/3 md:w-5/6 xl:text-4xl md:text-left md:text-3xl text-2xl text-center w-full min-h-screen flex flex-col justify-center">
+        <div className="2xl:w-1/2 xl:w-2/3 md:w-5/6 md:text-4xl font-bold text-3xl md:text-left text-center w-full min-h-screen flex flex-col justify-center">
           <h1 className={styles.header}>
             Пройдите краткий опрос и получите персональную консультацию по
             выбору лучшей недвижимости в израиле!
           </h1>
           <div>
             <button
-              className="text-white bg-regal-red text-xl rounded-md font-extralight w-max lg:px-12 lg:py-6 px-8 py-4 mt-10 duration-500 hover:-translate-y-1.5 hover:shadow-hero"
+              className="text-white bg-regal-red text-xl rounded-md font-bold w-max lg:px-12 lg:py-6 px-8 py-4 mt-10 duration-500 hover:-translate-y-1.5 hover:shadow-hero"
               onClick={openModal}
             >
               Пройти опрос!

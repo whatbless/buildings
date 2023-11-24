@@ -49,7 +49,7 @@ const SecondStep = () => {
               <div>
                 {variants.map((variant) => (
                   <div>
-                    <div className="md:text-lg text-md font-extralight flex text-regal-blue">
+                    <div className="md:text-lg text-md flex text-regal-blue">
                       <Field
                         className="mr-5"
                         name="propertyType"

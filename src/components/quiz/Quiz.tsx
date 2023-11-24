@@ -32,7 +32,7 @@ const Quiz = () => {
   return (
     <div className="h-[650px] 2xl:w-[1036px] lg:w-[780px] mx-auto flex flex-col items-center bg-white overflow-hidden">
       <div className={styles.progressWrap}>
-        <h1 className="md:text-lg sm:text-md text-sm font-extralight">
+        <h1 className="md:text-lg sm:text-md text-sm">
           <FontAwesomeIcon
             icon={faClipboard}
             className="pr-4 text-2xl text-regal-blue"

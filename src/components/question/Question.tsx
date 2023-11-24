@@ -6,7 +6,7 @@ const Question = () => {
     <section className="bg-pastel-grey relative">
       <div id="question" className="absolute -top-28"></div>
       <div className="container mx-auto w-full h-full text-black">
-        <h1 className="md:text-4xl text-3xl font-extralight w-full text-center py-10 px-10 text-regal-blue">
+        <h1 className="md:text-4xl text-3xl w-full text-center py-10 px-10 text-regal-blue">
           Пройдите опрос и получите бесплатную консультацию от наших экспертов!
         </h1>
         <div className="flex justify-center">
@@ -17,7 +17,7 @@ const Question = () => {
           </p>
         </div>
       </div>
-      <div className="lg:container mx-auto lg:px-20 px-0 flex justify-center py-24">
+      <div className="lg:container relative mx-auto lg:px-20 px-5 flex justify-center py-24">
         <Quiz />
       </div>
     </section>

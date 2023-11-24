@@ -16,6 +16,9 @@ const validations = [
   "Наличие комнаты безопасности",
 ];
 
+const min = 300000;
+const max = 30000000;
+
 function requireValidate(value: string) {
   let error;
   if (!value) {
@@ -25,10 +28,11 @@ function requireValidate(value: string) {
 }
 
 const FourthStep = () => {
+  const [values, setValues] = useState([min, max]);
   const dispatch = useDispatch();
   return (
     <div className="w-full h-full relative">
-      <h1 className="text-left text-lg mb-8">Бюджет</h1>
+      <h1 className="md:text-left text-center text-lg">Бюджет</h1>
       <Formik
         initialValues={{
           vals: [],
@@ -45,38 +49,43 @@ const FourthStep = () => {
         {({ errors, touched, isValidating }) => (
           <div className="w-full flex md:flex-row flex-col justify-between items-center">
             <Form>
-              <div className={styles.priceWrap}>
-                <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>от</p>
-                  <Field
-                    className={styles.formPrice}
-                    name="minPrice"
-                    validate={requireValidate}
-                  />
-                </div>
-                <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>до</p>
-                  <Field
-                    className={styles.formPrice}
-                    name="maxPrice"
-                    validate={requireValidate}
-                  />
-                </div>
+              <div className={styles.values}>
+                <h4 className="font-extralight md:text-lg text-md mb-1">от</h4>
+                <h4 className="font-extralight md:text-lg text-md mb-1">до</h4>
               </div>
-              {validations.map((val) => (
-                <div>
-                  <div className="md:text-lg text-md font-extralight flex text-regal-blue">
-                    <Field
-                      className="mr-5"
-                      name="vals"
-                      type="checkbox"
-                      value={val}
-                    />
-                    <p className={styles.formCheckboxTitle}>{val}</p>
+              <ReactSlider
+                className={"slider"}
+                trackClassName="slider-track"
+                min={min}
+                max={max}
+                value={values}
+                onChange={setValues}
+                step={10000}
+              />
+              <div className={styles.values}>
+                <h4 className="font-extralight md:text-lg text-md">
+                  {values[0]}
+                </h4>
+                <h4 className="font-extralight md:text-lg text-md">
+                  {values[1]}
+                </h4>
+              </div>
+              <div className="mt-5">
+                {validations.map((val) => (
+                  <div>
+                    <div className="md:text-lg text-md flex text-regal-blue">
+                      <Field
+                        className="mr-5"
+                        name="vals"
+                        type="checkbox"
+                        value={val}
+                      />
+                      <p className={styles.formCheckboxTitle}>{val}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-              <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
+                ))}
+              </div>
+              <div className="text-regal-red font-extralight md:text-lg text-sm text-left">
                 {(errors.maxPrice && touched.maxPrice && (
                   <div>{errors.minPrice}</div>
                 )) ||

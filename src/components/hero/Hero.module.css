@@ -35,35 +35,34 @@
     transform: translateX(-100%);
 }
 
-.image1 {
+.image1,
+.image3,
+.image4,
+.image5 {
     width: 100%;
     height: 100%;
-    background-image: url(./../../images/slider1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0px 0px 300px 100px rgba(0, 0, 0, 0.5);
 }
 
-.image2 {
-    width: 100%;
-    height: 100%;
-    background-image: url(./../../images/slider2.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0px 0px 300px 100px rgba(0, 0, 0, 0.5);
+.image1 {
+    background-image: url(./../../images/slider1.jpeg);
 }
 
 .image3 {
-    width: 100%;
-    height: 100%;
     background-image: url(./../../images/slider3.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0px 0px 300px 100px rgba(0, 0, 0, 0.5);
+}
+
+.image4 {
+    background-image: url(./../../images/slider4.jpeg);
+}
+
+.image5 {
+    background-image: url(./../../images/slider5.jpeg);
 }
 
 .header {
-    text-transform: uppercase;
     text-shadow: 0px 0px 10px black, 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 

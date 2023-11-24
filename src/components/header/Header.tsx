@@ -72,7 +72,7 @@ const Header = () => {
               <li className="w-full flex justify-center">
                 <a
                   href={social.link}
-                  className="w-16 mx-5 duration-300 hover:-translate-y-1"
+                  className="w-14 mx-4 duration-300 hover:-translate-y-1"
                 >
                   <img src={social.img} alt={social.alt} />
                 </a>

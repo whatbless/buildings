@@ -5,3 +5,10 @@ export type questionType = {
 export type propertyTypeVariants = {
   var: string;
 };
+
+export type carouselObject = {
+  src: string;
+  title: string;
+  desc: string;
+  text: string;
+};

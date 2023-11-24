@@ -48,7 +48,7 @@ const FirstStep = () => {
               <div className={styles.inputWrapper}>
                 <Field
                   validate={requireValidate}
-                  className="border-b border-black md:text-lg text-md text-extralight p-2.5 resize-none w-full focus:outline-none"
+                  className="border-b border-black md:text-lg text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="regions"
                   component="input"
                   placeholder="Перечислите районы через запятую. Пример: Кировский, Октябрьский, Ленинский, Железнодорожный"

@@ -51,7 +51,7 @@ const Bonus = () => {
             <div className="flex w-full justify-between items-center">
               <div className={styles.inputWrapper}>
                 <Field
-                  className="border-b border-black md:text-lg text-md text-extralight p-2.5 resize-none w-full focus:outline-none"
+                  className="border-b border-black md:text-lg text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="email"
                   validate={validateEmail}
                   placeholder="Ваша почта (email)"

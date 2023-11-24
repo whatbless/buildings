@@ -9,6 +9,7 @@ import firstImage1 from "./../../images/first-image1.png";
 import secondImage1 from "./../../images/second-image1.png";
 import thirdImage1 from "./../../images/third-image1.png";
 import fourthImage1 from "./../../images/fourth-image1.png";
+import { carouselObject } from "../../types/types";
 
 const customStyles = {
   content: {
@@ -66,7 +67,7 @@ const Carousel = () => {
     setIsOpenFourth(false);
   }
 
-  const objects = [
+  const objects: Array<carouselObject> = [
     {
       src: item,
       title: "Батуми Вью",
@@ -181,7 +182,7 @@ const Carousel = () => {
     3: fourthItems,
   };
 
-  const placesItems = objects.map((block, index: number) => (
+  const placesItems = objects.map((block: carouselObject, index: number) => (
     <div
       className="mx-5 text-center duration-300 hover:translate-y-1.5 flex flex-col items-center cursor-pointer hover:text-regal-blue"
       onClick={() => openModal(index)}
@@ -189,17 +190,18 @@ const Carousel = () => {
       <img src={block.src} onDragStart={handleDragStart} role="presentation" />
       <h1 className="px-2 pt-7 text-xl font-bold">{block.title}</h1>
       <p className="px-2 py-5 font-extralight">{block.desc}</p>
-      <button className="mb-5 hover:bg-regal-blue hover:text-white hover:duration-300 rounded-md p-3">
+      <button className="my-5 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue">
         Узнать подробности
       </button>
     </div>
   ));
 
   return (
-    <section className="px-10 pt-5 pb-20">
+    <section className="px-10 relative pt-5 pb-20">
+      <div id="objects" className="absolute -top-28"></div>
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center py-8">
-          <h1 className="text-center w-full md:text-4xl text-3xl font-extralight text-regal-blue pb-4">
+          <h1 className="text-center w-full md:text-4xl text-3xl text-regal-blue pb-4">
             Remax - Lorem ipsum dolor sit amet.
           </h1>
           <p className="md:w-2/3 w-full text-center font-extralight ">
@@ -233,7 +235,7 @@ const Carousel = () => {
             contentLabel="Modal"
           >
             <section className="flex flex-col 2xl:w-[1036px] lg:w-[780px] w-screen items-center md:p-20 p-10">
-              <h1 className="text-center text-regal-red font-extralight text-3xl pb-5">
+              <h1 className="text-center font-bold text-2xl md:text-3xl pb-7">
                 {block.title}
               </h1>
               <AliceCarousel
@@ -243,7 +245,7 @@ const Carousel = () => {
                 autoPlay={true}
                 responsive={{
                   0: { items: 1 },
-                  1530: { items: 3 },
+                  1530: { items: 2 },
                 }}
                 infinite={true}
                 disableDotsControls={true}
@@ -255,7 +257,7 @@ const Carousel = () => {
               <a
                 href="#feedback"
                 onClick={() => closeModal()}
-                className="mt-7 px-5 py-2.5 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue font-extralight"
+                className="mt-10 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
               >
                 Связаться с нами!
               </a>
