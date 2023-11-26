@@ -189,7 +189,7 @@ const Carousel = () => {
     >
       <img src={block.src} onDragStart={handleDragStart} role="presentation" />
       <h1 className="px-2 pt-7 text-xl font-bold">{block.title}</h1>
-      <p className="px-2 py-5 font-extralight">{block.desc}</p>
+      <p className="px-2 py-5">{block.desc}</p>
       <button className="my-5 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue">
         Узнать подробности
       </button>
@@ -204,7 +204,7 @@ const Carousel = () => {
           <h1 className="text-center w-full md:text-4xl text-3xl text-regal-blue pb-4">
             Remax - Lorem ipsum dolor sit amet.
           </h1>
-          <p className="md:w-2/3 w-full text-center font-extralight ">
+          <p className="md:w-2/3 w-full text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magni
             iste dolorem nisi itaque excepturi dolore culpa mollitia vero?
             Accusamus cupiditate recusandae aliquid. Praesentium eos totam
@@ -251,9 +251,7 @@ const Carousel = () => {
                 disableDotsControls={true}
                 autoPlayInterval={5000}
               />
-              <p className="text-center font-extralight md:text-base text-sm">
-                {block.text}
-              </p>
+              <p className="text-center md:text-base text-sm">{block.text}</p>
               <a
                 href="#feedback"
                 onClick={() => closeModal()}

@@ -78,7 +78,7 @@ const Result = () => {
               <span className="absolute sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue">
                 Ваше имя
               </span>
-              <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
+              <div className="text-regal-red md:text-lg text-sm text-center">
                 {errors.name && touched.name && <div>{errors.name}</div>}
               </div>
             </div>
@@ -91,7 +91,7 @@ const Result = () => {
               <span className="absolute sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue">
                 Ваш номер телефона {"( WhatsApp )"}
               </span>
-              <div className="text-regal-red font-extralight md:text-lg sm:text-md text-sm text-center">
+              <div className="text-regal-red md:text-lg sm:text-md text-sm text-center">
                 {errors.number && touched.number && <div>{errors.number}</div>}
               </div>
             </div>
@@ -105,7 +105,7 @@ const Result = () => {
                 Дополнительная информация
               </span>
             </div>
-            <div className="text-regal-red font-extralight md:text-lg sm:text-md text-sm text-center">
+            <div className="text-regal-red md:text-lg sm:text-md text-sm text-center">
               {errors.addition && touched.addition && (
                 <div>{errors.addition}</div>
               )}

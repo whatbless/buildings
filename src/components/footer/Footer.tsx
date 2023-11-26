@@ -45,7 +45,7 @@ const Footer = () => {
           <div>
             <ul>
               {rules.map((rule) => (
-                <li className="leading-10 sm:text-left text-center text-regal-blue font-extralight hover:text-black cursor-pointer">
+                <li className="leading-10 sm:text-left text-center text-regal-blue hover:text-black cursor-pointer">
                   {rule.title}
                 </li>
               ))}
@@ -53,23 +53,11 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex flex-row">
-              <img
-                className="w-16 h-16 mx-2 my-5"
-                src={facebook}
-                alt="facebook"
-              />
-              <img
-                className="w-16 h-16 mx-2 my-5"
-                src={instagram}
-                alt="instagram"
-              />
-              <img
-                className="w-16 h-16 mx-2 my-5"
-                src={whatsapp}
-                alt="twitter"
-              />
+              <img className="w-11 mx-3 my-5" src={facebook} alt="facebook" />
+              <img className="w-11 mx-3 my-5" src={instagram} alt="instagram" />
+              <img className="w-11 mx-3 my-5" src={whatsapp} alt="twitter" />
             </div>
-            <div className="font-extralight text-regal-blue text-lg text-center mb-5">
+            <div className="text-regal-blue text-lg text-center mb-5">
               +995 595 250 141
             </div>
           </div>

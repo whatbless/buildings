@@ -91,7 +91,7 @@ const Hero = () => {
           </h1>
           <div>
             <button
-              className="text-white bg-regal-red text-xl rounded-md font-bold w-max lg:px-12 lg:py-6 px-8 py-4 mt-10 duration-500 hover:-translate-y-1.5 hover:shadow-hero"
+              className="text-white bg-regal-red lg:text-lg texl-md rounded-md font-bold w-max lg:px-8 lg:py-4 px-6 py-3 mt-10 duration-500 hover:-translate-y-1.5 hover:shadow-hero"
               onClick={openModal}
             >
               Пройти опрос!

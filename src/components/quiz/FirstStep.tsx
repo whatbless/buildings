@@ -54,7 +54,7 @@ const FirstStep = () => {
                   placeholder="Перечислите районы через запятую. Пример: Кировский, Октябрьский, Ленинский, Железнодорожный"
                 />
               </div>
-              <div className="text-regal-red font-extralight md:text-lg text-md text-center">
+              <div className="text-regal-red md:text-lg text-md text-center">
                 {errors.regions && touched.regions && (
                   <div>{errors.regions}</div>
                 )}

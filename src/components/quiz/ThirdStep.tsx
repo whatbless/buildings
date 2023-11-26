@@ -26,8 +26,8 @@ const ThirdStep = () => {
     <div className="relative w-full h-full">
       <h1 className="md:text-lg text-md text-center mb-8">Количество комнат</h1>
       <div className={styles.values}>
-        <h4 className="font-extralight md:text-lg text-md">от</h4>
-        <h4 className="font-extralight md:text-lg text-md">до</h4>
+        <h4 className="md:text-lg text-md">от</h4>
+        <h4 className="md:text-lg text-md">до</h4>
       </div>
       <ReactSlider
         className={"slider"}
@@ -39,8 +39,8 @@ const ThirdStep = () => {
         step={0.5}
       />
       <div className={styles.values}>
-        <h4 className="font-extralight md:text-lg text-md">{values[0]}</h4>
-        <h4 className="font-extralight md:text-lg text-md">{values[1]}</h4>
+        <h4 className="md:text-lg text-md">{values[0]}</h4>
+        <h4 className="md:text-lg text-md">{values[1]}</h4>
       </div>
       <div className={styles.buttonWrapper}>
         <button

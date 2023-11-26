@@ -59,7 +59,7 @@ const Bonus = () => {
               </div>
               <div className={styles.error}></div>
             </div>
-            <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
+            <div className="text-regal-red md:text-lg text-sm text-center">
               {errors.email && touched.email && <div>{errors.email}</div>}
             </div>
             <div className={styles.buttonWrapper}>

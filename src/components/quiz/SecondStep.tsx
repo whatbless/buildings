@@ -68,7 +68,7 @@ const SecondStep = () => {
                 alt="henry-image3"
               />
             </div>
-            <div className="text-regal-red font-extralight md:text-lg text-sm text-center">
+            <div className="text-regal-red md:text-lg text-sm text-center">
               {errors.propertyType && touched.propertyType && (
                 <div>{errors.propertyType}</div>
               )}

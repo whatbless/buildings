@@ -19,7 +19,6 @@ function App() {
       <Feedback />
       <About />
       <Question />
-      <Contacts />
       <Footer />
     </div>
   );

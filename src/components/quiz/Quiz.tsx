@@ -14,18 +14,6 @@ import Bonus from "./Bonus";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const customStyles = {
-  width: "1000px",
-  height: "650px",
-  display: "flex",
-  fontWeight: "300",
-  flexDirection: "column",
-  alignItems: "center",
-  background: "white",
-  boxShadow: "inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1)",
-  overflow: "hidden",
-};
-
 const Quiz = () => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 

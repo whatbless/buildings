@@ -8,13 +8,17 @@ import whatsapp from "./../../images/whatsapp.png";
 const navs = [
   { title: "О нас", anchor: "#about" },
   { title: "Получить консультацию", anchor: "#question" },
-  { title: "Контакты", anchor: "#contacts" },
+  { title: "Контакты", anchor: "#about" },
 ];
 
 const socials = [
   { alt: "facebook", img: facebook, link: "/" },
   { alt: "instagram", img: instagram, link: "/" },
-  { alt: "whatsapp", img: whatsapp, link: "/" },
+  {
+    alt: "whatsapp",
+    img: whatsapp,
+    link: "https://wa.me/972586557877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82",
+  },
 ];
 
 const Header = () => {
@@ -71,8 +75,9 @@ const Header = () => {
             {socials.map((social) => (
               <li className="w-full flex justify-center">
                 <a
+                  target={"_blank"}
                   href={social.link}
-                  className="w-14 mx-4 duration-300 hover:-translate-y-1"
+                  className="w-11 mx-4 duration-300 hover:-translate-y-1"
                 >
                   <img src={social.img} alt={social.alt} />
                 </a>

@@ -50,8 +50,8 @@ const FourthStep = () => {
           <div className="w-full flex md:flex-row flex-col justify-between items-center">
             <Form>
               <div className={styles.values}>
-                <h4 className="font-extralight md:text-lg text-md mb-1">от</h4>
-                <h4 className="font-extralight md:text-lg text-md mb-1">до</h4>
+                <h4 className="md:text-lg text-md mb-1">от</h4>
+                <h4 className="md:text-lg text-md mb-1">до</h4>
               </div>
               <ReactSlider
                 className={"slider"}
@@ -63,12 +63,8 @@ const FourthStep = () => {
                 step={10000}
               />
               <div className={styles.values}>
-                <h4 className="font-extralight md:text-lg text-md">
-                  {values[0]}
-                </h4>
-                <h4 className="font-extralight md:text-lg text-md">
-                  {values[1]}
-                </h4>
+                <h4 className="md:text-lg text-md">{values[0]}</h4>
+                <h4 className="md:text-lg text-md">{values[1]}</h4>
               </div>
               <div className="mt-5">
                 {validations.map((val) => (
@@ -85,7 +81,7 @@ const FourthStep = () => {
                   </div>
                 ))}
               </div>
-              <div className="text-regal-red font-extralight md:text-lg text-sm text-left">
+              <div className="text-regal-red md:text-lg text-sm text-left">
                 {(errors.maxPrice && touched.maxPrice && (
                   <div>{errors.minPrice}</div>
                 )) ||

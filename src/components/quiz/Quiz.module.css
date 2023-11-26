@@ -47,7 +47,6 @@
 
 .steps {
     font-size: 18px;
-    font-weight: 300;
 }
 
 .progressWrap {
@@ -174,10 +173,6 @@
     margin-top: 25px;
     padding-left: 10px;
     padding-right: 7px;
-}
-
-.value {
-    font-weight: 300;
 }
 
 .image {
