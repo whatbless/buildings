@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/buildings/static/css/main.90bf7946.css",
-    "main.js": "/buildings/static/js/main.8a5ccef2.js",
+    "main.css": "/buildings/static/css/main.e2088aba.css",
+    "main.js": "/buildings/static/js/main.abb1e289.js",
     "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
-    "static/media/video.mp4": "/buildings/static/media/video.7094311458f20b1e4895.mp4",
+    "static/media/hero2.mp4": "/buildings/static/media/hero2.296bd4927ceb9805adac.mp4",
+    "static/media/hero1.mp4": "/buildings/static/media/hero1.260c0941190ed05c002b.mp4",
     "static/media/first-image1.png": "/buildings/static/media/first-image1.771ff43b4a429bce3e7f.png",
     "static/media/second-image1.png": "/buildings/static/media/second-image1.204387248d774f188d2d.png",
     "static/media/third-image1.png": "/buildings/static/media/third-image1.6dd695d787953ea406a6.png",
@@ -23,12 +24,12 @@
     "static/media/henry-grin.png": "/buildings/static/media/henry-grin.dcffd0a95c8538b0eb67.png",
     "static/media/henry-heart.png": "/buildings/static/media/henry-heart.1d35d181b9f7acdab5af.png",
     "index.html": "/buildings/index.html",
-    "main.90bf7946.css.map": "/buildings/static/css/main.90bf7946.css.map",
-    "main.8a5ccef2.js.map": "/buildings/static/js/main.8a5ccef2.js.map",
+    "main.e2088aba.css.map": "/buildings/static/css/main.e2088aba.css.map",
+    "main.abb1e289.js.map": "/buildings/static/js/main.abb1e289.js.map",
     "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90bf7946.css",
-    "static/js/main.8a5ccef2.js"
+    "static/css/main.e2088aba.css",
+    "static/js/main.abb1e289.js"
   ]
 }
