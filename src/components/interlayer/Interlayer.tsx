@@ -38,6 +38,11 @@ const Interlayer = () => {
     dispatch<any>(setStep(0));
   }
 
+  const xMarkHandle = () => {
+    dispatch<any>(setStep(0));
+    closeModal();
+  };
+
   return (
     <section className="bg-pastel-grey">
       <div className="container mx-auto w-full py-7">
@@ -56,6 +61,15 @@ const Interlayer = () => {
             contentLabel="Modal"
           >
             <Quiz />
+            <button
+              onClick={xMarkHandle}
+              className="absolute z-20 right-6 top-6"
+            >
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="text-2xl hover:text-regal-red"
+              />
+            </button>
           </Modal>
         </div>
       </div>

@@ -40,7 +40,7 @@ const Header = () => {
     <header
       className={
         scroll < 200
-          ? "text-regal-blue z-20 fixed w-full flex justify-center backdrop-blur-sm duration-500"
+          ? "text-regal-blue z-20 fixed w-full flex justify-center duration-500"
           : "text-regal-blue z-20 fixed w-full flex justify-center bg-white duration-500"
       }
     >
