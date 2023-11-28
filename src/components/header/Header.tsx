@@ -6,6 +6,7 @@ import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
 
 const navs = [
+  { title: " Главная", anchor: "#hero" },
   { title: "О нас", anchor: "#about" },
   { title: "Получить консультацию", anchor: "#question" },
   { title: "Контакты", anchor: "#about" },
@@ -55,7 +56,7 @@ const Header = () => {
           </div>
         </div>
         <ul className={menuOpen ? "open" : ""}>
-          <div className="flex xl:flex-row flex-col items-center 2xl:ml-60 xl:ml-32 ml-0">
+          <div className="flex xl:flex-row flex-col items-center w-full justify-center">
             {navs.map((nav) => (
               <li className="xl:mb-0 mb-3">
                 <a

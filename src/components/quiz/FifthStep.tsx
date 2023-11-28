@@ -24,7 +24,7 @@ const FifthStep = () => {
 
   return (
     <div className="w-full relative h-full">
-      <h1 className="md:text-lg text-md text-center mb-8">Этаж</h1>
+      <h1 className="md:text-lg text-md text-center mb-5">Этаж</h1>
       <div className={styles.values}>
         <h4>от</h4>
         <h4>до</h4>
@@ -42,7 +42,7 @@ const FifthStep = () => {
         <h4>{values[0]}</h4>
         <h4>{values[1]}</h4>
       </div>
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex 2xl:flex-col lg:flex-row md:flex-row flex-col items-center">
         <img
           className="md:w-60 md:h-60 w-36 h-36"
           src={henryGrin}

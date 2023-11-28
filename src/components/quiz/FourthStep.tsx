@@ -16,23 +16,22 @@ const validations = [
   "Наличие комнаты безопасности",
 ];
 
-const min = 300000;
-const max = 30000000;
-
-function requireValidate(value: string) {
+function validateNumber(value: string) {
   let error;
   if (!value) {
     error = "Укажи бюджет. Это важно для меня!";
+  } else if (/^\d+$/.test(value)) {
+  } else {
+    error = "Использовать можно только числа!";
   }
   return error;
 }
 
 const FourthStep = () => {
-  const [values, setValues] = useState([min, max]);
   const dispatch = useDispatch();
   return (
     <div className="w-full h-full relative">
-      <h1 className="md:text-left text-center text-lg">Бюджет</h1>
+      <h1 className="md:text-left text-center text-lg mb-5">Бюджет</h1>
       <Formik
         initialValues={{
           vals: [],
@@ -49,22 +48,31 @@ const FourthStep = () => {
         {({ errors, touched, isValidating }) => (
           <div className="w-full flex md:flex-row flex-col justify-between items-center">
             <Form>
-              <div className={styles.values}>
-                <h4 className="md:text-lg text-md mb-1">от</h4>
-                <h4 className="md:text-lg text-md mb-1">до</h4>
+              <div className={styles.priceWrap}>
+                <div className={styles.formPriceWrapper}>
+                  <p className={styles.formPriceTitle}>от</p>
+                  <Field
+                    className={styles.formPrice}
+                    name="minPrice"
+                    validate={validateNumber}
+                  />
+                </div>
+                <div className={styles.formPriceWrapper}>
+                  <p className={styles.formPriceTitle}>до</p>
+                  <Field
+                    className={styles.formPrice}
+                    name="maxPrice"
+                    validate={validateNumber}
+                  />
+                </div>
               </div>
-              <ReactSlider
-                className={"slider"}
-                trackClassName="slider-track"
-                min={min}
-                max={max}
-                value={values}
-                onChange={setValues}
-                step={10000}
-              />
-              <div className={styles.values}>
-                <h4 className="md:text-lg text-md">{values[0]}</h4>
-                <h4 className="md:text-lg text-md">{values[1]}</h4>
+              <div className="text-regal-red md:text-lg text-sm text-left">
+                {(errors.maxPrice && touched.maxPrice && (
+                  <div>{errors.minPrice}</div>
+                )) ||
+                  (errors.minPrice && touched.minPrice && (
+                    <div>{errors.minPrice}</div>
+                  ))}
               </div>
               <div className="mt-5">
                 {validations.map((val) => (
@@ -81,14 +89,7 @@ const FourthStep = () => {
                   </div>
                 ))}
               </div>
-              <div className="text-regal-red md:text-lg text-sm text-left">
-                {(errors.maxPrice && touched.maxPrice && (
-                  <div>{errors.minPrice}</div>
-                )) ||
-                  (errors.minPrice && touched.minPrice && (
-                    <div>{errors.minPrice}</div>
-                  ))}
-              </div>
+
               <div className={styles.buttonWrapper}>
                 <button
                   className={styles.backButton}

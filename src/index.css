@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 html {
   scroll-behavior: smooth;
@@ -38,4 +39,32 @@ body {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.305);
   margin-top: -2px;
+}
+
+.alice-carousel__prev-btn-item {
+  color: #0065cb;
+  font-size: 32px;
+  padding: 0 15px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  border: 2px solid white;
+}
+
+.alice-carousel__next-btn-item {
+  color: #0065cb;
+  font-size: 32px;
+  padding: 0 15px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  border: 2px solid white;
+}
+
+.alice-carousel__next-btn-item:hover {
+  color: #0065cb;
+  border: 2px solid #0065cb;
+}
+
+.alice-carousel__prev-btn-item:hover {
+  color: #0065cb;
+  border: 2px solid #0065cb;
 }

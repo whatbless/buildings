@@ -19,8 +19,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full">
-      <div className="container mx-auto px-5 flex xl:flex-row flex-col xl:space-y-0 sm:space-y-12 space-y-5 justify-center 2xl:space-x-20 xl:space-x-10 h-60 items-center">
+    <footer className="w-full py-10">
+      <div className="container mx-auto px-5 flex xl:flex-row flex-col xl:space-y-0 sm:space-y-12 space-y-5 justify-center 2xl:space-x-20 xl:space-x-10 items-center">
         <div className="flex 2xl:space-x-20 sm:flex-row flex-col sm:space-y-0 space-y-5 xl:space-x-10 xl:justify-normal justify-between items-center w-full">
           <div className="w-full flex flex-col sm:items-start justify-center items-center">
             <img className="w-40" src={logo} alt="logo" />
@@ -29,11 +29,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="lg:w-1/3 w-1/2">
-            <ul className="space-y-3 flex flex-col">
+            <ul className="space-y-3 flex flex-col xl:pt-0 md:pt-12 sm:pt-7 pt-0">
               {navs.map((nav) => (
                 <a
                   href={nav.anchor}
-                  className="w-full uppercase text-sm font-bold xl:text-left text-center text-regal-red hover:text-black cursor-pointer"
+                  className="w-full uppercase text-sm font-bold xl:text-left sm:text-right text-center text-regal-red hover:text-black cursor-pointer"
                 >
                   {nav.title}
                 </a>
@@ -57,7 +57,7 @@ const Footer = () => {
               <img className="w-11 mx-3 my-5" src={instagram} alt="instagram" />
               <img className="w-11 mx-3 my-5" src={whatsapp} alt="twitter" />
             </div>
-            <div className="text-regal-blue text-lg text-center mb-5">
+            <div className="text-regal-blue text-lg text-center">
               +995 595 250 141
             </div>
           </div>

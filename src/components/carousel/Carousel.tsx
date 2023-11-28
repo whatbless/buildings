@@ -1,6 +1,6 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import "./../../index.css";
 import Modal from "react-modal";
 import item from "./../../images/item1.jpeg";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -71,7 +71,7 @@ const Carousel = () => {
     {
       src: item,
       title: "Батуми Вью",
-      desc: "Идеально для инвестиций. Уникальный комплекс на нулевой линии!",
+      desc: "Идеально для инвестиций. Уникальный комплекс на нулевой!",
       text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et architecto cupiditate explicabo deserunt non quo magni fuga reprehenderit alias nemo adipisci nihil veniam dignissimos aut officiis dolor porro minus est, eveniet dolore. Quisquam, odio et. Quod, qui quasi. Soluta magnam sunt doloremque eos aliquid maxime quis dignissimos rerum aperiam. Ducimus voluptas magnam quidem ex perferendis iste, facere numquam dignissimos qui placeat dolor sint, et eos, vel vero! Pariatur labore fuga repudiandae quo veniam quis vero. Suscipit, distinctio, vero incidunt nostrum quia sapiente atque modi libero ratione at dolore delectus eius esse commodi? Magnam dolor incidunt, deserunt tempora illo rerum quaerat!",
     },
     {
@@ -183,14 +183,14 @@ const Carousel = () => {
   };
 
   const placesItems = objects.map((block: carouselObject, index: number) => (
-    <div
-      className="mx-5 text-center duration-300 hover:translate-y-1.5 flex flex-col items-center cursor-pointer hover:text-regal-blue"
-      onClick={() => openModal(index)}
-    >
+    <div className="mx-5 text-center duration-300 hover:translate-y-1.5 flex flex-col items-center hover:text-regal-blue">
       <img src={block.src} onDragStart={handleDragStart} role="presentation" />
       <h1 className="px-2 pt-7 text-xl font-bold">{block.title}</h1>
       <p className="px-2 py-5">{block.desc}</p>
-      <button className="my-5 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue">
+      <button
+        onClick={() => openModal(index)}
+        className="my-5 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
+      >
         Узнать подробности
       </button>
     </div>
@@ -216,14 +216,15 @@ const Carousel = () => {
         <AliceCarousel
           mouseTracking
           items={placesItems}
-          autoPlay={true}
+          autoPlay
           responsive={{
             640: { items: 1 },
             1024: { items: 2 },
             1280: { items: 4 },
           }}
-          infinite={true}
-          disableDotsControls={true}
+          infinite
+          disableDotsControls
+          disableButtonsControls
           autoPlayInterval={5000}
         />
         {objects.map((block, index: number) => (
@@ -234,7 +235,7 @@ const Carousel = () => {
             style={customStyles}
             contentLabel="Modal"
           >
-            <section className="flex flex-col 2xl:w-[1036px] lg:w-[780px] w-screen items-center md:p-20 p-10">
+            <section className="flex flex-col xl:w-[1036px] lg:w-[780px] max-h-screen w-screen items-center p-10">
               <h1 className="text-center font-bold text-2xl md:text-3xl pb-7">
                 {block.title}
               </h1>
@@ -245,7 +246,7 @@ const Carousel = () => {
                 autoPlay={true}
                 responsive={{
                   0: { items: 1 },
-                  1530: { items: 2 },
+                  1280: { items: 2 },
                 }}
                 infinite={true}
                 disableDotsControls={true}

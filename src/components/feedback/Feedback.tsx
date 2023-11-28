@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import styles from "./Feedback.module.css";
-import image from "./../../images/feedback-image.jpeg";
+import image from "./../../images/properties.png";
 import like from "./../../images/like.gif";
 
 function requireValidate(value: string) {
@@ -37,10 +37,10 @@ const Feedback = () => {
           {isSended ? (
             <div className="flex flex-col justify-center items-center">
               <img src={like} alt="like-gif"></img>
-              <p className="h-max w-max border-green-600 text-green-600 border-2 px-10 py-5 text-3xl">
+              <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
                 Данные отправленны!
               </p>
-              <p className="text-black text-xl mt-10 text-center">
+              <p className="text-black md:text-xl text-md my-10 text-center">
                 Спасибо! Наш представитель свяжется с вами в течении 24 часов
               </p>
             </div>

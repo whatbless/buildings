@@ -17,7 +17,7 @@ const Question = () => {
           </p>
         </div>
       </div>
-      <div className="lg:container relative lg:mx-20 mx-5 flex justify-center my-24">
+      <div className="lg:container relative lg:mx-20 mx-5 flex justify-center py-24">
         <Quiz />
       </div>
     </section>

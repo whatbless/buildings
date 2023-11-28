@@ -23,7 +23,7 @@ const Bonus = () => {
 
   return (
     <div className="w-full h-full relative">
-      <h1 className="text-center md:text-lg sm:text-md text-sm">
+      <h1 className="text-center 2xl:text-lg xl:text-md text-md text-sm">
         Я ценю время, которое ты уделил моему скромному тесту. За это я
         подготовил тебе небольшой подарок! Укажи свою электронную почту и я
         передам указание своим коллегам уведомлять тебя о каждом новом объекте.

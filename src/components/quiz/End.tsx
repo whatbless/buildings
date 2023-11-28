@@ -5,6 +5,7 @@ import { setStep } from "../../redux/quizReducer";
 import { useDispatch } from "react-redux";
 import { faRepeat } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const End = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,15 @@ const End = () => {
         недвижимость мечты! Наш эксперт скоро свяжется с тобой чтобы
         предоставить вам только самые лучшие варианты!»
       </h1>
-      <div className={styles.endButtonWrap}>
+      <div className={styles.buttonWrapper}>
+        <button
+          className={styles.backButton}
+          onClick={() => {
+            dispatch<any>(setStep(7));
+          }}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} /> Назад
+        </button>
         <button
           className={styles.button}
           onClick={() => dispatch<any>(setStep(0))}
