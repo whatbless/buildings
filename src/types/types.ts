@@ -12,3 +12,8 @@ export type carouselObject = {
   desc: string;
   text: string;
 };
+
+export type diplomaType = {
+  src: string;
+  alt: string;
+};

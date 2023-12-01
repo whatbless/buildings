@@ -63,7 +63,7 @@ const Header = () => {
                   href={nav.anchor}
                   className={
                     scroll < 200
-                      ? "mx-3.5 font-bold px-2.5 py-1 2xl:text-lg text-md rounded-none uppercase cursor-pointer text-white hover:border-regal-red hover:border-b-2"
+                      ? "mx-3.5 font-bold px-2.5 py-1 2xl:text-lg text-md rounded-none uppercase cursor-pointer drop-shadow-3xl text-white hover:border-regal-red hover:border-b-2"
                       : "mx-3.5 font-bold px-2.5 2xl:text-lg text-md py-1 rounded-none uppercase cursor-pointer text-regal-red hover:border-regal-red hover:border-b-2"
                   }
                 >

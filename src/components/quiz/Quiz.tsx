@@ -50,7 +50,7 @@ const Quiz = () => {
           </div>
         )}
       </div>
-      <div className="w-full h-full md:px-10 md:py-10 px-2 py-10">
+      <div className="w-full h-full md:px-10 md:py-10 px-5 py-10">
         {step === 0 && <Start />}
         {step === 1 && <FirstStep />}
         {step === 2 && <SecondStep />}
