@@ -9,7 +9,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import henryGrin from "./../../images/henry-grin.png";
 
-const min = 1;
+const min = 0;
 const max = 25;
 
 const FifthStep = () => {

@@ -16,15 +16,14 @@ const Start = () => {
           src={henryHi}
           alt="henry-image1"
         />
-        <h1 className="text-left md:text-lg sm:text-md text-sm flex items-center pl-5">
-          Привет, меня зовут Генри, я твой помощник на время этого небольшого
-          опроса. Ответь на вопросы и мои коллеги сделают тебе персональную
-          подборку объектов недвижимости, которая подойдёт именно тебе!
+        <h1 className="text-right md:text-lg sm:text-md text-sm flex items-center pl-5">
+          שלום, שמי אדם, אני העוזר האישי שלך במהלך השאלון הקצרצר הזה. ענה על
+          שאלותיי וחבריי לעבודה יבנו עבורך מקבץ הצעות נדל"ן המותאמות לך אישית
         </h1>
       </div>
       <div className="absolute bottom-0 right-0 w-full">
         <p className="absolute md:text-lg sm:text-md text-sm bottom-20 right-0 w-full text-right">
-          Нажимай на кнопку и проходи скорее мой опрос!
+          !לחץ על הכפתור ונתקדם לשאלון
         </p>
         <div className={styles.firstButtonWrapper}>
           <img
@@ -36,7 +35,7 @@ const Start = () => {
             className={styles.button}
             onClick={() => dispatch<any>(setStep(1))}
           >
-            Ответить на вопросы
+            .לענות על השאלות
           </div>
         </div>
       </div>

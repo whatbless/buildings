@@ -6,10 +6,10 @@ import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
 
 const navs = [
-  { title: " Главная", anchor: "#hero" },
-  { title: "О нас", anchor: "#about" },
-  { title: "Получить консультацию", anchor: "#question" },
-  { title: "Контакты", anchor: "#about" },
+  { title: "עמוד הבית", anchor: "#hero" },
+  { title: "מי אנחנו", anchor: "#about" },
+  { title: "קבל ייעוץ", anchor: "#question" },
+  { title: "צור קשר", anchor: "#about" },
 ];
 
 const socials = [
@@ -78,7 +78,7 @@ const Header = () => {
                 <a
                   target={"_blank"}
                   href={social.link}
-                  className="w-11 mx-4 duration-300 hover:-translate-y-1"
+                  className="w-9 mx-3 duration-300 hover:-translate-y-1"
                 >
                   <img src={social.img} alt={social.alt} />
                 </a>

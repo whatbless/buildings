@@ -7,6 +7,7 @@ import styles from "./Quiz.module.css";
 import ThirdStep from "./ThirdStep";
 import FourthStep from "./FourthStep";
 import FifthStep from "./FifthStep";
+import SixthStep from "./SixthStep";
 import Result from "./Result";
 import Start from "./Start";
 import End from "./End";
@@ -40,11 +41,11 @@ const Quiz = () => {
           />
           Пройдите опрос и получите бонус от наших экспертов!
         </h1>
-        {step > 0 && step < 6 && <p className={styles.steps}>{step}/5</p>}
+        {step > 0 && step < 7 && <p className={styles.steps}>{step}/6</p>}
         {step > 0 && (
           <div className={styles.progress}>
             <div
-              style={{ width: `${(step - 1) * 20}%` }}
+              style={{ width: `${(step - 1) * 16.7}%` }}
               className={styles.progress__inner}
             ></div>
           </div>
@@ -57,9 +58,10 @@ const Quiz = () => {
         {step === 3 && <ThirdStep />}
         {step === 4 && <FourthStep />}
         {step === 5 && <FifthStep />}
-        {step === 6 && <Result />}
-        {step === 7 && <Bonus />}
-        {step === 8 && <End />}
+        {step === 6 && <SixthStep />}
+        {step === 7 && <Result />}
+        {step === 8 && <Bonus />}
+        {step === 9 && <End />}
       </div>
     </div>
   );

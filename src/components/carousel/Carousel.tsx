@@ -224,7 +224,6 @@ const Carousel = () => {
           }}
           infinite
           disableDotsControls
-          disableButtonsControls
           autoPlayInterval={5000}
         />
         {objects.map((block, index: number) => (
@@ -246,7 +245,6 @@ const Carousel = () => {
                 autoPlay={true}
                 responsive={{
                   0: { items: 1 },
-                  1280: { items: 2 },
                 }}
                 infinite={true}
                 disableDotsControls={true}

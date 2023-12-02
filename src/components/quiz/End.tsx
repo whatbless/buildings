@@ -27,7 +27,7 @@ const End = () => {
         <button
           className={styles.backButton}
           onClick={() => {
-            dispatch<any>(setStep(7));
+            dispatch<any>(setStep(8));
           }}
         >
           <FontAwesomeIcon icon={faArrowLeft} /> Назад

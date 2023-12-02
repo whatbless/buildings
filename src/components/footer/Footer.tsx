@@ -53,9 +53,9 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex flex-row">
-              <img className="w-11 mx-3 my-5" src={facebook} alt="facebook" />
-              <img className="w-11 mx-3 my-5" src={instagram} alt="instagram" />
-              <img className="w-11 mx-3 my-5" src={whatsapp} alt="twitter" />
+              <img className="w-9 mx-3 my-5" src={facebook} alt="facebook" />
+              <img className="w-9 mx-3 my-5" src={instagram} alt="instagram" />
+              <img className="w-9 mx-3 my-5" src={whatsapp} alt="twitter" />
             </div>
             <div className="text-regal-blue text-lg text-center">
               +995 595 250 141

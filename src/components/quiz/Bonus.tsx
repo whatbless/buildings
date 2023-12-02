@@ -43,7 +43,7 @@ const Bonus = () => {
         }}
         onSubmit={(values: any) => {
           dispatch<any>(setEmail(values.email));
-          dispatch<any>(setStep(8));
+          dispatch<any>(setStep(9));
         }}
       >
         {({ errors, touched, isValidating }) => (
@@ -66,7 +66,7 @@ const Bonus = () => {
               <button
                 className={styles.backButton}
                 onClick={() => {
-                  dispatch<any>(setStep(6));
+                  dispatch<any>(setStep(7));
                 }}
               >
                 <FontAwesomeIcon icon={faArrowLeft} /> Назад

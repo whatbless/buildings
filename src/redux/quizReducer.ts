@@ -1,6 +1,7 @@
 const SET_REGIONS = "QUIZREDUCER_SET_REGIONS";
 const SET_STEP = "QUIZREDUCER_SET_STEP";
 const SET_PROPERTY_TYPE = "QUIZREDUCER_SET_PROPERTY_TYPE";
+const SET_PROPERTY_FOR = "QUIZREDUCER_SET_PROPERTY_FOR";
 const SET_ROOM_RANGE = "QUIZREDUCER_SET_ROOM_RANGE";
 const SET_FLOOR_RANGE = "QUIZREDUCER_SET_FLOOR_RANGE";
 const SET_PRICE = "QUIZREDUCER_SET_PRICE";
@@ -14,6 +15,7 @@ let initialState = {
   regions: "",
   step: 0,
   propertyType: [],
+  propertyFor: [],
   roomRange: [1, 9],
   price: [0, 10000000],
   validations: [],
@@ -39,6 +41,9 @@ const quizReducer = (
 
     case SET_PROPERTY_TYPE:
       return { ...state, propertyType: action.variants };
+
+    case SET_PROPERTY_FOR:
+      return { ...state, propertyFor: action.variants };
 
     case SET_ROOM_RANGE:
       return { ...state, roomRange: action.values };
@@ -89,6 +94,11 @@ export const setStep = (step: number) => ({
 
 export const setPropertyType = (variants: string) => ({
   type: SET_PROPERTY_TYPE,
+  variants,
+});
+
+export const setPropertyFor = (variants: string) => ({
+  type: SET_PROPERTY_FOR,
   variants,
 });
 

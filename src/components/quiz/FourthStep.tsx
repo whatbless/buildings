@@ -19,7 +19,8 @@ const validations = [
 function validateNumber(value: string) {
   let error;
   if (!value) {
-    error = "Укажи бюджет. Это важно для меня!";
+    error =
+      ".למה להתבייש? הגדרת התקציב חשובה למטרותינו. לא לדאוג- אני לא אספר לאיש";
   } else if (/^\d+$/.test(value)) {
   } else {
     error = "Использовать можно только числа!";

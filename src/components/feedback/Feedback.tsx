@@ -15,6 +15,8 @@ function requireValidate(value: string) {
 const Feedback = () => {
   const [isSended, setIsSended] = useState(false);
 
+  const [showElement, setShowElement] = React.useState(true);
+
   return (
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
@@ -35,15 +37,19 @@ const Feedback = () => {
             <img src={image} alt="feedback-image" />
           </div>
           {isSended ? (
-            <div className="flex flex-col justify-center items-center">
-              <img src={like} alt="like-gif"></img>
-              <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
-                Данные отправленны!
-              </p>
-              <p className="text-black md:text-xl text-md my-10 text-center">
-                Спасибо! Наш представитель свяжется с вами в течении 24 часов
-              </p>
-            </div>
+            showElement ? (
+              <div className="flex flex-col justify-center items-center">
+                <img src={like} alt="like-gif"></img>
+                <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
+                  Данные отправленны!
+                </p>
+                <p className="text-black md:text-xl text-md my-10 text-center">
+                  Спасибо! Наш представитель свяжется с вами в течении 24 часов
+                </p>
+              </div>
+            ) : (
+              <div></div>
+            )
           ) : (
             <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center xl:mt-32 sm:mt-0 mt-20 xl:mb-0 mb-16 items-center">
               <p className="w-full text-2xl">
@@ -60,6 +66,9 @@ const Feedback = () => {
                 onSubmit={(values: any) => {
                   console.log(values);
                   setIsSended(true);
+                  setTimeout(function () {
+                    setShowElement(false);
+                  }, 5000);
                 }}
               >
                 {({ errors, touched, isValidating }) => (

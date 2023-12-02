@@ -11,7 +11,7 @@ import henryLove from "./../../images/henry-love.png";
 function requireValidate(value: string) {
   let error;
   if (!value) {
-    error = "Мне нужны районы мечты, чтобы подобрать недвижимость мечты!";
+    error = ".לא ציינת באיזה אזור נמצאת דירת חלומותיך";
   }
   return error;
 }
@@ -22,7 +22,7 @@ const FirstStep = () => {
   return (
     <div className="relative w-full h-full">
       <div className="w-full flex flex-col items-center md:text-lg text-md text-center">
-        <h1>Я рад что ты остаешься со мной, ответим на несколько вопросов</h1>
+        <h1>:איזה כיף שנשארת איתי, אשמח לדעת עליך כמה דברים</h1>
         <img
           className="md:w-60 md:h-60 w-36 h-36"
           src={henryLove}
@@ -30,7 +30,7 @@ const FirstStep = () => {
         />
       </div>
       <h1 className="text-center md:texl-lg text-md">
-        Укажи район, в котором ты бы хотел{"(а)"} себе недвижимость
+        .מה האזור, בו היית רוצה לרכוש נכס
       </h1>
       <div>
         <Formik

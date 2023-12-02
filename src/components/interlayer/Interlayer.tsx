@@ -51,7 +51,7 @@ const Interlayer = () => {
             onClick={openModal}
             className="text-white bg-regal-blue px-10 py-5  text-center"
           >
-            Ответить на 5 вопросов и получить персональную подборку
+            Ответить на 6 вопросов и получить персональную подборку
             недвижимости!
           </button>
           <Modal

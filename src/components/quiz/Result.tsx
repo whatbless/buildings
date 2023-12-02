@@ -64,7 +64,7 @@ const Result = () => {
           dispatch<any>(setName(values.name));
           dispatch<any>(setNumber(values.number));
           dispatch<any>(setAddition(values.addition));
-          dispatch<any>(setStep(7));
+          dispatch<any>(setStep(8));
         }}
       >
         {({ errors, touched, isValidating }) => (
@@ -114,7 +114,7 @@ const Result = () => {
               <button
                 className={styles.backButton}
                 onClick={() => {
-                  dispatch<any>(setStep(5));
+                  dispatch<any>(setStep(6));
                 }}
               >
                 <FontAwesomeIcon icon={faArrowLeft} /> Назад

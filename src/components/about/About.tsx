@@ -1,24 +1,8 @@
 import React from "react";
 import real from "./../../images/real.jpeg";
 import sign from "./../../images/sign.png";
-import diploma1 from "./../../images/diploma1.webp";
-import diploma2 from "./../../images/diploma2.webp";
-import diploma3 from "./../../images/diploma3.webp";
-import diploma4 from "./../../images/diploma4.webp";
-import diploma5 from "./../../images/diploma5.webp";
-import diploma6 from "./../../images/diploma6.webp";
-import diploma7 from "./../../images/diploma7.webp";
-import { diplomaType } from "../../types/types";
-
-const diplomas: Array<diplomaType> = [
-  { src: diploma1, alt: "diploma1" },
-  { src: diploma2, alt: "diploma2" },
-  { src: diploma3, alt: "diploma3" },
-  { src: diploma4, alt: "diploma4" },
-  { src: diploma5, alt: "diploma5" },
-  { src: diploma6, alt: "diploma6" },
-  { src: diploma7, alt: "diploma7" },
-];
+import diploma from "./../../images/diploma.png";
+import logo from "./../../images/vert-logo.png";
 
 const About = () => {
   const [scroll, setScroll] = React.useState(0);
@@ -48,27 +32,20 @@ const About = () => {
           dolore ab. Voluptates quidem quod, accusamus ullam, adipisci aut
           fugiat
         </p>
-        <div className="flex justify-center items-center">
-          <div className="w-1/2">
-            {diplomas.map((diploma: diplomaType, index: number) =>
-              index % 2 != 0 ? (
-                <div className="w-full flex justify-end">
-                  <img
-                    className="mb-5 rounded-xl border-2 border-regal-blue w-64 mr-5"
-                    src={diploma.src}
-                    alt={diploma.alt}
-                  />
-                </div>
-              ) : (
-                <img
-                  className="mb-5 rounded-xl border-2 border-regal-blue w-64"
-                  src={diploma.src}
-                  alt={diploma.alt}
-                />
-              )
-            )}
+        <div className="flex justify-center">
+          <div className="w-1/2 px-32">
+            <img src={diploma} alt="diploma-image" />
           </div>
-          <img className="mb-20 w-1/2 h-max" src={real} alt="about-image" />
+          <div className="w-1/2 px-44">
+            <img src={real} alt="about-image" />
+            <div className="flex h-max items-center justify-between">
+              <img className="w-40" src={logo} alt="logo" />
+              <div>
+                <p>+932138291381931</p>
+                <p>адрес, адрес, дом 31</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

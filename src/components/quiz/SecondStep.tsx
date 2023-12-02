@@ -13,7 +13,7 @@ function checkedValidation(values: any) {
   console.log(values);
   let error;
   if (values.length === 0) {
-    error = "Думаю здесь найдется нужный параметр.";
+    error = ".נראה לי שכאן יש את הקריטריונים הדרושים";
   }
   return error;
 }
@@ -31,7 +31,7 @@ const SecondStep = () => {
   return (
     <div className="relative h-full w-full">
       <h1 className=" md:text-lg text-sm text-center mb-8">
-        Так держать! Здесь тебе нужно определиться с видом недвижимости.
+        .יופי! עכשיו נתמקד בסוג הנדל"ן
       </h1>
       <Formik
         initialValues={{
