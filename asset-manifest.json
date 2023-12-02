@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/buildings/static/css/main.3de3d983.css",
-    "main.js": "/buildings/static/js/main.5589c08b.js",
+    "main.css": "/buildings/static/css/main.0b45394b.css",
+    "main.js": "/buildings/static/js/main.202b4f69.js",
     "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
     "static/media/hero2.mp4": "/buildings/static/media/hero2.69857dcbf5c1b1a47f47.mp4",
     "static/media/real.jpeg": "/buildings/static/media/real.1246bfade9d403d65a04.jpeg",
-    "static/media/diploma.png": "/buildings/static/media/diploma.325169c65e83b1ac9e76.png",
+    "static/media/diploma.png": "/buildings/static/media/diploma.6bccd013245b931a9088.png",
     "static/media/first-image1.png": "/buildings/static/media/first-image1.771ff43b4a429bce3e7f.png",
     "static/media/second-image1.png": "/buildings/static/media/second-image1.204387248d774f188d2d.png",
     "static/media/third-image1.png": "/buildings/static/media/third-image1.6dd695d787953ea406a6.png",
@@ -29,12 +29,12 @@
     "static/media/henry-grin.png": "/buildings/static/media/henry-grin.dcffd0a95c8538b0eb67.png",
     "static/media/henry-heart.png": "/buildings/static/media/henry-heart.1d35d181b9f7acdab5af.png",
     "index.html": "/buildings/index.html",
-    "main.3de3d983.css.map": "/buildings/static/css/main.3de3d983.css.map",
-    "main.5589c08b.js.map": "/buildings/static/js/main.5589c08b.js.map",
+    "main.0b45394b.css.map": "/buildings/static/css/main.0b45394b.css.map",
+    "main.202b4f69.js.map": "/buildings/static/js/main.202b4f69.js.map",
     "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3de3d983.css",
-    "static/js/main.5589c08b.js"
+    "static/css/main.0b45394b.css",
+    "static/js/main.202b4f69.js"
   ]
 }
