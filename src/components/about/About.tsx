@@ -32,14 +32,18 @@ const About = () => {
           dolore ab. Voluptates quidem quod, accusamus ullam, adipisci aut
           fugiat
         </p>
-        <div className="flex justify-center">
-          <div className="w-1/2 px-32">
+        <div className="flex md:flex-row flex-col justify-center md:items-start items-center">
+          <div className="md:w-1/2 w-full 2xl:px-32 xl:px-24 lg:px-10 px-0">
             <img src={diploma} alt="diploma-image" />
           </div>
-          <div className="w-1/2 px-44">
-            <img src={real} alt="about-image" />
+          <div className="md:w-1/2 w-full 2xl:px-44 xl:px-36 lg:px-20 md:px-9 px-0">
+            <img className="md:block hidden" src={real} alt="about-image" />
             <div className="flex h-max items-center justify-between">
-              <img className="w-40" src={logo} alt="logo" />
+              <img
+                className="2xl:w-40 lg:w-32 md:w-28 w-40"
+                src={logo}
+                alt="logo"
+              />
               <div>
                 <p>+932138291381931</p>
                 <p>адрес, адрес, дом 31</p>
