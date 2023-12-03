@@ -21,19 +21,11 @@ const Feedback = () => {
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
         <div id="feedback" className="absolute top-36"></div>
-        <h1 className="md:text-4xl text-3xl w-full text-center py-10">
-          Какую недвижимость вы ищите?
+        <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
+          ?איזה נדל"ן אתם מחפשים
         </h1>
-        <p className="md:text-lg texl-md text-center w-full">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in
-          dolore ab. Voluptates quidem quod, accusamus ullam, adipisci aut
-          fugiat iusto magnam asperiores ipsam earum, sapiente consequuntur
-          deserunt fugit dolores est architecto minima reiciendis. Inventore
-          delectus iure earum quam eaque, sunt dicta quidem recusandae, qui, eum
-          voluptas aut atque animi?
-        </p>
-        <div className="flex xl:flex-row flex-col h-max">
-          <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full xl:mt-32 mt-10 sm:mb-20 mb-0 px-20">
+        <div className="flex xl:flex-row flex-col h-max pt-20">
+          <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
             <img src={image} alt="feedback-image" />
           </div>
           {isSended ? (
@@ -41,20 +33,22 @@ const Feedback = () => {
               <div className="flex flex-col justify-center items-center">
                 <img src={like} alt="like-gif"></img>
                 <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
-                  Данные отправленны!
+                  !תודה
                 </p>
                 <p className="text-black md:text-xl text-md my-10 text-center">
-                  Спасибо! Наш представитель свяжется с вами в течении 24 часов
+                  בקשתך נקלטה
+                </p>
+                <p className="text-black md:text-xl text-md my-10 text-center">
+                  !נציגנו יתקשר אליך תוך 24 שעות
                 </p>
               </div>
             ) : (
               <div></div>
             )
           ) : (
-            <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center xl:mt-32 sm:mt-0 mt-20 xl:mb-0 mb-16 items-center">
+            <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center">
               <p className="w-full text-2xl">
-                Оставьте ваши контакты и наш специалист свяжется с вами в
-                течении 24 часов!
+                צור קשר! אנא השאר פרטים ונחזור אליך בקדם
               </p>
               <Formik
                 initialValues={{
@@ -79,7 +73,7 @@ const Feedback = () => {
                           className={styles.input}
                           name="name"
                           validate={requireValidate}
-                          placeholder="Ваше имя"
+                          placeholder="שם"
                         />
                       </div>
                       <div className={styles.error}>
@@ -94,7 +88,7 @@ const Feedback = () => {
                           className={styles.input}
                           name="number"
                           validate={requireValidate}
-                          placeholder="Ваш номер телефона (WhatsApp)"
+                          placeholder="(מספר טלפון (וואטסאפ"
                         />
                       </div>
                       <div className={styles.error}>
@@ -119,14 +113,10 @@ const Feedback = () => {
                       </div>
                     </div>
                     <div className={styles.formBlock}>
-                      <h1 className="w-full text-2xl mb-4">
-                        Дополнительная информация
-                      </h1>
+                      <h1 className="w-full text-2xl mb-4">מידע נוסף</h1>
                       <p className="w-full mb-7 text-black">
-                        Это поможет нам сделать максимально персонализированную
-                        подборку для вас{" "}
                         {
-                          "(площадь, цена, район, кол-во комнат, прочие предпочтения)"
+                          " זה יסייע לנו לבנות את תיק ההצעות האישי האופטימלי (שטח, מחיר, אזור, כמות חדרים, העדפות אחרות) "
                         }
                       </p>
                       <div className={styles.inputBlock}>
@@ -149,7 +139,7 @@ const Feedback = () => {
                           className="px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
                           type="submit"
                         >
-                          Отправить ответы!
+                          שלח
                         </button>
                       </div>
                     </div>

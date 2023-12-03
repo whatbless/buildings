@@ -39,7 +39,7 @@ const Quiz = () => {
             icon={faClipboard}
             className="pr-4 text-2xl text-regal-blue"
           />
-          Пройдите опрос и получите бонус от наших экспертов!
+          ענו על השאלון וקבל מאיתנו מתנה
         </h1>
         {step > 0 && step < 7 && <p className={styles.steps}>{step}/6</p>}
         {step > 0 && (

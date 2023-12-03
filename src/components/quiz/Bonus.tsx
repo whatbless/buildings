@@ -24,11 +24,10 @@ const Bonus = () => {
   return (
     <div className="w-full h-full relative">
       <h1 className="text-center 2xl:text-lg xl:text-md text-md text-sm">
-        Я ценю время, которое ты уделил моему скромному тесту. За это я
-        подготовил тебе небольшой подарок! Укажи свою электронную почту и я
-        передам указание своим коллегам уведомлять тебя о каждом новом объекте.
-        Так ты сможешь одним из первых получать информацию о новой недвижимости
-        в нашем арсенале и найти для себя наилучший вариант!
+        אני מעריך את הזמן שהקדשת לשאלון הצנוע שלי, אי לכך הכנתי עבורך מתנה קטנה:
+        עליך רק להזין את כתובת הדואר האלקטרוני ואני אעביר לחבריי לעבודה הוראה
+        ליידע אותך על כל פרויקט חדש. זה יאפשר לך להיות בין הראשונים שיקבלו מידע
+        אודות הנכסים החדשים בבסיס המידע שלנו ולבחור את האפשרות המתאימה לך ביותר
       </h1>
       <div className="w-full flex justify-center">
         <img
@@ -69,10 +68,12 @@ const Bonus = () => {
                   dispatch<any>(setStep(7));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                <FontAwesomeIcon icon={faArrowLeft} />
+                חזור
               </button>
               <button className={styles.button} type="submit">
-                Далее <FontAwesomeIcon icon={faArrowRight} />
+                להמשיך
+                <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

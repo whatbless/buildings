@@ -191,26 +191,22 @@ const Carousel = () => {
         onClick={() => openModal(index)}
         className="my-5 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
       >
-        Узнать подробности
+        מידע נוסף
       </button>
     </div>
   ));
 
   return (
-    <section className="px-10 relative pt-5 pb-20">
+    <section className="px-10 relative pt-5 pb-5">
       <div id="objects" className="absolute -top-28"></div>
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center py-8">
           <h1 className="text-center w-full md:text-4xl text-3xl text-regal-blue pb-4">
-            Remax - Lorem ipsum dolor sit amet.
+            איזה נדל"ן אתם מחפשים?
           </h1>
           <p className="md:w-2/3 w-full text-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa magni
-            iste dolorem nisi itaque excepturi dolore culpa mollitia vero?
-            Accusamus cupiditate recusandae aliquid. Praesentium eos totam
-            pariatur, reprehenderit quam laborum fuga corrupti natus illo
-            debitis libero molestiae, temporibus fugit dicta dolores neque,
-            delectus facere accusamus culpa blanditiis ducimus sunt iure.
+            וזכרו שהתזמון הטוב ביותר לרכישת נדל"ן הוא "לפני חמש שנים", וכך יהיה
+            תמיד רכשו את הטוב ביותר, המחיר נשכח והאיכות נשארת
           </p>
         </div>
         <AliceCarousel
@@ -256,7 +252,7 @@ const Carousel = () => {
                 onClick={() => closeModal()}
                 className="mt-10 px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
               >
-                Связаться с нами!
+                צור קשר
               </a>
             </section>
             <button

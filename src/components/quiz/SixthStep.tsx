@@ -79,10 +79,12 @@ const SixthStep = () => {
                   dispatch<any>(setStep(5));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                <FontAwesomeIcon icon={faArrowLeft} />
+                חזור
               </button>
               <button className={styles.button} type="submit">
-                Далее <FontAwesomeIcon icon={faArrowRight} />
+                להמשיך
+                <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

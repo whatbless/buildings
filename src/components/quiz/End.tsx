@@ -18,10 +18,9 @@ const End = () => {
         alt="henry-image8"
       />
       <h1 className="text-center md:text-lg sm:text-md text-sm">
-        «Спасибо, что уделил время моему опросу! Я знаю своих коллег, они
-        профессионалы своего дела, думаю им не сложно будет подобрать тебе
-        недвижимость мечты! Наш эксперт скоро свяжется с тобой чтобы
-        предоставить вам только самые лучшие варианты!»
+        תודה! נהניתי מחברתך. אני סומך על חבריי לעבודה – הם מומחים בתחומם וימצאו
+        את נכס חלומותיך בקלות! המומחה שלנו יצור איתך קשר בקרוב כדי להציג בפניך
+        את האפשרויות הטובות ביותר
       </h1>
       <div className={styles.buttonWrapper}>
         <button
@@ -30,7 +29,8 @@ const End = () => {
             dispatch<any>(setStep(8));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} /> Назад
+          <FontAwesomeIcon icon={faArrowLeft} />
+          חזור
         </button>
         <button
           className={styles.button}

@@ -10,17 +10,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import henryV from "./../../images/henry-v.png";
 
-const validations = [
-  "Наличие стоянки",
-  "Наличие балкона",
-  "Наличие комнаты безопасности",
-];
+const validations = ["חנייה", "מרפסת", "ממד"];
 
 function validateNumber(value: string) {
   let error;
   if (!value) {
     error =
-      ".למה להתבייש? הגדרת התקציב חשובה למטרותינו. לא לדאוג- אני לא אספר לאיש";
+      "למה להתבייש? הגדרת התקציב חשובה למטרותינו. לא לדאוג - אני לא אספר לאיש";
   } else if (/^\d+$/.test(value)) {
   } else {
     error = "Использовать можно только числа!";
@@ -32,7 +28,7 @@ const FourthStep = () => {
   const dispatch = useDispatch();
   return (
     <div className="w-full h-full relative">
-      <h1 className="md:text-left text-center text-lg mb-5">Бюджет</h1>
+      <h1 className="md:text-left text-center text-lg mb-5">תקציב</h1>
       <Formik
         initialValues={{
           vals: [],
@@ -51,7 +47,7 @@ const FourthStep = () => {
             <Form>
               <div className={styles.priceWrap}>
                 <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>от</p>
+                  <p className={styles.formPriceTitle}>מ</p>
                   <Field
                     className={styles.formPrice}
                     name="minPrice"
@@ -59,7 +55,7 @@ const FourthStep = () => {
                   />
                 </div>
                 <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>до</p>
+                  <p className={styles.formPriceTitle}>עד</p>
                   <Field
                     className={styles.formPrice}
                     name="maxPrice"
@@ -98,10 +94,12 @@ const FourthStep = () => {
                     dispatch<any>(setStep(3));
                   }}
                 >
-                  <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                  <FontAwesomeIcon icon={faArrowLeft} />
+                  חזור
                 </button>
                 <button className={styles.button} type="submit">
-                  Далее <FontAwesomeIcon icon={faArrowRight} />
+                  להמשיך
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
             </Form>

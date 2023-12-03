@@ -51,7 +51,6 @@ const FirstStep = () => {
                   className="border-b border-black md:text-lg text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="regions"
                   component="input"
-                  placeholder="Перечислите районы через запятую. Пример: Кировский, Октябрьский, Ленинский, Железнодорожный"
                 />
               </div>
               <div className="text-regal-red md:text-lg text-md text-center">
@@ -64,10 +63,12 @@ const FirstStep = () => {
                   className={styles.backButton}
                   onClick={() => dispatch<any>(setStep(0))}
                 >
-                  <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                  <FontAwesomeIcon icon={faArrowLeft} />
+                  חזור
                 </button>
                 <button className={styles.button} type="submit">
-                  Далее <FontAwesomeIcon icon={faArrowRight} />
+                  להמשיך
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </button>
               </div>
             </Form>

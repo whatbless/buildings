@@ -16,7 +16,7 @@ import henryParty from "./../../images/henry-party.png";
 function validateName(value: string) {
   let error;
   if (!value) {
-    error = "Моим коллегам нужна эта информация!";
+    error = "!הצוות שלי זקוק למידע הזה";
   }
   return error;
 }
@@ -24,7 +24,7 @@ function validateName(value: string) {
 function validateNumber(value: string) {
   let error;
   if (!value) {
-    error = "Моим коллегам нужна эта информация!";
+    error = "!הצוות שלי זקוק למידע הזה";
   } else if (/^\d+$/.test(value)) {
   } else {
     error = "Вводи свой номер настоящий номер";
@@ -49,10 +49,9 @@ const Result = () => {
         alt="henry-image7"
       />
       <h1 className="text-center md:text-lg sm:text-md text-sm px-5">
-        Отлично, все вопросы позади! Введи свое имя и номер телефона и нажимай
-        кнопку "Отправить результаты"! Получив их, мои коллеги сделают
-        персональную подборку объектов именно под твои запросы и потребности, и
-        наш эксперт свяжется с тобой в ближайшее время!
+        יופי, כל השאלות מאחורינו. כל מה שנותר הוא להזין שם ומספר טלפון וללחוץ על
+        כפתור "שלח תוצאות"! אחרי קבלת הנתונים הצוות שלי יבנה תיק הצעות בהתאם
+        להעדפותיך והמומחה שלנו יצור איתך קשר בקרוב
       </h1>
       <Formik
         initialValues={{
@@ -76,7 +75,7 @@ const Result = () => {
                 validate={validateName}
               />
               <span className="absolute sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue">
-                Ваше имя
+                שם
               </span>
               <div className="text-regal-red md:text-lg text-sm text-center">
                 {errors.name && touched.name && <div>{errors.name}</div>}
@@ -89,7 +88,7 @@ const Result = () => {
                 validate={validateNumber}
               />
               <span className="absolute sm:text-md text-sm z-0 left-7 -top-2.5 bg-white px-2 text-regal-blue">
-                Ваш номер телефона {"( WhatsApp )"}
+                {" (מספר טלפון (וואטסאפ "}
               </span>
               <div className="text-regal-red md:text-lg sm:text-md text-sm text-center">
                 {errors.number && touched.number && <div>{errors.number}</div>}
@@ -117,10 +116,11 @@ const Result = () => {
                   dispatch<any>(setStep(6));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                <FontAwesomeIcon icon={faArrowLeft} />
+                חזור
               </button>
               <button className={styles.button} type="submit">
-                Получить бонус <FontAwesomeIcon icon={faArrowRight} />
+                קבלת מתנה <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

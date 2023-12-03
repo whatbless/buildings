@@ -24,10 +24,10 @@ const FifthStep = () => {
 
   return (
     <div className="w-full relative h-full">
-      <h1 className="md:text-lg text-md text-center mb-5">Этаж</h1>
+      <h1 className="md:text-lg text-md text-center mb-5">?איזה קומה</h1>
       <div className={styles.values}>
-        <h4>от</h4>
-        <h4>до</h4>
+        <h4>מ</h4>
+        <h4>עד</h4>
       </div>
       <ReactSlider
         className={"slider"}
@@ -49,8 +49,8 @@ const FifthStep = () => {
           alt="henry-image6"
         />
         <p className="text-center md:text-lg text-md">
-          Мда уж, достаточно философский вопрос. Если тебе без разницы на каком
-          этаже жить, то нажимай далее, мои коллеги сами разберутся
+          אכן שאלה פילוסופית. אם הקומה לא ממש חשובה לך, אפשר לדלג על השאלה,
+          החברים שלי כבר יסתדרו
         </p>
       </div>
       <div className={styles.buttonWrapper}>
@@ -60,10 +60,12 @@ const FifthStep = () => {
             dispatch<any>(setStep(4));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} /> Назад
+          <FontAwesomeIcon icon={faArrowLeft} />
+          חזור
         </button>
         <button className={styles.button} onClick={handleClick}>
-          Далее <FontAwesomeIcon icon={faArrowRight} />
+          להמשיך
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
     </div>

@@ -26,8 +26,8 @@ const ThirdStep = () => {
     <div className="relative w-full h-full">
       <h1 className="md:text-lg text-md text-center mb-8">.כמות החדרים</h1>
       <div className={styles.values}>
-        <h4 className="md:text-lg text-md">от</h4>
-        <h4 className="md:text-lg text-md">до</h4>
+        <h4 className="md:text-lg text-md">מ</h4>
+        <h4 className="md:text-lg text-md">עד</h4>
       </div>
       <ReactSlider
         className={"slider"}
@@ -49,10 +49,12 @@ const ThirdStep = () => {
             dispatch<any>(setStep(2));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} /> Назад
+          <FontAwesomeIcon icon={faArrowLeft} />
+          חזור
         </button>
         <button className={styles.button} onClick={handleClick}>
-          Далее <FontAwesomeIcon icon={faArrowRight} />
+          להמשיך
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
       <div className="flex flex-col items-center">

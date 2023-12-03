@@ -20,11 +20,12 @@ function checkedValidation(values: any) {
 
 const SecondStep = () => {
   const variants: Array<propertyTypeVariants> = [
-    { var: "дом" },
-    { var: "коттедж" },
-    { var: "вилла" },
-    { var: "квартира" },
-    { var: "квартира с двориком" },
+    { var: "בית" },
+    { var: "קוטג" },
+    { var: "וילה" },
+    { var: "דירה" },
+    { var: "דירה עם חצר" },
+    { var: "פֶּנטהאוס" },
   ];
 
   const dispatch = useDispatch();
@@ -80,10 +81,12 @@ const SecondStep = () => {
                   dispatch<any>(setStep(1));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} /> Назад
+                <FontAwesomeIcon icon={faArrowLeft} />
+                חזור
               </button>
               <button className={styles.button} type="submit">
-                Далее <FontAwesomeIcon icon={faArrowRight} />
+                להמשיך
+                <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </Form>

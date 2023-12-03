@@ -35,7 +35,7 @@ const Start = () => {
             className={styles.button}
             onClick={() => dispatch<any>(setStep(1))}
           >
-            .לענות על השאלות
+            לענות על השאלות
           </div>
         </div>
       </div>
