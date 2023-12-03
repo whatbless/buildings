@@ -20,7 +20,7 @@ const About = () => {
             <img className="md:block hidden" src={real} alt="about-image" />
             <div className="flex h-max items-center justify-between">
               <img
-                className="2xl:w-40 lg:w-32 md:w-28 sm:w-40 w-32"
+                className="2xl:w-36 lg:w-32 md:w-28 sm:w-40 w-32"
                 src={logo}
                 alt="logo"
               />

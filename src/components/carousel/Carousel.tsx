@@ -241,6 +241,7 @@ const Carousel = () => {
                 autoPlay={true}
                 responsive={{
                   0: { items: 1 },
+                  1280: { items: 2 },
                 }}
                 infinite={true}
                 disableDotsControls={true}

@@ -47,7 +47,7 @@ const Feedback = () => {
             )
           ) : (
             <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center">
-              <p className="w-full text-2xl">
+              <p className="w-full text-2xl sm:pt-0 pt-5">
                 צור קשר! אנא השאר פרטים ונחזור אליך בקדם
               </p>
               <Formik
@@ -124,7 +124,6 @@ const Feedback = () => {
                           className={styles.formArea}
                           name="addition"
                           component="textarea"
-                          placeholder="Дополнительная информация"
                         />
                       </div>
                       <div className={styles.error}>
