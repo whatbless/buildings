@@ -51,8 +51,7 @@ const Interlayer = () => {
             onClick={openModal}
             className="text-white bg-regal-blue px-10 py-5  text-center"
           >
-            Ответить на 6 вопросов и получить персональную подборку
-            недвижимости!
+            ענו על מספר שאלות וקבלו תיק הצעות נדל"ן אישי
           </button>
           <Modal
             isOpen={modalIsOpen}

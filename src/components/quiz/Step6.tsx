@@ -19,7 +19,7 @@ const FifthStep = () => {
 
   const handleClick = () => {
     dispatch<any>(setFloorRange(values));
-    dispatch<any>(setStep(6));
+    dispatch<any>(setStep(7));
   };
 
   return (
@@ -57,15 +57,15 @@ const FifthStep = () => {
         <button
           className={styles.backButton}
           onClick={() => {
-            dispatch<any>(setStep(4));
+            dispatch<any>(setStep(5));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
           חזור
         </button>
         <button className={styles.button} onClick={handleClick}>
           להמשיך
-          <FontAwesomeIcon icon={faArrowRight} />
+          <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
         </button>
       </div>
     </div>

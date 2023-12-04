@@ -8,22 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-function validateEmail(value: string) {
-  let error;
-  if (!value) {
-    error = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = "Invalid email address";
-  }
-  return error;
-}
-
 const Bonus = () => {
   const dispatch = useDispatch();
 
   return (
     <div className="w-full h-full relative">
-      <h1 className="text-center 2xl:text-lg xl:text-md text-md text-sm">
+      <h1 className="text-center md:text-lg text-sm">
         אני מעריך את הזמן שהקדשת לשאלון הצנוע שלי, אי לכך הכנתי עבורך מתנה קטנה:
         עליך רק להזין את כתובת הדואר האלקטרוני ואני אעביר לחבריי לעבודה הוראה
         ליידע אותך על כל פרויקט חדש. זה יאפשר לך להיות בין הראשונים שיקבלו מידע
@@ -52,8 +42,7 @@ const Bonus = () => {
                 <Field
                   className="border-b border-black md:text-lg text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="email"
-                  validate={validateEmail}
-                  placeholder="Ваша почта (email)"
+                  placeholder="האימייל שלך"
                 />
               </div>
               <div className={styles.error}></div>
@@ -68,12 +57,12 @@ const Bonus = () => {
                   dispatch<any>(setStep(7));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                 חזור
               </button>
               <button className={styles.button} type="submit">
                 להמשיך
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
               </button>
             </div>
           </Form>

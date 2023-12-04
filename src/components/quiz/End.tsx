@@ -29,14 +29,14 @@ const End = () => {
             dispatch<any>(setStep(8));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
           חזור
         </button>
         <button
           className={styles.button}
           onClick={() => dispatch<any>(setStep(0))}
         >
-          Пройти еще раз <FontAwesomeIcon icon={faRepeat} />
+          Пройти еще раз <FontAwesomeIcon className="ml-3" icon={faRepeat} />
         </button>
       </div>
     </div>

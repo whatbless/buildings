@@ -4,6 +4,7 @@ import logo from "./../../images/logo.png";
 import facebook from "./../../images/facebook.png";
 import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
+import { SocialType } from "../../types/types";
 
 const navs = [
   { title: "עמוד הבית", anchor: "#hero" },
@@ -13,7 +14,7 @@ const navs = [
   { title: "צור קשר", anchor: "#about" },
 ];
 
-const socials = [
+const socials: Array<SocialType> = [
   { alt: "facebook", img: facebook, link: "/" },
   { alt: "instagram", img: instagram, link: "/" },
   {
@@ -78,7 +79,7 @@ const Header = () => {
             ))}
           </div>
           <div className="flex flex-row xl:mb-0 mb-3 items-center">
-            {socials.map((social) => (
+            {socials.map((social: SocialType) => (
               <li className="w-full flex justify-center">
                 <a
                   target={"_blank"}

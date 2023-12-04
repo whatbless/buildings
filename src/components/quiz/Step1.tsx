@@ -1,13 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setPropertyType, setStep } from "../../redux/quizReducer";
+import { setPropertyFor, setStep } from "../../redux/quizReducer";
 import { propertyTypeVariants } from "../../types/types";
 import styles from "./Quiz.module.css";
 import { Formik, Form, Field } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import henryHand from "./../../images/henry-hand.png";
+import henryO from "./../../images/henry-o.png";
 
 function checkedValidation(values: any) {
   console.log(values);
@@ -18,30 +18,27 @@ function checkedValidation(values: any) {
   return error;
 }
 
-const SecondStep = () => {
+const SixthStep = () => {
   const variants: Array<propertyTypeVariants> = [
-    { var: "בית" },
-    { var: "קוטג" },
-    { var: "וילה" },
-    { var: "דירה" },
-    { var: "דירה עם חצר" },
-    { var: "פֶּנטהאוס" },
+    { var: "למגורים" },
+    { var: "להשקעה" },
+    { var: "להשקעה ומגורים" },
   ];
 
   const dispatch = useDispatch();
   return (
     <div className="relative h-full w-full">
       <h1 className=" md:text-lg text-sm text-center mb-8">
-        .יופי! עכשיו נתמקד בסוג הנדל"ן
+        Последний вопросик! Для каких целей тебе нужна недвижимость?
       </h1>
       <Formik
         initialValues={{
-          propertyType: [],
+          propertyFor: [],
         }}
         onSubmit={(values: any) => {
           console.log(values);
-          dispatch<any>(setPropertyType(values.propertyType));
-          dispatch<any>(setStep(3));
+          dispatch<any>(setPropertyFor(values.propertyFor));
+          dispatch<any>(setStep(2));
         }}
       >
         {({ errors, touched, isValidating }) => (
@@ -50,10 +47,10 @@ const SecondStep = () => {
               <div>
                 {variants.map((variant) => (
                   <div>
-                    <div className="md:text-lg text-md flex text-regal-blue">
+                    <div className="md:text-lg text-sm flex text-regal-blue">
                       <Field
                         className="mr-5"
-                        name="propertyType"
+                        name="propertyFor"
                         type="checkbox"
                         value={variant.var}
                         validate={checkedValidation}
@@ -65,28 +62,28 @@ const SecondStep = () => {
               </div>
               <img
                 className="md:w-60 md:h-60 w-36 h-36"
-                src={henryHand}
+                src={henryO}
                 alt="henry-image3"
               />
             </div>
             <div className="text-regal-red md:text-lg text-sm text-center">
-              {errors.propertyType && touched.propertyType && (
-                <div>{errors.propertyType}</div>
+              {errors.propertyFor && touched.propertyFor && (
+                <div>{errors.propertyFor}</div>
               )}
             </div>
             <div className={styles.buttonWrapper}>
               <button
                 className={styles.backButton}
                 onClick={() => {
-                  dispatch<any>(setStep(1));
+                  dispatch<any>(setStep(0));
                 }}
               >
-                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                 חזור
               </button>
               <button className={styles.button} type="submit">
                 להמשיך
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
               </button>
             </div>
           </Form>
@@ -96,4 +93,4 @@ const SecondStep = () => {
   );
 };
 
-export default SecondStep;
+export default SixthStep;

@@ -40,7 +40,7 @@ const FirstStep = () => {
           onSubmit={(values: any) => {
             console.log(values);
             dispatch<any>(setRegionForm(values.regions));
-            dispatch<any>(setStep(2));
+            dispatch<any>(setStep(3));
           }}
         >
           {({ errors, touched, isValidating }) => (
@@ -61,14 +61,14 @@ const FirstStep = () => {
               <div className={styles.buttonWrapper}>
                 <button
                   className={styles.backButton}
-                  onClick={() => dispatch<any>(setStep(0))}
+                  onClick={() => dispatch<any>(setStep(1))}
                 >
-                  <FontAwesomeIcon icon={faArrowLeft} />
+                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   חזור
                 </button>
                 <button className={styles.button} type="submit">
                   להמשיך
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </button>
               </div>
             </Form>

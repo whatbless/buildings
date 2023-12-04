@@ -17,7 +17,7 @@
 .formPrice {
     border: 1px solid black;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     font-size: 20px;
     background: white;
     color: black;
@@ -28,7 +28,9 @@
 .priceWrap {
     display: flex;
     width: 100%;
+    justify-content: center;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
 .formPriceWrapper {

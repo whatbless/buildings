@@ -29,7 +29,7 @@ const Feedback = () => {
             <img src={image} alt="feedback-image" />
           </div>
           {isSended ? (
-            showElement ? (
+            showElement && (
               <div className="flex flex-col justify-center items-center">
                 <img src={like} alt="like-gif"></img>
                 <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
@@ -42,8 +42,6 @@ const Feedback = () => {
                   !נציגנו יתקשר אליך תוך 24 שעות
                 </p>
               </div>
-            ) : (
-              <div></div>
             )
           ) : (
             <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center">
@@ -62,6 +60,7 @@ const Feedback = () => {
                   setIsSended(true);
                   setTimeout(function () {
                     setShowElement(false);
+                    setIsSended(false);
                   }, 5000);
                 }}
               >
@@ -103,7 +102,7 @@ const Feedback = () => {
                           className={styles.input}
                           name="purpose"
                           validate={requireValidate}
-                          placeholder="Для каких целей вы ищете недвижимость"
+                          placeholder="לשם איזו מטרה אתם רוכשים דירה"
                         />
                       </div>
                       <div className={styles.error}>
@@ -124,6 +123,7 @@ const Feedback = () => {
                           className={styles.formArea}
                           name="addition"
                           component="textarea"
+                          placeholder="מידע נוסף"
                         />
                       </div>
                       <div className={styles.error}>

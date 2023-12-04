@@ -19,7 +19,7 @@ const ThirdStep = () => {
 
   const handleClick = () => {
     dispatch<any>(setRoomRange(values));
-    dispatch<any>(setStep(4));
+    dispatch<any>(setStep(5));
   };
 
   return (
@@ -46,15 +46,15 @@ const ThirdStep = () => {
         <button
           className={styles.backButton}
           onClick={() => {
-            dispatch<any>(setStep(2));
+            dispatch<any>(setStep(3));
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
           חזור
         </button>
         <button className={styles.button} onClick={handleClick}>
           להמשיך
-          <FontAwesomeIcon icon={faArrowRight} />
+          <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
         </button>
       </div>
       <div className="flex flex-col items-center">

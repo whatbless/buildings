@@ -17,3 +17,9 @@ export type diplomaType = {
   src: string;
   alt: string;
 };
+
+export type SocialType = {
+  alt: string;
+  img: string;
+  link: string;
+};
