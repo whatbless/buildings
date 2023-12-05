@@ -23,3 +23,7 @@ export type SocialType = {
   img: string;
   link: string;
 };
+
+export type QuizPropsType = {
+  closeModal?: () => void;
+};

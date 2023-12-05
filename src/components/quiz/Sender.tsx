@@ -1,13 +1,16 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import styles from "./Quiz.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import henryHeart from "./../../images/henry-heart.png";
+import { setStep } from "../../redux/quizReducer";
+import { QuizPropsType } from "../../types/types";
 
-const Sender = () => {
+const Sender = (props: QuizPropsType) => {
+  const dispatch = useDispatch();
   const data = useSelector((state: RootState) => state.quiz);
   const message = `regions: ${data.regions}, propertyType: ${data.propertyType}, propertyFor: ${data.propertyFor}, price: ${data.price}, floor range: ${data.floorRange}, name: ${data.name}, email: ${data.email}, number: ${data.number}, validations: ${data.validations}, addition: ${data.addition}`;
 
@@ -20,6 +23,8 @@ const Sender = () => {
       e.target,
       "cLVGE7oDmk1YG9Cjm"
     );
+
+    dispatch(setStep(0));
   };
 
   return (
@@ -39,7 +44,11 @@ const Sender = () => {
         onSubmit={sendEmail}
       >
         <textarea className="hidden" name="message" value={message} />
-        <button className={styles.button} type="submit">
+        <button
+          className={styles.button}
+          type="submit"
+          onClick={props.closeModal}
+        >
           שלח
           <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
         </button>

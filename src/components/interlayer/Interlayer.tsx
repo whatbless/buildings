@@ -59,7 +59,7 @@ const Interlayer = () => {
             style={customStyles}
             contentLabel="Modal"
           >
-            <Quiz />
+            <Quiz closeModal={closeModal} />
             <button
               onClick={xMarkHandle}
               className="absolute z-20 right-6 top-6"

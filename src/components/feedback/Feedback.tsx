@@ -54,7 +54,7 @@ const Feedback = () => {
   return (
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
-        <div id="feedback" className="absolute top-36"></div>
+        <div id="feedback" className="absolute -top-36"></div>
         <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
           ?איזה נדל"ן אתם מחפשים
         </h1>

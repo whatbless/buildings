@@ -10,15 +10,15 @@ import Step6 from "./Step6";
 import Step1 from "./Step1";
 import Result from "./Result";
 import Start from "./Start";
-import End from "./End";
 import Bonus from "./Bonus";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { setStep } from "../../redux/quizReducer";
 import Sender from "./Sender";
+import { QuizPropsType } from "../../types/types";
 
-const Quiz = () => {
+const Quiz = (props: QuizPropsType) => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 
   const dispatch = useDispatch();
@@ -62,7 +62,7 @@ const Quiz = () => {
         {step === 6 && <Step6 />}
         {step === 7 && <Result />}
         {step === 8 && <Bonus />}
-        {step === 9 && <Sender />}
+        {step === 9 && <Sender closeModal={props.closeModal} />}
       </div>
     </div>
   );
