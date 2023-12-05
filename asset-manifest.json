@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/buildings/static/css/main.a8a33c4e.css",
-    "main.js": "/buildings/static/js/main.57dadb52.js",
+    "main.css": "/buildings/static/css/main.03290ef7.css",
+    "main.js": "/buildings/static/js/main.a3d7e053.js",
     "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
     "static/media/hero2.mp4": "/buildings/static/media/hero2.0a0619dfa06a0ad3af18.mp4",
     "static/media/diploma.png": "/buildings/static/media/diploma.6bccd013245b931a9088.png",
@@ -14,9 +14,10 @@
     "static/media/whatsapp.png": "/buildings/static/media/whatsapp.807cf0d84060a9ee2059.png",
     "static/media/hero-image.jpeg": "/buildings/static/media/hero-image.3b963ff96ff770446112.jpeg",
     "static/media/properties.png": "/buildings/static/media/properties.5ab66617b03b3ca29260.png",
-    "static/media/like.gif": "/buildings/static/media/like.8f7332d61fcfcb2b4485.gif",
     "static/media/item1.jpeg": "/buildings/static/media/item1.c79e6485b49072de90ae.jpeg",
     "static/media/vert-logo.png": "/buildings/static/media/vert-logo.711eb23362ee10fed72e.png",
+    "static/media/henry-like.png": "/buildings/static/media/henry-like.202c7d12eb5aae59edd2.png",
+    "static/media/logo1.png": "/buildings/static/media/logo1.d2e9c194134d16899526.png",
     "static/media/henry-o.png": "/buildings/static/media/henry-o.352a97a277511c440542.png",
     "static/media/henry-hi.png": "/buildings/static/media/henry-hi.7d9dbca9d936c69f1d1b.png",
     "static/media/henry-v.png": "/buildings/static/media/henry-v.d39b25a3391928c50813.png",
@@ -28,12 +29,12 @@
     "static/media/henry-grin.png": "/buildings/static/media/henry-grin.dcffd0a95c8538b0eb67.png",
     "static/media/henry-heart.png": "/buildings/static/media/henry-heart.1d35d181b9f7acdab5af.png",
     "index.html": "/buildings/index.html",
-    "main.a8a33c4e.css.map": "/buildings/static/css/main.a8a33c4e.css.map",
-    "main.57dadb52.js.map": "/buildings/static/js/main.57dadb52.js.map",
+    "main.03290ef7.css.map": "/buildings/static/css/main.03290ef7.css.map",
+    "main.a3d7e053.js.map": "/buildings/static/js/main.a3d7e053.js.map",
     "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8a33c4e.css",
-    "static/js/main.57dadb52.js"
+    "static/css/main.03290ef7.css",
+    "static/js/main.a3d7e053.js"
   ]
 }
