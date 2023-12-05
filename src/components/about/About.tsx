@@ -34,7 +34,7 @@ const About = () => {
                       className="text-regal-red mr-3 text-xl"
                       icon={faLocationDot}
                     />
-                    רחי חרצ חיפש
+                    רחי חרצל 20, חיפש
                   </p>
                   <p>
                     <FontAwesomeIcon
