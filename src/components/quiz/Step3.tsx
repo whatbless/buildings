@@ -32,7 +32,7 @@ const SecondStep = () => {
   return (
     <div className="relative h-full w-full">
       <h1 className="md:text-lg text-sm text-center mb-8">
-        .יופי! עכשיו נתמקד בסוג הנדל"ן
+        יופי! עכשיו נתמקד בסוג הנדל"ן
       </h1>
       <Formik
         initialValues={{

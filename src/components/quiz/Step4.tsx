@@ -24,7 +24,7 @@ const ThirdStep = () => {
 
   return (
     <div className="relative w-full h-full">
-      <h1 className="md:text-lg text-md text-center mb-8">.כמות החדרים</h1>
+      <h1 className="md:text-lg text-md text-center mb-8">כמות החדרים</h1>
       <div className={styles.values}>
         <h4 className="md:text-lg text-md">מ</h4>
         <h4 className="md:text-lg text-md">עד</h4>

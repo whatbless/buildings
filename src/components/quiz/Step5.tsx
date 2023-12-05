@@ -17,9 +17,6 @@ function validateNumber(value: string) {
   if (!value) {
     error =
       "למה להתבייש? הגדרת התקציב חשובה למטרותינו. לא לדאוג - אני לא אספר לאיש";
-  } else if (/^\d+$/.test(value)) {
-  } else {
-    error = "Использовать можно только числа!";
   }
   return error;
 }
