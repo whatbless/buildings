@@ -62,7 +62,7 @@ const Footer = () => {
                   className="text-regal-red mr-3 mt-2 text-xl"
                   icon={faLocationDot}
                 />
-                רחי חרצל 20, חיפש
+                רחי הרצל 20, חיפה
               </p>
               <p>
                 <FontAwesomeIcon
