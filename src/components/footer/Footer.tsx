@@ -5,6 +5,8 @@ import instagram from "./../../images/instagram.png";
 import facebook from "./../../images/facebook.png";
 import logo from "./../../images/logo.png";
 import { SocialType } from "../../types/types";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const socials: Array<SocialType> = [
   { alt: "facebook", img: facebook, link: "/" },
@@ -28,7 +30,7 @@ const Footer = () => {
       <div className="container mx-auto px-5 flex lg:flex-row flex-col-reverse lg:space-y-0 space-y-10 justify-between items-center w-full h-full">
         <div className="flex flex-col sm:items-start justify-center items-center ">
           <img className="w-40" src={logo} alt="logo" />
-          <div className="text-sm font-extralight sm:text-left text-center text-regal-blue lg:pb-0 pb-8">
+          <div className="text-sm sm:text-left text-center text-regal-blue lg:pb-0 pb-8">
             @2023 All Rights Reserved
           </div>
         </div>
@@ -37,7 +39,7 @@ const Footer = () => {
             {navs.map((nav) => (
               <a
                 href={nav.anchor}
-                className="uppercase md:text-lg text-sm font-bold text-center text-regal-red hover:text-black cursor-pointer"
+                className="uppercase 2xl:text-xl text-lg font-bold text-center text-regal-red hover:text-black cursor-pointer"
               >
                 {nav.title}
               </a>
@@ -52,12 +54,22 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <p className="text-regal-blue text-lg text-center mt-5 mb-3">
-            0586557877
-          </p>
-          <p className="text-regal-red text-lg text-center">
-            רחי חרצל 20, חיפש
-          </p>
+          <div className="text-center md:text-md text-sm font-bold text-regal-blue">
+            <p className="py-2">
+              0586557877
+              <FontAwesomeIcon
+                className="text-regal-red ml-3 text-xl"
+                icon={faPhone}
+              />
+            </p>
+            <p>
+              רחי חרצל 20, חיפש
+              <FontAwesomeIcon
+                className="text-regal-red ml-3 text-xl"
+                icon={faLocationDot}
+              />
+            </p>
+          </div>
         </div>
       </div>
     </footer>

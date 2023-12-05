@@ -10,6 +10,7 @@ import Header from "./components/header/Header";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./anims.css";
+import logo1 from "./images/logo1.png";
 
 function App() {
   const [scroll, setScroll] = React.useState(0);
@@ -45,11 +46,15 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div>
+    <div className="relative">
       {isMobile ? (
-        scroll > 200 && (
+        scroll > 200 ? (
           <div id="header">
             <Header />
+          </div>
+        ) : (
+          <div className="absolute top-5 right-5">
+            <img className="w-20" src={logo1} alt="logo1"></img>
           </div>
         )
       ) : (

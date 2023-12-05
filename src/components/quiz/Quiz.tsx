@@ -24,7 +24,7 @@ const Quiz = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="h-[650px] 2xl:w-[1036px] lg:w-[780px] w-screen relative mx-auto flex flex-col items-center bg-white overflow-hidden">
+    <div className="md:h-[600px] h-[500px] 2xl:w-[1036px] lg:w-[780px] w-screen relative mx-auto flex flex-col items-center bg-white overflow-hidden">
       <button
         onClick={() => dispatch<any>(setStep(0))}
         className="absolute z-10 right-6 top-6"
@@ -52,7 +52,7 @@ const Quiz = () => {
           </div>
         )}
       </div>
-      <div className="w-full h-full md:px-10 md:py-10 px-5 py-10">
+      <div className="w-full h-full md:px-10 md:py-10 px-5 py-5">
         {step === 0 && <Start />}
         {step === 1 && <Step1 />}
         {step === 2 && <Step2 />}

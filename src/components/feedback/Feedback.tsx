@@ -66,17 +66,23 @@ const Feedback = () => {
             showElement && (
               <div
                 id="send"
-                className="flex flex-col justify-center items-center w-1/2"
+                className="flex flex-col justify-center items-center xl:w-1/2 w-full"
               >
                 <img src={like} alt="like-henry"></img>
-                <p>Спасибо что прошли опрос</p>
+                <p className="mb-5 md:text-2xl text-xl text-center text-regal-blue">
+                  !תודה
+                </p>
+                <p className="mb-5 md:text-2xl text-xl text-center text-regal-red">
+                  לחץ על הכפתור "שלח" והמומחה שלנו יצור איתך קשר בקרוב כדי להציג
+                  בפניך את האפשרויות הטובות דירות
+                </p>
                 <form onSubmit={sendEmail}>
                   <textarea name="message" value={message} className="hidden" />
                   <button
                     type="submit"
-                    className="border border-green-600 w-max text-green-600 px-8 py-4 flex items-center rounded-md duration-300 hover:text-white hover:bg-green-600 hover:px-16"
+                    className="border border-regal-blue w-max text-regal-blue px-8 py-4 flex items-center rounded-md duration-300 hover:text-white hover:bg-regal-blue hover:px-16"
                   >
-                    Отправить данные
+                    שלח
                   </button>
                 </form>
               </div>
@@ -138,7 +144,7 @@ const Feedback = () => {
                       </div>
                     </div>
                     <div className="pt-5">
-                      <h1 className="text-2xl pb-2">для каких целей?</h1>
+                      <h1 className="text-2xl pb-2">?לאיזו מטרה ישמש הנכס</h1>
                       {variants.map((variant) => (
                         <div>
                           <div className="md:text-lg text-sm flex">
@@ -188,7 +194,7 @@ const Feedback = () => {
                           className="px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
                           type="submit"
                         >
-                          שלח
+                          להמשיך
                         </button>
                       </div>
                     </div>

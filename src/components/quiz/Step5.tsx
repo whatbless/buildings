@@ -44,35 +44,35 @@ const FourthStep = () => {
         {({ errors, touched, isValidating }) => (
           <Form>
             <div className="flex md:flex-row flex-col">
-              <div className="w-full">
-                <h1 className="text-center text-lg mb-5">תקציב</h1>
-                <div className={styles.priceWrap}>
-                  <div className={styles.formPriceWrapper}>
-                    <p className={styles.formPriceTitle}>מ</p>
-                    <Field
-                      className={styles.formPrice}
-                      name="minPrice"
-                      validate={validateNumber}
-                    />
-                  </div>
-                  <div className={styles.formPriceWrapper}>
-                    <p className={styles.formPriceTitle}>עד</p>
-                    <Field
-                      className={styles.formPrice}
-                      name="maxPrice"
-                      validate={validateNumber}
-                    />
-                  </div>
+              <h1 className="text-center text-lg mb-5">תקציב</h1>
+              <div className={styles.priceWrap}>
+                <div className={styles.formPriceWrapper}>
+                  <p className={styles.formPriceTitle}>מ</p>
+                  <Field
+                    className={styles.formPrice}
+                    name="minPrice"
+                    validate={validateNumber}
+                  />
                 </div>
-                <div className="text-regal-red md:text-lg text-sm text-center">
-                  {(errors.maxPrice && touched.maxPrice && (
+                <div className={styles.formPriceWrapper}>
+                  <p className={styles.formPriceTitle}>עד</p>
+                  <Field
+                    className={styles.formPrice}
+                    name="maxPrice"
+                    validate={validateNumber}
+                  />
+                </div>
+              </div>
+              <div className="text-regal-red md:text-lg text-sm text-center ">
+                {(errors.maxPrice && touched.maxPrice && (
+                  <div>{errors.minPrice}</div>
+                )) ||
+                  (errors.minPrice && touched.minPrice && (
                     <div>{errors.minPrice}</div>
-                  )) ||
-                    (errors.minPrice && touched.minPrice && (
-                      <div>{errors.minPrice}</div>
-                    ))}
-                </div>
-                <div className="mt-5 flex text-regal-blue justify-center">
+                  ))}
+              </div>
+              <div className="flex -mt-2">
+                <div className="mt-5 flex text-regal-blue justify-center w-1/2">
                   <div>
                     {validations.map((val) => (
                       <div>
@@ -89,13 +89,13 @@ const FourthStep = () => {
                     ))}
                   </div>
                 </div>
-              </div>
-              <div className="md:pt-0 pt-5 md:w-1/2 w-full flex justify-center">
-                <img
-                  className="md:w-60 md:h-60 w-36 h-36"
-                  src={henryV}
-                  alt="henry-image5"
-                />
+                <div className="w-1/2 flex justify-center ">
+                  <img
+                    className="md:w-60 md:h-60 w-36 h-36"
+                    src={henryV}
+                    alt="henry-image5"
+                  />
+                </div>
               </div>
             </div>
             <div className={styles.buttonWrapper}>

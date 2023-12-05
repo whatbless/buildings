@@ -40,15 +40,11 @@ const Bonus = () => {
             <div className="flex w-full justify-between items-center">
               <div className={styles.inputWrapper}>
                 <Field
-                  className="border-b border-black md:text-lg text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
+                  className="border-b border-black md:text-lg md:-mt-10 -mt-5 text-md font-extralight p-2.5 resize-none w-full focus:outline-none"
                   name="email"
                   placeholder="האימייל שלך"
                 />
               </div>
-              <div className={styles.error}></div>
-            </div>
-            <div className="text-regal-red md:text-lg text-sm text-center">
-              {errors.email && touched.email && <div>{errors.email}</div>}
             </div>
             <div className={styles.buttonWrapper}>
               <button

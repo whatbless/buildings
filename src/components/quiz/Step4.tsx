@@ -59,7 +59,7 @@ const ThirdStep = () => {
       </div>
       <div className="flex flex-col items-center">
         <img
-          className="md:w-60 md:h-60 w-36 h-36"
+          className="md:w-60 md:h-60 w-36 h-36 -mt-8"
           src={henryThink}
           alt="henry-image4"
         />

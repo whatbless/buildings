@@ -10,10 +10,6 @@ const Hero = () => {
   const [height, setHeight] = useState<number>(window.innerHeight);
   const [showArrow, setShowArrow] = useState(false);
 
-  setTimeout(() => {
-    setShowArrow(true);
-  }, 60000);
-
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
@@ -34,6 +30,13 @@ const Hero = () => {
 
   const isMobile = width / height < 1.45;
 
+  setTimeout(
+    () => {
+      setShowArrow(true);
+    },
+    isMobile ? 5000 : 60000
+  );
+
   const [isLoaded1, setIsLoaded1] = useState(false);
   const [isLoaded2, setIsLoaded2] = useState(false);
   const [isLoaded3, setIsLoaded3] = useState(false);
@@ -53,7 +56,7 @@ const Hero = () => {
   return (
     <section className="relative">
       <div className="absolute top-0" id="hero"></div>
-      {!isMobile && showArrow && (
+      {showArrow && (
         <div className="absolute bottom-5 flex justify-center w-full drop-shadow-5xl">
           <FontAwesomeIcon
             className="text-white text-7xl animate-bounce"

@@ -75,11 +75,14 @@ const Header = () => {
         <div className="flex justify-between">
           <a href="/">
             <img
-              className={isMobile ? "w-24 py-6" : "w-52"}
+              className={isMobile ? "w-20 py-4" : "w-52"}
               src={isMobile ? logo1 : logo}
             ></img>
           </a>
-          <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <div
+            className={isMobile ? "menu1" : "menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <span></span>
             <span></span>
             <span></span>

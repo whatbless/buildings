@@ -29,7 +29,7 @@ const SixthStep = () => {
   return (
     <div className="relative h-full w-full">
       <h1 className=" md:text-lg text-sm text-center mb-8">
-        Последний вопросик! Для каких целей тебе нужна недвижимость?
+        !תגיד לי בסוד - לאיזו מטרה ישמש הנכס? מבטיח לא לגלות לאף אחד
       </h1>
       <Formik
         initialValues={{
@@ -44,27 +44,33 @@ const SixthStep = () => {
         {({ errors, touched, isValidating }) => (
           <Form>
             <div className="flex w-full justify-between items-center">
-              <div>
-                {variants.map((variant) => (
-                  <div>
-                    <div className="md:text-lg text-sm flex text-regal-blue">
-                      <Field
-                        className="mr-5"
-                        name="propertyFor"
-                        type="checkbox"
-                        value={variant.var}
-                        validate={checkedValidation}
-                      />
-                      <p className={styles.formCheckboxTitle}>{variant.var}</p>
+              <div className="flex flex-col items-center w-1/2">
+                <div>
+                  {variants.map((variant) => (
+                    <div>
+                      <div className="md:text-lg text-sm flex text-regal-blue">
+                        <Field
+                          className="mr-5"
+                          name="propertyFor"
+                          type="checkbox"
+                          value={variant.var}
+                          validate={checkedValidation}
+                        />
+                        <p className={styles.formCheckboxTitle}>
+                          {variant.var}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <img
-                className="md:w-60 md:h-60 w-36 h-36"
-                src={henryO}
-                alt="henry-image3"
-              />
+              <div className="w-1/2 flex justify-center">
+                <img
+                  className="md:w-60 md:h-60 w-36 h-36"
+                  src={henryO}
+                  alt="henry-image3"
+                />
+              </div>
             </div>
             <div className="text-regal-red md:text-lg text-sm text-center">
               {errors.propertyFor && touched.propertyFor && (

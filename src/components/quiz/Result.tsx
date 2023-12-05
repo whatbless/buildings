@@ -38,17 +38,17 @@ const Result = () => {
   return (
     <div className="relative h-full">
       <img
-        className="md:w-60 md:h-60 w-36 h-36 absolute md:-left-36 -left-20 md:-top-40 -top-0 z-10"
+        className="md:w-60 md:h-60 w-36 h-36 absolute md:-left-36 -left-20 md:-top-40 -top-7 z-10"
         src={henryParty}
         alt="henry-image7"
       />
       <img
         style={{ transform: "scale(-1, 1)" }}
-        className="md:w-60 md:h-60 w-36 h-36 absolute md:-right-36 -right-20 md:top-36 top-52 z-10"
+        className="md:w-60 md:h-60 w-36 h-36 absolute md:-right-36 -right-20 md:top-36 top-40 z-10"
         src={henryParty}
         alt="henry-image7"
       />
-      <h1 className="text-center md:text-lg text-sm px-5">
+      <h1 className="text-center md:text-lg text-sm px-5 ">
         יופי, כל השאלות מאחורינו. כל מה שנותר הוא להזין שם ומספר טלפון וללחוץ על
         כפתור "שלח תוצאות"! אחרי קבלת הנתונים הצוות שלי יבנה תיק הצעות בהתאם
         להעדפותיך והמומחה שלנו יצור איתך קשר בקרוב
@@ -96,7 +96,7 @@ const Result = () => {
             </div>
             <div className={styles.inputBlock}>
               <Field
-                className="border-regal-blue border rounded-md w-full md:text-lg text-sm bg-white font-extralight px-3.5 py-2.5 h-24 resize-none box-border"
+                className="border-regal-blue border rounded-md w-full md:text-lg text-sm bg-white font-extralight px-3.5 py-2.5 md:h-24 h-16 resize-none box-border"
                 name="addition"
                 component="textarea"
               />

@@ -47,27 +47,33 @@ const SecondStep = () => {
         {({ errors, touched, isValidating }) => (
           <Form>
             <div className="flex w-full justify-between items-center">
-              <div>
-                {variants.map((variant) => (
-                  <div>
-                    <div className="md:text-lg text-sm flex text-regal-blue">
-                      <Field
-                        className="mr-5"
-                        name="propertyType"
-                        type="checkbox"
-                        value={variant.var}
-                        validate={checkedValidation}
-                      />
-                      <p className={styles.formCheckboxTitle}>{variant.var}</p>
+              <div className="flex justify-center w-1/2">
+                <div>
+                  {variants.map((variant) => (
+                    <div>
+                      <div className="md:text-lg text-sm flex text-regal-blue">
+                        <Field
+                          className="mr-5"
+                          name="propertyType"
+                          type="checkbox"
+                          value={variant.var}
+                          validate={checkedValidation}
+                        />
+                        <p className={styles.formCheckboxTitle}>
+                          {variant.var}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <img
-                className="md:w-60 md:h-60 w-36 h-36"
-                src={henryHand}
-                alt="henry-image3"
-              />
+              <div className="w-1/2 flex justify-center">
+                <img
+                  className="md:w-60 md:h-60 w-36 h-36"
+                  src={henryHand}
+                  alt="henry-image3"
+                />
+              </div>
             </div>
             <div className="text-regal-red md:text-lg text-sm text-center">
               {errors.propertyType && touched.propertyType && (

@@ -3,6 +3,9 @@ import real from "./../../images/real.jpeg";
 import sign from "./../../images/sign.png";
 import diploma from "./../../images/diploma.png";
 import logo from "./../../images/vert-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -24,9 +27,21 @@ const About = () => {
                 src={logo}
                 alt="logo"
               />
-              <div>
-                <p>0586557877</p>
-                <p> רחי חרצל 20, חיפש</p>
+              <div className="text-end md:text-md text-sm font-bold text-regal-blue">
+                <p>
+                  0586557877
+                  <FontAwesomeIcon
+                    className="text-regal-red ml-3 text-xl"
+                    icon={faPhone}
+                  />
+                </p>
+                <p>
+                  רחי חרצל 20, חיפש
+                  <FontAwesomeIcon
+                    className="text-regal-red ml-3 text-xl"
+                    icon={faLocationDot}
+                  />
+                </p>
               </div>
             </div>
           </div>

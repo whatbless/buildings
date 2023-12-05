@@ -44,11 +44,11 @@ const FifthStep = () => {
       </div>
       <div className="w-full flex 2xl:flex-col lg:flex-row md:flex-row flex-col items-center">
         <img
-          className="md:w-60 md:h-60 w-36 h-36"
+          className="md:w-60 md:h-60 w-36 h-36 -mt-7"
           src={henryGrin}
           alt="henry-image6"
         />
-        <p className="text-center md:text-lg text-md">
+        <p className="text-center md:text-lg text-md -mt-5">
           אכן שאלה פילוסופית. אם הקומה לא ממש חשובה לך, אפשר לדלג על השאלה,
           החברים שלי כבר יסתדרו
         </p>

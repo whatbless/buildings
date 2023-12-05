@@ -49,7 +49,7 @@ const Interlayer = () => {
         <div className="w-full flex justify-center">
           <button
             onClick={openModal}
-            className="text-white bg-regal-blue px-10 py-5  text-center"
+            className="text-white bg-regal-blue px-16 py-5 text-center 2xl:text-xl md:text-lg text-sm font-bold"
           >
             ענו על מספר שאלות וקבלו תיק הצעות נדל"ן אישי
           </button>

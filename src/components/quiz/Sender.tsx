@@ -8,6 +8,7 @@ import { setStep } from "../../redux/quizReducer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import henryHeart from "./../../images/henry-heart.png";
 
 const Sender = () => {
   const dispatch = useDispatch();
@@ -27,25 +28,26 @@ const Sender = () => {
   };
 
   return (
-    <div className="relative h-full w-full">
-      <h1>какая то надпись спасибо за то что прошел тест, отправить данные</h1>
-      <form onSubmit={sendEmail}>
+    <div className="relative h-full w-full flex flex-col items-center">
+      <img
+        className="md:w-60 md:h-60 w-36 h-36"
+        src={henryHeart}
+        alt="henry-image8"
+      />
+      <h1 className="text-center md:text-lg sm:text-md text-sm">
+        תודה! נהניתי מחברתך. אני סומך על חבריי לעבודה – הם מומחים בתחומם וימצאו
+        את נכס חלומותיך בקלות! המומחה שלנו יצור איתך קשר בקרוב כדי להציג בפניך
+        את האפשרויות הטובות ביותר
+      </h1>
+      <form
+        className="absolute bottom-0 flex w-full justify-center"
+        onSubmit={sendEmail}
+      >
         <textarea className="hidden" name="message" value={message} />
-        <div className={styles.buttonWrapper}>
-          <button
-            className={styles.backButton}
-            onClick={() => {
-              dispatch<any>(setStep(8));
-            }}
-          >
-            <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
-            חזור
-          </button>
-          <button className={styles.button} type="submit">
-            להמשיך
-            <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-          </button>
-        </div>
+        <button className={styles.button} type="submit">
+          שלח
+          <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
+        </button>
       </form>
     </div>
   );
