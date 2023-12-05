@@ -66,12 +66,12 @@ const Header = () => {
       className={
         scroll < 200
           ? menuOpen
-            ? "text-regal-blue z-20 fixed w-full flex justify-center duration-500 backdrop-blur-sm"
-            : "text-regal-blue z-20 fixed w-full flex justify-center duration-500"
-          : "text-regal-blue z-20 fixed w-full flex justify-center bg-white duration-500"
+            ? "text-regal-blue z-40 fixed w-full flex justify-center duration-500 backdrop-blur-sm"
+            : "text-regal-blue z-40 fixed w-full flex justify-center duration-500"
+          : "text-regal-blue z-40 fixed w-full flex justify-center bg-white duration-500"
       }
     >
-      <nav className="container mx-auto flex xl:flex-row flex-col items-start px-10 relative">
+      <nav className="container relative mx-auto flex xl:flex-row flex-col items-start px-10">
         <div className="flex justify-between">
           <a href="/">
             <img

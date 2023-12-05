@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "./components/carousel/Carousel";
 import Feedback from "./components/feedback/Feedback";
 import Hero from "./components/hero/Hero";
@@ -13,6 +13,28 @@ import "./anims.css";
 
 function App() {
   const [scroll, setScroll] = React.useState(0);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [height, setHeight] = useState<number>(window.innerHeight);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width / height < 1.45;
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -24,6 +46,16 @@ function App() {
   }, []);
   return (
     <div>
+      {isMobile ? (
+        scroll > 200 && (
+          <div id="header">
+            <Header />
+          </div>
+        )
+      ) : (
+        <Header />
+      )}
+
       {scroll > 900 && (
         <a
           href="#hero"
@@ -34,7 +66,6 @@ function App() {
         </a>
       )}
       <div>
-        <Header />
         <Hero />
         <Interlayer />
         <Carousel />
