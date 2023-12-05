@@ -202,9 +202,9 @@ const Carousel = () => {
       <div className="container mx-auto w-full">
         <div className="flex flex-col items-center py-8">
           <h1 className="text-center w-full md:text-4xl text-3xl text-regal-blue pb-4">
-            !רכשו את הטוב ביותר, המחיר נשכח והאיכות נשארת
+            רכשו את הטוב ביותר, המחיר נשכח והאיכות נשארת
           </h1>
-          <p className="md:w-2/3 w-full text-center">
+          <p className="md:w-2/3 w-full text-center md:text-2xl text-xl">
             רהשקעה כדאית בערכים נצחיים. קנו עכשיו ותיהנו מעליית המחירים
           </p>
         </div>

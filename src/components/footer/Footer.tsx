@@ -7,6 +7,7 @@ import logo from "./../../images/logo.png";
 import { SocialType } from "../../types/types";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const socials: Array<SocialType> = [
   { alt: "facebook", img: facebook, link: "/" },
@@ -47,7 +48,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center">
             {socials.map((social: SocialType) => (
               <a href={social.link}>
                 <img className="w-9 mx-3" src={social.img} alt={social.alt} />
@@ -55,20 +56,29 @@ const Footer = () => {
             ))}
           </div>
           <div className="text-center md:text-md text-sm font-bold text-regal-blue">
-            <p className="py-2">
-              0586557877
-              <FontAwesomeIcon
-                className="text-regal-red ml-3 text-xl"
-                icon={faPhone}
-              />
-            </p>
-            <p>
-              רחי חרצל 20, חיפש
-              <FontAwesomeIcon
-                className="text-regal-red ml-3 text-xl"
-                icon={faLocationDot}
-              />
-            </p>
+            <div>
+              <p>
+                <FontAwesomeIcon
+                  className="text-regal-red mr-3 mt-2 text-xl"
+                  icon={faLocationDot}
+                />
+                רחי חרצל 20, חיפש
+              </p>
+              <p>
+                <FontAwesomeIcon
+                  className="text-regal-red mr-3 mt-2 text-xl"
+                  icon={faPhone}
+                />
+                0586557877
+              </p>
+              <p>
+                <FontAwesomeIcon
+                  className="text-regal-red mr-3 mt-2 text-xl"
+                  icon={faEnvelope}
+                />
+                nadlanhaifa.nesher@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const FourthStep = () => {
       >
         {({ errors, touched, isValidating }) => (
           <Form>
-            <div className="flex md:flex-row flex-col">
+            <div className="flex flex-col">
               <h1 className="text-center text-lg mb-5">תקציב</h1>
               <div className={styles.priceWrap}>
                 <div className={styles.formPriceWrapper}>
@@ -71,8 +71,8 @@ const FourthStep = () => {
                     <div>{errors.minPrice}</div>
                   ))}
               </div>
-              <div className="flex -mt-2">
-                <div className="mt-5 flex text-regal-blue justify-center w-1/2">
+              <div className="flex">
+                <div className="md:mt-16 mt-7 flex text-regal-blue justify-center w-1/2">
                   <div>
                     {validations.map((val) => (
                       <div>
@@ -89,7 +89,7 @@ const FourthStep = () => {
                     ))}
                   </div>
                 </div>
-                <div className="w-1/2 flex justify-center ">
+                <div className="w-1/2 flex justify-center">
                   <img
                     className="md:w-60 md:h-60 w-36 h-36"
                     src={henryV}

@@ -27,21 +27,23 @@ const About = () => {
                 src={logo}
                 alt="logo"
               />
-              <div className="text-end md:text-md text-sm font-bold text-regal-blue">
-                <p>
-                  0586557877
-                  <FontAwesomeIcon
-                    className="text-regal-red ml-3 text-xl"
-                    icon={faPhone}
-                  />
-                </p>
-                <p>
-                  רחי חרצל 20, חיפש
-                  <FontAwesomeIcon
-                    className="text-regal-red ml-3 text-xl"
-                    icon={faLocationDot}
-                  />
-                </p>
+              <div className="md:text-md text-sm font-bold text-regal-blue">
+                <div>
+                  <p>
+                    <FontAwesomeIcon
+                      className="text-regal-red mr-3 text-xl"
+                      icon={faLocationDot}
+                    />
+                    רחי חרצל 20, חיפש
+                  </p>
+                  <p>
+                    <FontAwesomeIcon
+                      className="text-regal-red mr-3 mt-2 text-xl"
+                      icon={faPhone}
+                    />
+                    0586557877
+                  </p>
+                </div>
               </div>
             </div>
           </div>

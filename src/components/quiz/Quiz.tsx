@@ -63,7 +63,6 @@ const Quiz = () => {
         {step === 7 && <Result />}
         {step === 8 && <Bonus />}
         {step === 9 && <Sender />}
-        {step === 10 && <End />}
       </div>
     </div>
   );

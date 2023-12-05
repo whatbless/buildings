@@ -58,7 +58,7 @@ const Feedback = () => {
         <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
           ?איזה נדל"ן אתם מחפשים
         </h1>
-        <div className="flex xl:flex-row flex-col h-max pt-20">
+        <div className="flex xl:flex-row flex-col h-max md:pt-10 pt-5">
           <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
             <img src={image} alt="feedback-image" />
           </div>
