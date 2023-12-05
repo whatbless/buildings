@@ -2,10 +2,17 @@
 import video2 from "./../../images/hero2.mp4";
 import { useEffect, useState } from "react";
 import image from "./../../images/hero-image.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [height, setHeight] = useState<number>(window.innerHeight);
+  const [showArrow, setShowArrow] = useState(false);
+
+  setTimeout(() => {
+    setShowArrow(true);
+  }, 60000);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -46,7 +53,14 @@ const Hero = () => {
   return (
     <section className="relative">
       <div className="absolute top-0" id="hero"></div>
-
+      {!isMobile && showArrow && (
+        <div className="absolute bottom-5 flex justify-center w-full drop-shadow-5xl">
+          <FontAwesomeIcon
+            className="text-white text-7xl animate-bounce"
+            icon={faArrowDown}
+          />
+        </div>
+      )}
       <div className="relative">
         {isMobile ? (
           <div

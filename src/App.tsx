@@ -7,36 +7,42 @@ import Question from "./components/question/Question";
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { useSelector } from "react-redux";
-import { RootState } from "./redux/store";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./anims.css";
 
 function App() {
-  const data = useSelector((state: RootState) => state.quiz);
+  const [scroll, setScroll] = React.useState(0);
 
-  const message = `regions: ${data.regions}, propertyType: ${data.propertyType}, propertyFor: ${data.propertyFor}, price: ${data.price}, floor range: ${data.floorRange}, name: ${data.name}, email: ${data.email}, number: ${data.number}, validations: ${data.validations}, addition: ${data.addition}`;
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "service_upsc13j",
-      "template_k9nm0fc",
-      e.target,
-      "cLVGE7oDmk1YG9Cjm"
-    );
+  const handleScroll = () => {
+    setScroll(window.scrollY);
   };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div>
-      <Header />
-      <Hero />
-      <Interlayer />
-      <Carousel />
-      <Feedback />
-      <About />
-      <Question />
-      <Footer />
+      {scroll > 900 && (
+        <a
+          href="#hero"
+          id="arrowUp"
+          className="px-6 py-5 rounded-full fixed right-5 bottom-5 bg-regal-blue cursor-pointer z-50"
+        >
+          <FontAwesomeIcon className="text-white text-xl" icon={faAngleUp} />
+        </a>
+      )}
+      <div>
+        <Header />
+        <Hero />
+        <Interlayer />
+        <Carousel />
+        <Feedback />
+        <About />
+        <Question />
+        <Footer />
+      </div>
     </div>
   );
 }

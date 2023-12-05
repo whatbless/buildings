@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "./../../images/logo.png";
+import logo1 from "./../../images/logo1.png";
 import facebook from "./../../images/facebook.png";
 import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
@@ -26,6 +27,28 @@ const socials: Array<SocialType> = [
 
 const Header = () => {
   const [scroll, setScroll] = React.useState(0);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [height, setHeight] = useState<number>(window.innerHeight);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width / height < 1.45;
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -42,14 +65,19 @@ const Header = () => {
     <header
       className={
         scroll < 200
-          ? "text-regal-blue z-20 fixed w-full flex justify-center duration-500"
+          ? menuOpen
+            ? "text-regal-blue z-20 fixed w-full flex justify-center duration-500 backdrop-blur-sm"
+            : "text-regal-blue z-20 fixed w-full flex justify-center duration-500"
           : "text-regal-blue z-20 fixed w-full flex justify-center bg-white duration-500"
       }
     >
       <nav className="container mx-auto flex xl:flex-row flex-col items-start px-10 relative">
         <div className="flex justify-between">
           <a href="/">
-            <img className="w-52" src={logo}></img>
+            <img
+              className={isMobile ? "w-24 py-6" : "w-52"}
+              src={isMobile ? logo1 : logo}
+            ></img>
           </a>
           <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
             <span></span>
