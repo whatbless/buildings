@@ -4,7 +4,7 @@ import "./../../index.css";
 import Modal from "react-modal";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { carouselObject, nums } from "../../types/types";
+import { carouselObject} from "../../types/types";
 
 const customStyles = {
   content: {
@@ -32,9 +32,9 @@ const Carousel = () => {
   const [modalCardID, setModalCardID] = React.useState(0);
 
   const previewGetter = async () => {
-    const response =  await ((await fetch("http://localhost:8000/api/cards/")).json());
+    const response =  await ((await fetch("api/cards/")).json());
     for (let i = 0; i < response.length; i++) {
-      let imgRes = await fetch("http://localhost:8000/api/image/", {
+      let imgRes = await fetch("/api/image/", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -44,18 +44,18 @@ const Carousel = () => {
       const imageBlob = await imgRes.blob();
       let imageBlobURL = URL.createObjectURL(imageBlob);
       response[i].preview = imageBlobURL; 
+      // setPreviewArr(response);
     }
-    
     return response;
   }
 
   const cardsImageGetter = async () => {
-    const response =  await ((await fetch("http://localhost:8000/api/cards/")).json());
+    const response =  await ((await fetch("/api/cards/")).json());
     
     response.forEach((obj: carouselObject) => {
       let imgGetter = async (index: number) => {
         let imgId = obj.images[index];
-        let imgRes = await fetch("http://localhost:8000/api/image/", {
+        let imgRes = await fetch("/api/image/", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -72,7 +72,6 @@ const Carousel = () => {
       for (let i = 0; i < obj.images.length; i++) {
         imgGetter(i);
         setCardsImageArr(response);
-        console.log(cardsImageArr);
       }
     })
     

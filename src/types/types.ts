@@ -23,11 +23,17 @@ export type carouselObject = {
   text: string;
 };
 
-export type nums = {
-  [key: number]: string;
-}
-
 export type diplomaType = {
   src: string;
   alt: string;
+};
+
+export type SocialType = {
+  alt: string;
+  img: string;
+  link: string;
+};
+
+export type QuizPropsType = {
+  closeModal?: () => void;
 };

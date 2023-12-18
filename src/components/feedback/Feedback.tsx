@@ -2,7 +2,19 @@ import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import styles from "./Feedback.module.css";
 import image from "./../../images/properties.png";
-import like from "./../../images/like.gif";
+import like from "./../../images/henry-like.png";
+import { propertyTypeVariants } from "../../types/types";
+import { useDispatch } from "react-redux";
+import "./../../anims.css";
+import {
+  setAddition,
+  setName,
+  setNumber,
+  setPropertyFor,
+} from "../../redux/quizReducer";
+import { useSelector } from "react-redux";
+import emailjs from "@emailjs/browser";
+import { RootState } from "../../redux/store";
 
 function requireValidate(value: string) {
   let error;
@@ -12,41 +24,74 @@ function requireValidate(value: string) {
   return error;
 }
 
+const variants: Array<propertyTypeVariants> = [
+  { var: "למגורים" },
+  { var: "להשקעה" },
+  { var: "להשקעה ומגורים" },
+];
+
 const Feedback = () => {
   const [isSended, setIsSended] = useState(false);
-
   const [showElement, setShowElement] = React.useState(true);
+  const dispatch = useDispatch();
+
+  const data = useSelector((state: RootState) => state.quiz);
+  const message = `propertyFor: ${data.propertyFor}, name: ${data.name}, email: ${data.email}, addition: ${data.addition}`;
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_upsc13j",
+      "template_k9nm0fc",
+      e.target,
+      "cLVGE7oDmk1YG9Cjm"
+    );
+    setShowElement(false);
+    setIsSended(false);
+  };
 
   return (
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
-        <div id="feedback" className="absolute top-36"></div>
+        <div id="feedback" className="absolute -top-36"></div>
         <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
           ?איזה נדל"ן אתם מחפשים
         </h1>
-        <div className="flex xl:flex-row flex-col h-max pt-20">
+        <div className="flex xl:flex-row flex-col h-max md:pt-10 pt-5">
           <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
             <img src={image} alt="feedback-image" />
           </div>
           {isSended ? (
-            showElement ? (
-              <div className="flex flex-col justify-center items-center">
-                <img src={like} alt="like-gif"></img>
-                <p className="h-max w-max border-green-600 text-green-600 md:border-2 border px-10 py-5 md:text-3xl text-xl">
+            showElement && (
+              <div
+                id="send"
+                className="flex flex-col justify-center items-center xl:w-1/2 w-full"
+              >
+                <img src={like} alt="like-henry"></img>
+                <p className="mb-5 md:text-2xl text-xl text-center text-regal-blue">
                   !תודה
                 </p>
-                <p className="text-black md:text-xl text-md my-10 text-center">
-                  בקשתך נקלטה
+                <p className="mb-5 md:text-2xl text-xl text-center text-regal-red">
+                  לחץ על הכפתור "שלח" והמומחה שלנו יצור איתך קשר בקרוב כדי להציג
+                  בפניך את האפשרויות הטובות דירות
                 </p>
-                <p className="text-black md:text-xl text-md my-10 text-center">
-                  !נציגנו יתקשר אליך תוך 24 שעות
-                </p>
+                <form onSubmit={sendEmail}>
+                  <textarea name="message" value={message} className="hidden" />
+                  <button
+                    type="submit"
+                    className="border border-regal-blue w-max text-regal-blue px-8 py-4 flex items-center rounded-md duration-300 hover:text-white hover:bg-regal-blue hover:px-16"
+                  >
+                    שלח
+                  </button>
+                </form>
               </div>
-            ) : (
-              <div></div>
             )
           ) : (
-            <div className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center">
+            <div
+              id="form"
+              className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center"
+            >
               <p className="w-full text-2xl sm:pt-0 pt-5">
                 צור קשר! אנא השאר פרטים ונחזור אליך בקדם
               </p>
@@ -58,11 +103,12 @@ const Feedback = () => {
                   addition: "",
                 }}
                 onSubmit={(values: any) => {
-                  console.log(values);
                   setIsSended(true);
-                  setTimeout(function () {
-                    setShowElement(false);
-                  }, 5000);
+                  setShowElement(true);
+                  dispatch(setName(values.name));
+                  dispatch(setNumber(values.number));
+                  dispatch(setPropertyFor(values.purpose));
+                  dispatch(setAddition(values.addition));
                 }}
               >
                 {({ errors, touched, isValidating }) => (
@@ -97,15 +143,24 @@ const Feedback = () => {
                         )}
                       </div>
                     </div>
-                    <div className={styles.formBlock}>
-                      <div className={styles.inputWrapper}>
-                        <Field
-                          className={styles.input}
-                          name="purpose"
-                          validate={requireValidate}
-                          placeholder="Для каких целей вы ищете недвижимость"
-                        />
-                      </div>
+                    <div className="pt-5">
+                      <h1 className="text-2xl pb-2">?לאיזו מטרה ישמש הנכס</h1>
+                      {variants.map((variant) => (
+                        <div>
+                          <div className="md:text-lg text-sm flex">
+                            <Field
+                              className="mr-5"
+                              name="purpose"
+                              type="checkbox"
+                              value={variant.var}
+                              validate={requireValidate}
+                            />
+                            <p className={styles.formCheckboxTitle}>
+                              {variant.var}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                       <div className={styles.error}>
                         {errors.purpose && touched.purpose && (
                           <div>{errors.purpose}</div>
@@ -124,6 +179,7 @@ const Feedback = () => {
                           className={styles.formArea}
                           name="addition"
                           component="textarea"
+                          placeholder="מידע נוסף"
                         />
                       </div>
                       <div className={styles.error}>
@@ -138,7 +194,7 @@ const Feedback = () => {
                           className="px-6 py-3 border border-regal-blue hover:px-12 duration-300 hover:bg-regal-blue hover:text-white text-regal-blue"
                           type="submit"
                         >
-                          שלח
+                          להמשיך
                         </button>
                       </div>
                     </div>

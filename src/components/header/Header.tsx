@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "./../../images/logo.png";
+import logo1 from "./../../images/logo1.png";
 import facebook from "./../../images/facebook.png";
 import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
+import { SocialType } from "../../types/types";
 
 const navs = [
   { title: "עמוד הבית", anchor: "#hero" },
@@ -13,7 +15,7 @@ const navs = [
   { title: "צור קשר", anchor: "#about" },
 ];
 
-const socials = [
+const socials: Array<SocialType> = [
   { alt: "facebook", img: facebook, link: "/" },
   { alt: "instagram", img: instagram, link: "/" },
   {
@@ -25,6 +27,28 @@ const socials = [
 
 const Header = () => {
   const [scroll, setScroll] = React.useState(0);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [height, setHeight] = useState<number>(window.innerHeight);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width / height < 1.45;
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -41,16 +65,24 @@ const Header = () => {
     <header
       className={
         scroll < 200
-          ? "text-regal-blue z-20 fixed w-full flex justify-center duration-500"
-          : "text-regal-blue z-20 fixed w-full flex justify-center bg-white duration-500"
+          ? menuOpen
+            ? "text-regal-blue z-40 fixed w-full flex justify-center duration-500 backdrop-blur-sm"
+            : "text-regal-blue z-40 fixed w-full flex justify-center duration-500"
+          : "text-regal-blue z-40 fixed w-full flex justify-center bg-white duration-500"
       }
     >
-      <nav className="container mx-auto flex xl:flex-row flex-col items-start px-10 relative">
+      <nav className="container relative mx-auto flex xl:flex-row flex-col items-start px-10">
         <div className="flex justify-between">
           <a href="/">
-            <img className="w-52" src={logo}></img>
+            <img
+              className={isMobile ? "w-20 py-4" : "w-52"}
+              src={isMobile ? logo1 : logo}
+            ></img>
           </a>
-          <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <div
+            className={isMobile ? "menu1" : "menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -78,7 +110,7 @@ const Header = () => {
             ))}
           </div>
           <div className="flex flex-row xl:mb-0 mb-3 items-center">
-            {socials.map((social) => (
+            {socials.map((social: SocialType) => (
               <li className="w-full flex justify-center">
                 <a
                   target={"_blank"}

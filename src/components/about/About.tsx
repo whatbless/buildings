@@ -3,6 +3,9 @@ import real from "./../../images/real.jpeg";
 import sign from "./../../images/sign.png";
 import diploma from "./../../images/diploma.png";
 import logo from "./../../images/vert-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -24,9 +27,23 @@ const About = () => {
                 src={logo}
                 alt="logo"
               />
-              <div>
-                <p>+932138291381931</p>
-                <p>адрес, адрес, дом 31</p>
+              <div className="md:text-md text-sm font-bold text-regal-blue">
+                <div>
+                  <p>
+                    <FontAwesomeIcon
+                      className="text-regal-red mr-3 text-xl"
+                      icon={faLocationDot}
+                    />
+                    רחי הרצל 20, חיפה
+                  </p>
+                  <p>
+                    <FontAwesomeIcon
+                      className="text-regal-red mr-3 mt-2 text-xl"
+                      icon={faPhone}
+                    />
+                    0586557877
+                  </p>
+                </div>
               </div>
             </div>
           </div>

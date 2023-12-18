@@ -31,6 +31,18 @@ nav .menu {
     cursor: pointer;
 }
 
+nav .menu1 {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
 nav .menu span {
     height: 0.4rem;
     width: 100%;
@@ -38,9 +50,19 @@ nav .menu span {
     border-radius: 0.5rem;
 }
 
+nav .menu1 span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #dc1c2d;
+    border-radius: 0.5rem;
+}
 
 @media (max-width: 1279px) {
     nav .menu {
+        display: flex;
+    }
+
+    nav .menu1 {
         display: flex;
     }
 

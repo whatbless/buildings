@@ -1,29 +1,30 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import FirstStep from "./FirstStep";
-import SecondStep from "./SecondStep";
+import Step2 from "./Step2";
+import Step3 from "./Step3";
 import styles from "./Quiz.module.css";
-import ThirdStep from "./ThirdStep";
-import FourthStep from "./FourthStep";
-import FifthStep from "./FifthStep";
-import SixthStep from "./SixthStep";
+import Step4 from "./Step4";
+import Step5 from "./Step5";
+import Step6 from "./Step6";
+import Step1 from "./Step1";
 import Result from "./Result";
 import Start from "./Start";
-import End from "./End";
 import Bonus from "./Bonus";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { setStep } from "../../redux/quizReducer";
+import Sender from "./Sender";
+import { QuizPropsType } from "../../types/types";
 
-const Quiz = () => {
+const Quiz = (props: QuizPropsType) => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
 
   const dispatch = useDispatch();
 
   return (
-    <div className="h-[650px] 2xl:w-[1036px] lg:w-[780px] relative mx-auto flex flex-col items-center bg-white overflow-hidden">
+    <div className="md:h-[600px] h-[500px] 2xl:w-[1036px] lg:w-[780px] w-screen relative mx-auto flex flex-col items-center bg-white overflow-hidden">
       <button
         onClick={() => dispatch<any>(setStep(0))}
         className="absolute z-10 right-6 top-6"
@@ -51,17 +52,17 @@ const Quiz = () => {
           </div>
         )}
       </div>
-      <div className="w-full h-full md:px-10 md:py-10 px-5 py-10">
+      <div className="w-full h-full md:px-10 md:py-10 px-5 py-5">
         {step === 0 && <Start />}
-        {step === 1 && <FirstStep />}
-        {step === 2 && <SecondStep />}
-        {step === 3 && <ThirdStep />}
-        {step === 4 && <FourthStep />}
-        {step === 5 && <FifthStep />}
-        {step === 6 && <SixthStep />}
+        {step === 1 && <Step1 />}
+        {step === 2 && <Step2 />}
+        {step === 3 && <Step3 />}
+        {step === 4 && <Step4 />}
+        {step === 5 && <Step5 />}
+        {step === 6 && <Step6 />}
         {step === 7 && <Result />}
         {step === 8 && <Bonus />}
-        {step === 9 && <End />}
+        {step === 9 && <Sender closeModal={props.closeModal} />}
       </div>
     </div>
   );
