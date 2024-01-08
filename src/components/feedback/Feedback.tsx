@@ -15,6 +15,7 @@ import {
 import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
 import { RootState } from "../../redux/store";
+import DataSended from "../quiz/DataSended";
 
 function requireValidate(value: string) {
   let error;
@@ -48,6 +49,9 @@ const Feedback = () => {
       "cLVGE7oDmk1YG9Cjm"
     );
     setShowElement(false);
+  };
+
+  const action = () => {
     setIsSended(false);
   };
 
@@ -55,20 +59,24 @@ const Feedback = () => {
     <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
         <div id="feedback" className="absolute -top-36"></div>
-        <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
+        <h1 className="md:text-4xl text-3xl w-full text-center pt-10 text-regal-blue">
           ?איזה נדל"ן אתם מחפשים
         </h1>
         <div className="flex xl:flex-row flex-col h-max md:pt-10 pt-5">
           <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
-            <img src={image} alt="feedback-image" />
+            <img
+              src={image}
+              alt='эנדל " ן בסמארטפון'
+              className="w-full h-full"
+            />
           </div>
           {isSended ? (
-            showElement && (
+            showElement ? (
               <div
                 id="send"
                 className="flex flex-col justify-center items-center xl:w-1/2 w-full"
               >
-                <img src={like} alt="like-henry"></img>
+                <img src={like} alt="like-henry" loading="lazy"></img>
                 <p className="mb-5 md:text-2xl text-xl text-center text-regal-blue">
                   !תודה
                 </p>
@@ -85,6 +93,10 @@ const Feedback = () => {
                     שלח
                   </button>
                 </form>
+              </div>
+            ) : (
+              <div className="flex flex-col justify-center items-center xl:w-1/2 w-full">
+                <DataSended action={action} />
               </div>
             )
           ) : (

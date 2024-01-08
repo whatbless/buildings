@@ -22,7 +22,7 @@ nav ul li {
 nav .menu {
     display: none;
     position: absolute;
-    top: 3.5rem;
+    top: 1.5rem;
     right: 2.5rem;
     flex-direction: column;
     justify-content: space-between;
@@ -34,7 +34,7 @@ nav .menu {
 nav .menu1 {
     display: none;
     position: absolute;
-    top: 2.5rem;
+    top: 1.5rem;
     right: 2.5rem;
     flex-direction: column;
     justify-content: space-between;
@@ -44,14 +44,14 @@ nav .menu1 {
 }
 
 nav .menu span {
-    height: 0.4rem;
+    height: 0.35rem;
     width: 100%;
     background-color: #dc1c2d;
     border-radius: 0.5rem;
 }
 
 nav .menu1 span {
-    height: 0.4rem;
+    height: 0.35rem;
     width: 100%;
     background-color: #dc1c2d;
     border-radius: 0.5rem;

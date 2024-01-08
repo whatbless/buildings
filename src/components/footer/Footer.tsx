@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import whatsapp from "./../../images/whatsapp.png";
 import instagram from "./../../images/instagram.png";
@@ -30,7 +29,7 @@ const Footer = () => {
     <footer className="w-full lg:py-10 py-0">
       <div className="container mx-auto px-5 flex lg:flex-row flex-col-reverse lg:space-y-0 space-y-10 justify-between items-center w-full h-full">
         <div className="flex flex-col sm:items-start justify-center items-center ">
-          <img className="w-40" src={logo} alt="logo" />
+          <img className="w-40 h-full" src={logo} alt="logo" loading="lazy" />
           <div className="text-sm sm:text-left text-center text-regal-blue lg:pb-0 pb-8">
             @2023 All Rights Reserved
           </div>
@@ -51,7 +50,12 @@ const Footer = () => {
           <div className="flex flex-row justify-center">
             {socials.map((social: SocialType) => (
               <a href={social.link}>
-                <img className="w-9 mx-3" src={social.img} alt={social.alt} />
+                <img
+                  loading="lazy"
+                  className="w-9 mx-3 h-full"
+                  src={social.img}
+                  alt={social.alt}
+                />
               </a>
             ))}
           </div>

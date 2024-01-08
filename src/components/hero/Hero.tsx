@@ -1,7 +1,7 @@
 //@ts-ignore
 import video2 from "./../../images/hero2.mp4";
 import { useEffect, useState } from "react";
-import image from "./../../images/hero-image.jpeg";
+import image from "./../../images/hero-image.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -83,7 +83,7 @@ const Hero = () => {
             <img
               className="absolute left-0 top-0 w-screen h-screen object-cover object-top -z-10"
               src={image}
-              alt="hero-image"
+              alt="וידאו רמיקס"
             />
             <div className="container relative mx-auto flex items-center h-full drop-shadow-5xl">
               <div className="absolute lg:text-8xl md:text-7xl sm:text-6xl text-5xl px-10 font-bold">

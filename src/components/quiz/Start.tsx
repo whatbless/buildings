@@ -1,9 +1,8 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { setStep } from "../../redux/quizReducer";
 import styles from "./Quiz.module.css";
-import henryHi from "./../../images/henry-hi.png";
-import hand from "./../../images/hand.png";
+import henryHi from "./../../images/henry-hi.webp";
+import hand from "./../../images/hand.webp";
 
 const Start = () => {
   const dispatch = useDispatch();
@@ -14,7 +13,8 @@ const Start = () => {
         <img
           className="md:w-60 md:h-60 w-36 h-36"
           src={henryHi}
-          alt="henry-image1"
+          alt="אייקוני אייפון"
+          loading="lazy"
         />
         <h1 className="text-right md:text-lg sm:text-md text-sm flex items-center pl-5">
           שלום, שמי אדם, אני העוזר האישי שלך במהלך השאלון הקצרצר הזה. ענה על
@@ -29,7 +29,8 @@ const Start = () => {
           <img
             className="md:w-28 md:h-28 w-20 h-20 mr-5 absolute md:-left-36 md:-top-5 -left-24 -top-3"
             src={hand}
-            alt="hand-image"
+            alt="אייקוני אייפון"
+            loading="lazy"
           />
           <div
             className={styles.button}

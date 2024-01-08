@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Step2 from "./Step2";
@@ -17,6 +16,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { setStep } from "../../redux/quizReducer";
 import Sender from "./Sender";
 import { QuizPropsType } from "../../types/types";
+import DataSended from "./DataSended";
 
 const Quiz = (props: QuizPropsType) => {
   const step: number = useSelector((state: RootState) => state.quiz.step);
@@ -62,7 +62,8 @@ const Quiz = (props: QuizPropsType) => {
         {step === 6 && <Step6 />}
         {step === 7 && <Result />}
         {step === 8 && <Bonus />}
-        {step === 9 && <Sender closeModal={props.closeModal} />}
+        {step === 9 && <Sender />}
+        {step === 10 && <DataSended action={props.closeModal} />}
       </div>
     </div>
   );

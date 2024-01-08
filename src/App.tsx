@@ -54,7 +54,7 @@ function App() {
           </div>
         ) : (
           <div className="absolute top-5 right-5">
-            <img className="w-20" src={logo1} alt="logo1"></img>
+            <img className="w-20 h-full" src={logo1} alt="logo1"></img>
           </div>
         )
       ) : (

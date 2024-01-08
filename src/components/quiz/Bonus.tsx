@@ -1,5 +1,4 @@
-import React from "react";
-import henryEye from "./../../images/henry-eye.png";
+import henryEye from "./../../images/henry-eye.webp";
 import styles from "./Quiz.module.css";
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
@@ -23,7 +22,8 @@ const Bonus = () => {
         <img
           className="md:w-60 md:h-60 w-36 h-36"
           src={henryEye}
-          alt="henry-image8"
+          alt="אייקוני אייפון"
+          loading="lazy"
         />
       </div>
       <Formik

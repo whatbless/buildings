@@ -6,13 +6,6 @@ export type propertyTypeVariants = {
   var: string;
 };
 
-// export type carouselObject = {
-//   src: string;
-//   title: string;
-//   desc: string;
-//   text: string;
-// };
-
 export type carouselObject = {
   images: Array<any>;
   id: number;

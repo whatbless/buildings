@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import {
   setName,
@@ -40,13 +39,15 @@ const Result = () => {
       <img
         className="md:w-60 md:h-60 w-36 h-36 absolute md:-left-36 -left-20 md:-top-40 -top-7 z-10"
         src={henryParty}
-        alt="henry-image7"
+        alt="אייקוני אייפון"
+        loading="lazy"
       />
       <img
         style={{ transform: "scale(-1, 1)" }}
         className="md:w-60 md:h-60 w-36 h-36 absolute md:-right-36 -right-20 md:top-36 top-40 z-10"
         src={henryParty}
-        alt="henry-image7"
+        alt="אייקוני אייפון"
+        loading="lazy"
       />
       <h1 className="text-center md:text-lg text-sm px-5 ">
         יופי, כל השאלות מאחורינו. כל מה שנותר הוא להזין שם ומספר טלפון וללחוץ על

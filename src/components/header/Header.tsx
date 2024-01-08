@@ -16,10 +16,18 @@ const navs = [
 ];
 
 const socials: Array<SocialType> = [
-  { alt: "facebook", img: facebook, link: "/" },
-  { alt: "instagram", img: instagram, link: "/" },
   {
-    alt: "whatsapp",
+    alt: "facebook icon",
+    img: facebook,
+    link: "https://www.facebook.com/buyflathaifa",
+  },
+  {
+    alt: "instagram icon",
+    img: instagram,
+    link: "https://www.facebook.com/buyflathaifa",
+  },
+  {
+    alt: "whatsapp icon",
     img: whatsapp,
     link: "https://wa.me/972586557877?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82",
   },
@@ -75,8 +83,12 @@ const Header = () => {
         <div className="flex justify-between">
           <a href="/">
             <img
-              className={isMobile ? "w-20 py-4" : "w-52"}
-              src={isMobile ? logo1 : logo}
+              className={
+                !isMobile && width > 1279 ? "w-52 h-full" : "w-16 py-2 h-full"
+              }
+              src={!isMobile && width > 1279 ? logo : logo1}
+              alt="לוגו של רימקס"
+              loading="lazy"
             ></img>
           </a>
           <div
@@ -100,8 +112,8 @@ const Header = () => {
                   href={nav.anchor}
                   className={
                     scroll < 200
-                      ? "mx-3.5 font-bold px-2.5 py-1 2xl:text-xl text-lg rounded-none uppercase cursor-pointer drop-shadow-5xl text-white hover:border-regal-red hover:border-b-2"
-                      : "mx-3.5 font-bold px-2.5 2xl:text-xl text-lg py-1 rounded-none uppercase cursor-pointer text-regal-red hover:border-regal-red hover:border-b-2"
+                      ? "mx-3.5 font-bold px-2.5 py-1 2xl:text-2xl text-xl rounded-none uppercase cursor-pointer drop-shadow-5xl text-white hover:border-regal-red hover:border-b-2"
+                      : "mx-3.5 font-bold px-2.5 2xl:text-2xl text-xl py-1 rounded-none uppercase cursor-pointer text-regal-red hover:border-regal-red hover:border-b-2"
                   }
                 >
                   {nav.title}
@@ -113,11 +125,17 @@ const Header = () => {
             {socials.map((social: SocialType) => (
               <li className="w-full flex justify-center">
                 <a
-                  target={"_blank"}
+                  target="_blank"
+                  rel="noreferrer"
                   href={social.link}
                   className="w-9 mx-3 duration-300 hover:-translate-y-1"
                 >
-                  <img src={social.img} alt={social.alt} />
+                  <img
+                    className="w-full h-full"
+                    loading="lazy"
+                    src={social.img}
+                    alt={social.alt}
+                  />
                 </a>
               </li>
             ))}
